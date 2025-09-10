@@ -5,11 +5,45 @@
 
 Computational tools for quantifying the evolution of legal parasitism in Argentine constitutional law (1922-2025).
 
-## 📖 Paper
+## 📖 Papers
 
-These tools support the paper: **"The Peralta Metamorphosis: Quantifying the Evolution of Legal Parasitism Through Computational Analysis of Argentine Constitutional Degradation (1922-2025)"** by Ignacio Adrián Lerer
+This repository supports multiple papers in **The Extended Phenotype of Law** series by Ignacio Adrián Lerer:
+
+### Original Paper: The Peralta Metamorphosis
+**"Quantifying the Evolution of Legal Parasitism Through Computational Analysis of Argentine Constitutional Degradation (1922-2025)"**
 
 Available at: [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=XXXXX)
+
+### Paper 9: The Multilayer Parasite ✅ Complete
+
+**Title:** The Multilayer Parasite: Quantifying Corruption's Accumulative Evolution Through Computational Analysis of Argentine Legal Responses (1880-2025)
+
+**Status:** ✅ Complete (January 2025)
+
+**Key Findings:**
+- **Accumulation Index**: 0.439 (44% accumulation pattern)
+- **Biofilm Protection Score**: 0.611 (61% mutual protection)  
+- **4 corruption layers** simultaneously active in 2025
+- Only **13.3% of compliance programs** genuinely effective
+- **Electoral corruption** still 33.2% active after 145 years
+
+**Tools Used:**
+- CorruptionLayerAnalyzer (new)
+- JurisRank (adapted)
+- RootFinder (adapted)  
+- Legal-Memespace (adapted)
+
+**Dataset:**
+- 89 corruption cases (1880-2025)
+- Includes major Argentine scandals: Skanska, Cuadernos, Vacunatorio VIP, FGS Seguros
+
+**Run Analysis:**
+```bash
+python analysis/corruption_analysis.py
+python analysis/corruption_visualizations.py
+```
+
+**Full Paper:** [`papers/paper9_multilayer_parasite.md`](papers/paper9_multilayer_parasite.md)
 
 ## 🛠️ Tools Included
 
