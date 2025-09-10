@@ -1,0 +1,91 @@
+case_id,case_name,year,layer,outcome,severity,fitness_impact,description
+Electoral_1880,Voto_Cantado_Roca,1880,electoral,unchallenged,high,0.95,Public voting system enabling electoral manipulation
+Electoral_1890,Fraude_Patriotico_1890,1890,electoral,unchallenged,high,0.93,Systematic electoral fraud during the Unicato period
+Electoral_1900,Elecciones_Falsas_Pellegrini,1900,electoral,unchallenged,extreme,0.96,Peak of electoral manipulation before Saenz Pena Law
+Electoral_1910,Ultima_Decada_Infame,1910,electoral,reformed,high,0.45,Final period of systematic electoral fraud
+Saenz_Pena_1912,Ley_Saenz_Pena,1912,electoral,reform_attempt,high,-0.60,Secret ballot law attempting to end electoral corruption
+Electoral_1930,Fraude_Patriotico_Uriburu,1930,electoral,normalized,high,0.78,Return of electoral manipulation after military coup
+Electoral_1943,Elecciones_Fraudulentas_1943,1943,electoral,challenged,medium,0.55,Military government ends fraudulent electoral system
+Electoral_1946,Clientelismo_Peronista,1946,electoral,normalized,high,0.82,Institutionalization of clientelistic networks
+Electoral_1955,Revolucion_Libertadora_Electoral,1955,electoral,challenged,medium,0.45,Military intervention disrupts electoral networks
+Electoral_1973,Retorno_Clientelismo,1973,electoral,normalized,high,0.85,Return of Peronist electoral networks
+Electoral_1983,Democratizacion_Parcial,1983,electoral,challenged,medium,0.50,Democratic transition with persistent clientelism
+Electoral_1989,Crisis_Hiperinflacion_Electoral,1989,electoral,normalized,high,0.88,Economic crisis strengthens clientelistic dependence
+Electoral_1995,Reeleccion_Menem,1995,electoral,unchallenged,high,0.90,Constitutional reform enabling reelection through deals
+Electoral_2001,Crisis_Electoral_2001,2001,electoral,challenged,medium,0.40,Economic crisis weakens electoral machinery
+Electoral_2003,Kirchnerismo_Clientelismo,2003,electoral,normalized,high,0.87,Renewal of clientelistic networks under new leadership
+Electoral_2015,Voto_Cadena_Moderno,2015,electoral,documented,medium,0.65,Modern vote buying through benefits cards and chains
+Electoral_2019,Boletas_Robadas_PASO,2019,electoral,challenged,low,0.55,Ballot theft in primary elections generates scandal
+Electoral_2021,Clientelismo_Pandemia,2021,electoral,emerging,medium,0.70,Use of pandemic aid for electoral purposes
+Electoral_2023,Clientelismo_Digital,2023,electoral,emerging,medium,0.75,Digital coordination of vote buying through apps
+Admin_1920,Primeros_Noquis,1920,administrative,unchallenged,medium,0.70,First systematic ghost employee schemes
+Admin_1930,Expansion_Burocracia_Militar,1930,administrative,normalized,medium,0.75,Military government expands bureaucratic corruption
+Admin_1946,Expansion_Estatal_Peronista,1946,administrative,normalized,high,0.85,Massive state expansion creates corruption opportunities
+Admin_1955,Revolucion_Libertadora_Admin,1955,administrative,challenged,medium,0.40,Military government attempts bureaucratic cleanup
+Admin_1958,Desarrollismo_Frondizi,1958,administrative,normalized,medium,0.72,Developmentalist state increases administrative corruption
+Admin_1966,Ongania_Burocratizacion,1966,administrative,normalized,high,0.80,Authoritarian regime institutionalizes admin corruption
+Admin_1973,Retorno_Peronismo_Admin,1973,administrative,expanded,high,0.88,Return of Peronism massively expands state bureaucracy
+Admin_1976,Proceso_Reorganizacion,1976,administrative,challenged,medium,0.45,Military dictatorship attempts to control bureaucracy
+Admin_1983,Democratizacion_Admin,1983,administrative,normalized,high,0.82,Democratic transition preserves bureaucratic networks
+Admin_1989,Crisis_Estado_Empleador,1989,administrative,challenged,high,0.35,Hyperinflation crisis exposes state employment chaos
+Admin_1990,Reforma_Estado_Cavallo,1990,administrative,challenged,medium,0.38,State reform attempts to reduce bureaucratic corruption
+Admin_1995,Consolidacion_Noquis,1995,administrative,normalized,high,0.85,Ghost employees become institutionalized practice
+Admin_2001,Crisis_Admin_2001,2001,administrative,challenged,high,0.30,Economic crisis forces temporary bureaucratic reduction
+Admin_2003,Expansion_K_Burocracia,2003,administrative,expanded,extreme,0.92,Kirchnerist governments massively expand state employment
+Admin_2015,Cambio_Era_Admin,2015,administrative,challenged,medium,0.48,Macri government attempts bureaucratic reform
+Admin_2019,Retorno_K_Admin,2019,administrative,normalized,high,0.86,Return of Kirchnerism restores bureaucratic expansion
+Admin_2020,Vacunatorio_VIP,2020,administrative,scandal,high,0.30,VIP vaccination scandal exposes administrative privileges
+Admin_2021,Obras_Publicas_K,2021,administrative,prosecuted,extreme,0.25,Prosecution of massive public works corruption network
+Admin_2023,Seguros_Gate,2023,administrative,emerging,high,0.72,Insurance company scandal involving state contracts
+Entrepreneurial_1990,Privatizaciones_Telefonica,1990,entrepreneurial,unchallenged,extreme,0.94,Telephone company privatization with massive kickbacks
+Entrepreneurial_1991,Privatizaciones_Aerolineas,1991,entrepreneurial,unchallenged,extreme,0.95,Airline privatization with documented corruption
+Entrepreneurial_1992,Privatizaciones_YPF,1992,entrepreneurial,unchallenged,extreme,0.96,Oil company privatization enables massive corruption
+Entrepreneurial_1994,Swift_Atentado_Encubrimiento,1994,entrepreneurial,partial_prosecution,extreme,0.65,AMIA attack cover-up involves business interests
+Entrepreneurial_1995,Mafia_Oro_Banco_Central,1995,entrepreneurial,partial_prosecution,extreme,0.60,Central Bank gold reserves scandal
+Entrepreneurial_1997,Contratos_Basura_Telecom,1997,entrepreneurial,unchallenged,high,0.88,Garbage contracts in telecommunications sector
+IBM_Banco_Nacion_1998,IBM_Banco_Nacion,1998,entrepreneurial,prosecuted,extreme,0.25,IBM-Banco Nacion corruption case prosecution
+Entrepreneurial_1999,Sobornos_Senado,1999,entrepreneurial,partial_prosecution,extreme,0.55,Senate bribery scandal during labor reform
+Entrepreneurial_2001,Megacanje_Deuda,2001,entrepreneurial,challenged,extreme,0.35,Debt swap scandal during economic crisis
+Entrepreneurial_2003,Energeticos_K,2003,entrepreneurial,normalized,high,0.85,Energy sector corruption under Kirchner governments
+Entrepreneurial_2005,Antonini_Wilson_Maletin,2005,entrepreneurial,scandal,high,0.40,Venezuelan money suitcase scandal
+Skanska_2006,Caso_Skanska,2006,entrepreneurial,prosecuted,high,0.30,Swedish construction company bribery prosecution
+Entrepreneurial_2008,Papel_Prensa_Monopolio,2008,entrepreneurial,challenged,high,0.45,Papel Prensa monopoly scandal
+Entrepreneurial_2010,Futbol_Para_Todos_Contratos,2010,entrepreneurial,normalized,medium,0.75,Football broadcasting rights corruption
+Entrepreneurial_2012,Ruta_Dinero_K,2012,entrepreneurial,challenged,extreme,0.40,Money route investigation into Kirchner wealth
+Entrepreneurial_2015,Hotesur_Los_Sauces,2015,entrepreneurial,prosecuted,high,0.35,Kirchner family hotel business corruption
+Entrepreneurial_2016,Panama_Papers_Argentina,2016,entrepreneurial,documented,extreme,0.50,Panama Papers reveal offshore corruption structures
+Notebooks_2018,Cuadernos_Corrupcion,2018,entrepreneurial,mass_prosecution,extreme,0.15,Massive prosecution of business-government corruption
+Entrepreneurial_2019,Causa_Vialidad,2019,entrepreneurial,prosecuted,extreme,0.20,Road construction corruption prosecution
+Entrepreneurial_2020,Vacunas_Intermediarios,2020,entrepreneurial,scandal,high,0.45,Vaccine procurement corruption through intermediaries
+Entrepreneurial_2021,Contratos_Pandemia,2021,entrepreneurial,challenged,high,0.50,Pandemic-related procurement corruption
+Entrepreneurial_2022,Gasoducto_Nestor_Kirchner,2022,entrepreneurial,emerging,extreme,0.70,Gas pipeline construction corruption allegations
+Entrepreneurial_2023,Contratos_Energia_Renovable,2023,entrepreneurial,emerging,high,0.75,Renewable energy contracts corruption
+Compliance_2017,Law_27401_Sanction,2017,compliance_capture,reform_attempt,medium,-0.40,Corporate criminal liability law creating compliance obligation
+Compliance_2018,Primer_Programa_Real_Techint,2018,compliance_capture,effective,low,-0.30,First genuine compliance program implementation
+Compliance_2018,Programa_Cosmetic_Empresa_X,2018,compliance_capture,cosmetic,medium,0.60,First cosmetic compliance program for legal protection
+Compliance_2019,Techint_Genuine_Program,2019,compliance_capture,effective,low,-0.35,Continued genuine compliance efforts by major corporation
+Compliance_2019,Banco_Y_Checkbox_Compliance,2019,compliance_capture,cosmetic,medium,0.65,Bank implements checkbox compliance for appearances
+Compliance_2020,Pandemia_Compliance_Suspension,2020,compliance_capture,normalized,high,0.70,Pandemic used to suspend compliance obligations
+Compliance_2020,Empresa_Z_Defensive_Program,2020,compliance_capture,defensive,high,0.75,Company uses compliance program defensively in prosecution
+Compliance_2021,Odebrecht_Leniency_Agreement,2021,compliance_capture,negotiated,extreme,0.35,Brazilian company negotiates reduced penalties through compliance
+Compliance_2021,Farmaceutica_Compliance_Theater,2021,compliance_capture,cosmetic,medium,0.68,Pharmaceutical company creates compliance theater
+Compliance_2022,Energia_Compliance_Capture,2022,compliance_capture,defensive,high,0.72,Energy company captures compliance process for protection
+Compliance_2022,Constructora_Fake_Training,2022,compliance_capture,cosmetic,medium,0.70,Construction company implements fake compliance training
+Compliance_2023,Consulting_Firm_Capture,2023,compliance_capture,defensive,high,0.78,Major consulting firm captures compliance market
+Compliance_2023,AI_Generated_Reports_Beta,2023,compliance_capture,emerging,medium,0.75,First experiments with AI-generated compliance documentation
+Compliance_2024,AI_Compliance_Industrial,2024,compliance_capture,emerging,high,0.80,Industrial-scale AI generation of compliance materials
+Compliance_2024,Blockchain_Fake_Transparency,2024,compliance_capture,emerging,medium,0.77,Use of blockchain for fake transparency initiatives
+Judicial_2005,Fallo_Favorable_Cumplimiento,2005,compliance_capture,favorable,low,-0.30,Court ruling favorable to genuine compliance efforts
+Judicial_2018,Fallo_Techint_Leniency,2018,compliance_capture,lenient,medium,0.45,Court grants leniency based on compliance program quality
+Judicial_2019,Fallo_Cosmetic_Rejected,2019,compliance_capture,strict,low,-0.25,Court rejects cosmetic compliance program as insufficient
+Judicial_2020,Fallo_Pro_Compliance_Theater,2020,compliance_capture,favorable,high,0.65,Court accepts theatrical compliance as mitigation
+Judicial_2021,Fallo_Defensive_Success,2021,compliance_capture,lenient,high,0.70,Successful defensive use of compliance program in court
+Judicial_2022,Fallo_AI_Reports_Accepted,2022,compliance_capture,favorable,medium,0.68,Court accepts AI-generated compliance reports as valid
+Judicial_2023,Precedent_Compliance_Shield,2023,compliance_capture,favorable,high,0.75,Court establishes compliance programs as effective legal shield
+Mixed_2019,Lawfare_Compliance_Hybrid,2019,compliance_capture,defensive,extreme,0.78,Use of compliance programs as lawfare tool against opponents
+Mixed_2020,ONG_Capture_Compliance,2020,compliance_capture,cosmetic,medium,0.72,NGO capture for fake compliance certification
+Mixed_2021,Academic_Compliance_Washing,2021,compliance_capture,cosmetic,medium,0.70,Academic institutions provide compliance washing services
+Mixed_2022,International_Compliance_Arbitrage,2022,compliance_capture,defensive,high,0.76,Exploitation of international compliance standards differences
+Mixed_2023,ESG_Compliance_Weaponization,2023,compliance_capture,emerging,high,0.79,Weaponization of ESG compliance for competitive advantage
+Future_2024,Quantum_Encryption_Corruption,2024,entrepreneurial,emerging,medium,0.82,Early adoption of quantum-resistant encryption for corruption
+Future_2025,AI_Compliance_Singularity,2025,compliance_capture,emerging,extreme,0.85,AI systems fully capture compliance generation and assessment
