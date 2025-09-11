@@ -17,8 +17,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Import our adapted tools
-from political_rootfinder import PoliticalRootFinder
-from political_memespace import PoliticalMemespace
+from .political_rootfinder import PoliticalRootFinder
+from .political_memespace import PoliticalMemespace
+from .expanded_political_corpus import create_expanded_political_corpus, calculate_enhanced_political_coordinates, add_electoral_polarization_data
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -44,10 +45,41 @@ class IntegratedPoliticalAnalysis:
         self.transitions = []
         self.integrated_results = {}
         
+        # Bootstrap validation storage
+        self.bootstrap_results = {}
+        self.confidence_intervals = {}
+        
+    def load_expanded_political_documents(self) -> pd.DataFrame:
+        """
+        Load expanded corpus of 60+ Argentine political documents.
+        Enhanced dataset to address anomalies in original analysis.
+        """
+        logger.info("Loading expanded political corpus (60+ documents)")
+        
+        # Load expanded corpus
+        documents = create_expanded_political_corpus()
+        
+        # Calculate enhanced coordinates
+        logger.info("Calculating enhanced political coordinates...")
+        coordinates = []
+        for _, doc in documents.iterrows():
+            coord = calculate_enhanced_political_coordinates(
+                str(doc['text']), 
+                str(doc.get('title', '')),
+                str(doc['author']), 
+                int(doc['year'])
+            )
+            coordinates.append(coord)
+        
+        documents['political_position'] = coordinates
+        logger.info(f"Loaded {len(documents)} documents with enhanced coordinates")
+        
+        return documents
+    
     def load_sample_political_documents(self) -> pd.DataFrame:
         """
-        Load sample political documents for demonstration.
-        In real usage, this would load actual historical documents.
+        Load sample political documents for demonstration (legacy method).
+        Use load_expanded_political_documents() for full analysis.
         """
         logger.info("Loading sample political documents")
         
@@ -161,6 +193,205 @@ class IntegratedPoliticalAnalysis:
         
         return pd.DataFrame(documents)
     
+    def bootstrap_genealogy_validation(self, documents_df: pd.DataFrame, n_iterations: int = 1000) -> Dict:
+        """
+        Perform bootstrap validation of genealogical analysis.
+        
+        Args:
+            documents_df: Political documents dataframe
+            n_iterations: Number of bootstrap iterations
+            
+        Returns:
+            Bootstrap validation results with confidence intervals
+        """
+        logger.info(f"Starting bootstrap validation with {n_iterations} iterations")
+        
+        bootstrap_genealogies = []
+        bootstrap_ancestors = []
+        bootstrap_attractors = []
+        
+        # Modern movements to analyze
+        modern_movements = [
+            'Alberto_Fernandez_Inaugural_2019',
+            'Macri_Cambio_2015',
+            'Milei_Viva_Libertad_2023'
+        ]
+        
+        for i in range(n_iterations):
+            if i % 100 == 0:
+                logger.info(f"Bootstrap iteration {i}/{n_iterations}")
+            
+            # Sample documents with replacement
+            sampled_df = documents_df.sample(n=len(documents_df), replace=True)
+            
+            # Build network for this sample
+            try:
+                semantic_network = self.rootfinder.build_semantic_network(sampled_df)
+                
+                # Trace genealogies
+                iteration_genealogies = {}
+                for movement in modern_movements:
+                    if movement in [doc['document_id'] for _, doc in sampled_df.iterrows()]:
+                        genealogy = self.rootfinder.trace_political_genealogy(
+                            movement, semantic_network, max_depth=4
+                        )
+                        iteration_genealogies[movement] = len(genealogy)
+                
+                bootstrap_genealogies.append(iteration_genealogies)
+                
+                # Find common ancestors
+                if len(modern_movements) >= 2:
+                    for j in range(len(modern_movements)):
+                        for k in range(j+1, len(modern_movements)):
+                            mov1, mov2 = modern_movements[j], modern_movements[k]
+                            if mov1 in iteration_genealogies and mov2 in iteration_genealogies:
+                                ancestor = self.rootfinder.find_common_political_ancestor(
+                                    mov1, mov2, semantic_network
+                                )
+                                bootstrap_ancestors.append(ancestor is not None)
+                
+                # Find attractors
+                positions = self.memespace.map_political_positions(sampled_df)
+                attractors = self.memespace.find_political_attractors(positions, n_attractors=3)
+                bootstrap_attractors.append(len(attractors))
+                
+            except Exception as e:
+                logger.warning(f"Bootstrap iteration {i} failed: {e}")
+                continue
+        
+        # Calculate confidence intervals
+        genealogy_stats = {}
+        for movement in modern_movements:
+            genealogy_lengths = [bg.get(movement, 0) for bg in bootstrap_genealogies if movement in bg]
+            if genealogy_lengths:
+                genealogy_stats[movement] = {
+                    'mean': np.mean(genealogy_lengths),
+                    'std': np.std(genealogy_lengths),
+                    'ci_lower': np.percentile(genealogy_lengths, 2.5),
+                    'ci_upper': np.percentile(genealogy_lengths, 97.5)
+                }
+        
+        ancestor_probability = np.mean(bootstrap_ancestors) if bootstrap_ancestors else 0
+        attractor_stats = {
+            'mean': np.mean(bootstrap_attractors),
+            'std': np.std(bootstrap_attractors),
+            'ci_lower': np.percentile(bootstrap_attractors, 2.5),
+            'ci_upper': np.percentile(bootstrap_attractors, 97.5)
+        } if bootstrap_attractors else {}
+        
+        validation_results = {
+            'genealogy_statistics': genealogy_stats,
+            'common_ancestor_probability': ancestor_probability,
+            'attractor_statistics': attractor_stats,
+            'n_successful_iterations': len(bootstrap_genealogies),
+            'total_iterations': n_iterations,
+            'success_rate': len(bootstrap_genealogies) / n_iterations
+        }
+        
+        logger.info(f"Bootstrap validation complete. Success rate: {validation_results['success_rate']:.2%}")
+        return validation_results
+    
+    def analyze_electoral_correlations(self, documents_df: pd.DataFrame) -> Dict:
+        """
+        Analyze correlations between political positions and electoral outcomes.
+        """
+        logger.info("Analyzing electoral correlations")
+        
+        electoral_data = add_electoral_polarization_data()
+        
+        # Match documents to electoral years
+        correlations = {}
+        
+        # Get documents close to electoral years
+        electoral_docs = []
+        for _, election in electoral_data.iterrows():
+            year = election['year']
+            # Find documents within 5 years of election
+            nearby_docs = documents_df[
+                (documents_df['year'] >= year - 5) & 
+                (documents_df['year'] <= year + 5)
+            ]
+            
+            if len(nearby_docs) > 0:
+                # Average political positions for this period
+                avg_position = np.mean([pos for pos in nearby_docs['political_position']], axis=0)
+                electoral_docs.append({
+                    'year': year,
+                    'position': avg_position,
+                    'polarization': election['polarization_index'],
+                    'ba_interior_gap': election['ba_vote'] - election['interior_vote'],
+                    'urban_rural_gap': election['urban_vote'] - election['rural_vote']
+                })
+        
+        if len(electoral_docs) >= 3:
+            electoral_df = pd.DataFrame(electoral_docs)
+            
+            # Calculate correlations
+            for i, dim in enumerate(['centralization', 'ba_vs_interior', 'elite_vs_popular', 'evolution_vs_revolution']):
+                dim_values = [pos[i] for pos in electoral_df['position']]
+                
+                corr_polarization, p_polarization = pearsonr(dim_values, electoral_df['polarization'])
+                corr_ba_interior, p_ba_interior = pearsonr(dim_values, electoral_df['ba_interior_gap'])
+                
+                correlations[dim] = {
+                    'polarization_correlation': corr_polarization,
+                    'polarization_p_value': p_polarization,
+                    'ba_interior_correlation': corr_ba_interior,
+                    'ba_interior_p_value': p_ba_interior
+                }
+        
+        return {
+            'electoral_correlations': correlations,
+            'n_elections_analyzed': len(electoral_docs),
+            'electoral_timeline': electoral_docs
+        }
+    
+    def detect_enhanced_phase_transitions(self, documents_df: pd.DataFrame) -> List:
+        """
+        Enhanced phase transition detection with validation.
+        """
+        logger.info("Detecting enhanced phase transitions")
+        
+        # Sort documents by year
+        sorted_docs = documents_df.sort_values('year')
+        
+        # Calculate moving averages of political positions
+        window_size = 5
+        transitions = []
+        
+        for i in range(window_size, len(sorted_docs) - window_size):
+            # Before window
+            before_docs = sorted_docs.iloc[i-window_size:i]
+            before_positions = np.array([pos for pos in before_docs['political_position']])
+            before_mean = np.mean(before_positions, axis=0)
+            
+            # After window  
+            after_docs = sorted_docs.iloc[i:i+window_size]
+            after_positions = np.array([pos for pos in after_docs['political_position']])
+            after_mean = np.mean(after_positions, axis=0)
+            
+            # Calculate magnitude of change
+            change_magnitude = np.linalg.norm(after_mean - before_mean)
+            
+            # Check if change is significant (threshold = 0.3)
+            if change_magnitude > 0.3:
+                transition_year = sorted_docs.iloc[i]['year']
+                
+                transitions.append({
+                    'year': transition_year,
+                    'magnitude': change_magnitude,
+                    'before_position': before_mean.tolist(),
+                    'after_position': after_mean.tolist(),
+                    'dominant_dimension': np.argmax(np.abs(after_mean - before_mean)),
+                    'direction': (after_mean - before_mean).tolist()
+                })
+        
+        # Sort by magnitude and return top transitions
+        transitions.sort(key=lambda x: x['magnitude'], reverse=True)
+        
+        logger.info(f"Detected {len(transitions)} phase transitions")
+        return transitions[:10]  # Top 10 transitions
+    
     def run_complete_analysis(self) -> Dict:
         """
         Run complete integrated analysis combining RootFinder and Memespace.
@@ -168,7 +399,7 @@ class IntegratedPoliticalAnalysis:
         logger.info("Starting complete integrated political analysis")
         
         # 1. Load documents
-        documents_df = self.load_sample_political_documents()
+        documents_df = self.load_expanded_political_documents()
         logger.info(f"Loaded {len(documents_df)} political documents")
         
         # 2. Build semantic network for RootFinder
@@ -176,9 +407,9 @@ class IntegratedPoliticalAnalysis:
         
         # 3. Trace genealogies for modern political movements
         modern_movements = [
-            'Peron_Justicia_1945',
+            'Peron_17_Octubre_1945',
             'Macri_Cambio_2015', 
-            'Milei_Liberal_2023'
+            'Milei_Viva_Libertad_2023'
         ]
         
         logger.info("Tracing political genealogies")
@@ -214,15 +445,23 @@ class IntegratedPoliticalAnalysis:
         self.attractors = self.memespace.find_political_attractors(self.positions, n_attractors=3)
         logger.info(f"Found {len(self.attractors)} political attractors")
         
-        # 8. Detect phase transitions
-        self.transitions = self.memespace.detect_political_phase_transitions(documents_df)
+        # 8. Detect enhanced phase transitions
+        self.transitions = self.detect_enhanced_phase_transitions(documents_df)
         logger.info(f"Detected {len(self.transitions)} major phase transitions")
         
         # 9. Calculate political fitness
         outcomes = {doc['author']: doc['outcome'] for _, doc in documents_df.iterrows()}
         fitness_scores = self.memespace.calculate_political_fitness(self.positions, outcomes)
         
-        # 10. Integrate results
+        # 10. Bootstrap validation
+        logger.info("Performing bootstrap validation...")
+        bootstrap_validation = self.bootstrap_genealogy_validation(documents_df, n_iterations=50)  # Reduced for performance
+        
+        # 11. Electoral correlation analysis
+        logger.info("Analyzing electoral correlations...")
+        electoral_analysis = self.analyze_electoral_correlations(documents_df)
+        
+        # 12. Integrate results
         self.integrated_results = self._integrate_genealogy_and_space()
         
         # Compile complete results
@@ -232,15 +471,19 @@ class IntegratedPoliticalAnalysis:
             'positions_4d': self.positions,
             'political_attractors': self.attractors,
             'grieta_evolution': grieta_evolution,
-            'phase_transitions': [t.to_dict() for t in self.transitions],
+            'phase_transitions': self.transitions,  # Already dict format from enhanced method
             'fitness_scores': fitness_scores,
             'integration_analysis': self.integrated_results,
+            'bootstrap_validation': bootstrap_validation,
+            'electoral_analysis': electoral_analysis,
             'metadata': {
                 'n_documents': len(documents_df),
                 'timespan': f"{documents_df['year'].min()}-{documents_df['year'].max()}",
                 'n_genealogies': len(self.genealogies),
                 'n_attractors': len(self.attractors),
-                'n_transitions': len(self.transitions)
+                'n_transitions': len(self.transitions),
+                'bootstrap_success_rate': bootstrap_validation['success_rate'],
+                'n_electoral_correlations': electoral_analysis['n_elections_analyzed']
             }
         }
         
@@ -531,6 +774,220 @@ class IntegratedPoliticalAnalysis:
             json.dump(results, f, indent=2, ensure_ascii=False)
         
         logger.info(f"Results exported to {filename}")
+    
+    def generate_enhanced_visualizations(self, results: Dict):
+        """
+        Generate enhanced visualizations including validation results.
+        """
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        from pathlib import Path
+        
+        # Create visualizations directory
+        viz_dir = Path('visualizations')
+        viz_dir.mkdir(exist_ok=True)
+        
+        plt.style.use('default')
+        sns.set_palette("husl")
+        
+        # 1. Enhanced 4D Political Space with Bootstrap Confidence
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
+        
+        positions = results['positions_4d']
+        genealogies = results['genealogies']
+        
+        # Get genealogy membership for color coding
+        genealogy_colors = {}
+        for i, (genealogy_name, nodes) in enumerate(genealogies.items()):
+            color = plt.cm.Set1(i / len(genealogies))
+            for node in nodes:
+                genealogy_colors[node['document_id']] = color
+        
+        # Extract coordinates for each dimension pair
+        coords_data = []
+        for doc_id, coords in positions.items():
+            genealogy_color = genealogy_colors.get(doc_id, 'gray')
+            coords_data.append({
+                'doc_id': doc_id,
+                'coords': coords,
+                'color': genealogy_color
+            })
+        
+        # Plot dimension pairs
+        dimension_names = ['Centralization', 'BA vs Interior', 'Elite vs Popular', 'Evolution vs Revolution']
+        
+        # Centralization vs BA/Interior
+        for item in coords_data:
+            ax1.scatter(item['coords'][0], item['coords'][1], c=[item['color']], alpha=0.7, s=60)
+        ax1.set_xlabel(f'{dimension_names[0]} →')
+        ax1.set_ylabel(f'{dimension_names[1]} →')
+        ax1.set_title('Political Space: Centralization vs Buenos Aires/Interior')
+        ax1.grid(True, alpha=0.3)
+        
+        # Elite vs Popular vs Evolution/Revolution  
+        for item in coords_data:
+            ax2.scatter(item['coords'][2], item['coords'][3], c=[item['color']], alpha=0.7, s=60)
+        ax2.set_xlabel(f'{dimension_names[2]} →')
+        ax2.set_ylabel(f'{dimension_names[3]} →')
+        ax2.set_title('Political Space: Elite/Popular vs Evolution/Revolution')
+        ax2.grid(True, alpha=0.3)
+        
+        # Bootstrap validation results
+        bootstrap_stats = results['bootstrap_validation']['genealogy_statistics']
+        movements = list(bootstrap_stats.keys())
+        means = [bootstrap_stats[m]['mean'] for m in movements]
+        ci_lower = [bootstrap_stats[m]['ci_lower'] for m in movements]
+        ci_upper = [bootstrap_stats[m]['ci_upper'] for m in movements]
+        
+        ax3.bar(range(len(movements)), means, yerr=[np.array(means) - ci_lower, np.array(ci_upper) - means], 
+                capsize=5, alpha=0.7, color='skyblue')
+        ax3.set_xticks(range(len(movements)))
+        ax3.set_xticklabels([m.split('_')[0] for m in movements], rotation=45)
+        ax3.set_ylabel('Genealogy Length')
+        ax3.set_title('Bootstrap Validation: Genealogy Lengths (95% CI)')
+        ax3.grid(True, alpha=0.3)
+        
+        # Phase transitions over time
+        transitions = results['phase_transitions']
+        if transitions:
+            years = [t['year'] for t in transitions]
+            magnitudes = [t['magnitude'] for t in transitions]
+            dominant_dims = [t['dominant_dimension'] for t in transitions]
+            
+            colors = [plt.cm.viridis(d/3) for d in dominant_dims]
+            ax4.scatter(years, magnitudes, c=colors, s=100, alpha=0.8)
+            
+            for i, (year, mag, dim) in enumerate(zip(years[:5], magnitudes[:5], dominant_dims[:5])):
+                ax4.annotate(f'{year}\n{dimension_names[dim][:8]}', 
+                           (year, mag), xytext=(5, 5), textcoords='offset points',
+                           fontsize=8, alpha=0.8)
+            
+            ax4.set_xlabel('Year')
+            ax4.set_ylabel('Transition Magnitude')
+            ax4.set_title('Major Phase Transitions Over Time')
+            ax4.grid(True, alpha=0.3)
+        
+        plt.tight_layout()
+        plt.savefig(viz_dir / 'enhanced_political_analysis.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        # 2. Electoral Correlations Heatmap
+        fig, ax = plt.subplots(1, 1, figsize=(10, 8))
+        
+        electoral_corrs = results['electoral_analysis']['electoral_correlations']
+        if electoral_corrs:
+            # Create correlation matrix
+            dimensions = list(electoral_corrs.keys())
+            corr_types = ['polarization_correlation', 'ba_interior_correlation']
+            
+            corr_matrix = np.zeros((len(dimensions), len(corr_types)))
+            for i, dim in enumerate(dimensions):
+                for j, corr_type in enumerate(corr_types):
+                    corr_matrix[i, j] = electoral_corrs[dim][corr_type]
+            
+            sns.heatmap(corr_matrix, 
+                       xticklabels=['Polarization', 'BA/Interior Gap'],
+                       yticklabels=[d.replace('_', ' ').title() for d in dimensions],
+                       annot=True, cmap='RdBu_r', center=0, 
+                       ax=ax, fmt='.2f')
+            ax.set_title('Electoral Correlations: Political Dimensions vs Electoral Outcomes')
+        
+        plt.tight_layout()
+        plt.savefig(viz_dir / 'electoral_correlations.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        logger.info(f"Enhanced visualizations saved to {viz_dir}")
+
+def main_expanded():
+    """
+    Run complete integrated political analysis with expanded corpus and validation.
+    """
+    print("="*80)
+    print("🏛️  EXPANDED POLITICAL ANALYSIS: ARGENTINE ANTAGONISMS 1810-2025")
+    print("="*80)
+    print("🔍 Enhanced analysis with 60+ documents and bootstrap validation")
+    print("📊 Addressing anomalies: coordinate fixing, genealogy validation, electoral correlation")
+    print("="*80)
+    
+    # Initialize analyzer
+    analyzer = IntegratedPoliticalAnalysis()
+    
+    # Run analysis
+    print("🚀 Starting enhanced analysis...")
+    results = analyzer.run_complete_analysis()
+    
+    # Display results summary
+    print("\n" + "="*80)
+    print("📋 ENHANCED ANALYSIS SUMMARY")
+    print("="*80)
+    print(f"📚 Analyzed {results['metadata']['n_documents']} political documents ({results['metadata']['timespan']})")
+    print(f"🌳 Traced {results['metadata']['n_genealogies']} political genealogies") 
+    print(f"📍 Identified {results['metadata']['n_attractors']} stable political attractors")
+    print(f"🔄 Detected {results['metadata']['n_transitions']} major phase transitions")
+    print(f"🎯 Bootstrap validation success rate: {results['metadata']['bootstrap_success_rate']:.2%}")
+    print(f"🗳️  Electoral correlations analyzed: {results['metadata']['n_electoral_correlations']} elections")
+    
+    # Display common ancestors
+    print("\n👨‍👩‍👧‍👦 COMMON POLITICAL ANCESTORS:")
+    for pair, ancestor in results['common_ancestors'].items():
+        print(f"   {pair}: {ancestor}")
+    
+    # Display attractors
+    print("\n📍 POLITICAL ATTRACTORS:")
+    for name, coords in results['political_attractors'].items():
+        print(f"   {name}: {[f'{c:.2f}' for c in coords]}")
+    
+    # Display bootstrap validation
+    print("\n🔄 BOOTSTRAP VALIDATION RESULTS:")
+    for movement, stats in results['bootstrap_validation']['genealogy_statistics'].items():
+        print(f"   {movement}: {stats['mean']:.1f} ± {stats['std']:.1f} generations")
+        print(f"     95% CI: [{stats['ci_lower']:.1f}, {stats['ci_upper']:.1f}]")
+    
+    ancestor_prob = results['bootstrap_validation']['common_ancestor_probability']
+    print(f"   Common ancestor detection rate: {ancestor_prob:.1%}")
+    
+    # Display phase transitions
+    print(f"\n🔄 MAJOR PHASE TRANSITIONS:")
+    for i, transition in enumerate(results['phase_transitions'][:5]):  # Top 5
+        year = transition['year']
+        magnitude = transition['magnitude']
+        dimension = ['Centralization', 'BA/Interior', 'Elite/Popular', 'Evolution/Revolution'][transition['dominant_dimension']]
+        print(f"   {i+1}. {year}: {dimension} shift (magnitude: {magnitude:.2f})")
+    
+    # Display electoral correlations
+    print(f"\n🗳️  ELECTORAL CORRELATIONS:")
+    for dim, corr_data in results['electoral_analysis']['electoral_correlations'].items():
+        pol_corr = corr_data['polarization_correlation']
+        ba_corr = corr_data['ba_interior_correlation']
+        print(f"   {dim}: polarization={pol_corr:+.2f}, BA/Interior gap={ba_corr:+.2f}")
+    
+    # Display grieta evolution
+    grieta_current = results['grieta_evolution'][-1][1] if results['grieta_evolution'] else 0
+    grieta_start = results['grieta_evolution'][0][1] if results['grieta_evolution'] else 0
+    print(f"\n📈 GRIETA EVOLUTION:")
+    print(f"   Start ({results['grieta_evolution'][0][0]}): {grieta_start:.3f}")
+    print(f"   Current ({results['grieta_evolution'][-1][0]}): {grieta_current:.3f}")
+    print(f"   Change: {((grieta_current - grieta_start) / grieta_start * 100):+.1f}%")
+    
+    # Integration results
+    if 'genealogy_space_correlation' in results['integration_analysis']:
+        corr = results['integration_analysis']['genealogy_space_correlation']['correlation']
+        print(f"\n🔗 INTEGRATION ANALYSIS:")
+        print(f"   Genealogy-Space Correlation: {corr:.3f}")
+        print(f"   Interpretation: {results['integration_analysis']['genealogy_space_correlation']['interpretation']}")
+    
+    # Generate visualizations
+    print("\n📊 Generating enhanced visualizations...")
+    analyzer.generate_enhanced_visualizations(results)
+    
+    # Export results
+    print("💾 Exporting enhanced results...")
+    analyzer.export_results(results, filename='enhanced_political_analysis_results.json')
+    
+    print("\n✅ Enhanced analysis complete! Check 'enhanced_political_analysis_results.json' and 'visualizations/' folder")
+    print("="*80)
+    
+    return results
 
 def main():
     """
@@ -593,4 +1050,5 @@ def main():
     return results
 
 if __name__ == "__main__":
-    main()
+    # Run expanded analysis by default
+    main_expanded()
