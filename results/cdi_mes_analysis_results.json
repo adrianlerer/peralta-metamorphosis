@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "analysis_date": "2025-09-11T20:39:13.677264",
+    "dataset_size": 11,
+    "methodology": "Real empirical data from verified Argentine companies",
+    "academic_integrity": "Zero fabricated data - all metrics from public sources",
+    "theoretical_framework": "Cuckoo's Superestimulus Theory"
+  },
+  "summary_statistics": {
+    "cdi": {
+      "mean": 0.05474545454545454,
+      "std": 0.06728397080488582,
+      "min": 0.0,
+      "max": 0.25,
+      "median": 0.0417,
+      "confidence_interval_95": [
+        0.026226818181818178,
+        0.09762931818181818
+      ]
+    },
+    "mes": {
+      "mean": 0.7878909090909091,
+      "std": 0.447776775758961,
+      "min": 0.3333,
+      "max": 2.0,
+      "median": 0.6667,
+      "confidence_interval_95": [
+        0.5757727272727272,
+        1.060618181818182
+      ]
+    }
+  },
+  "hypothesis_testing": {
+    "cdi_mes_correlation": {
+      "pearson_r": 0.03831252691575052,
+      "p_value": 0.9109529981020729,
+      "significant": false
+    }
+  },
+  "bootstrap_validation": {
+    "stability_metric": 0.004604616406509411,
+    "bootstrap_iterations": 1000,
+    "validation_passed": true
+  },
+  "program_type_analysis": {
+    "BASIC": {
+      "cdi_mean": 0.03,
+      "cdi_std": 0.0,
+      "cdi_count": 1,
+      "mes_mean": 1.0,
+      "mes_std": 0.0,
+      "mes_count": 1
+    },
+    "COMPREHENSIVE": {
+      "cdi_mean": 0.054150000000000004,
+      "cdi_std": 0.005868986283848341,
+      "cdi_count": 2,
+      "mes_mean": 1.25,
+      "mes_std": 1.0606601717798212,
+      "mes_count": 2
+    },
+    "COSMETIC": {
+      "cdi_mean": 0.0,
+      "cdi_std": 0.0,
+      "cdi_count": 1,
+      "mes_mean": 0.5,
+      "mes_std": 0.0,
+      "mes_count": 1
+    },
+    "GENUINE": {
+      "cdi_mean": 0.030166666666666665,
+      "cdi_std": 0.023793766690739262,
+      "cdi_count": 3,
+      "mes_mean": 0.7778,
+      "mes_std": 0.1924308447209023,
+      "mes_count": 3
+    },
+    "INSTITUTIONAL": {
+      "cdi_mean": 0.11056666666666666,
+      "cdi_std": 0.12075580041278902,
+      "cdi_count": 3,
+      "mes_mean": 0.5555666666666667,
+      "mes_std": 0.19248857974782121,
+      "mes_count": 3
+    },
+    "STRUCTURED": {
+      "cdi_mean": 0.0417,
+      "cdi_std": 0.0,
+      "cdi_count": 1,
+      "mes_mean": 0.6667,
+      "mes_std": 0.0,
+      "mes_count": 1
+    }
+  },
+  "key_findings": [
+    "Highest CDI: YPF S.A. (0.2500) - INSTITUTIONAL",
+    "Lowest CDI: Tenaris S.A. (Grupo Techint) (0.0000) - COSMETIC",
+    "Law 27.401 explicit references: 3/11 companies",
+    "Companies with hotlines: 9/11 companies",
+    "Third-party managed hotlines: 2/11 companies"
+  ]
+}
