@@ -108,6 +108,11 @@ class PoliticalVectorRAG:
     
     def __init__(self, use_openai_embeddings: bool = False):
         self.use_openai_embeddings = use_openai_embeddings and HAS_OPENAI
+        
+        # Enhanced OpenAI configuration  
+        if self.use_openai_embeddings:
+            self.embedding_model = "text-embedding-3-small"
+            self.embedding_batch_size = 50  # Reduced for rate limits
         self.chunker = PoliticalDocumentChunker()
         self.chunks = []
         self.embeddings = None
