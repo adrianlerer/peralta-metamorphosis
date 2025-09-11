@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "analysis_date": "2025-09-11T22:01:55.309354",
+    "dataset_size": 32,
+    "total_actors": 32,
+    "countries_represented": 19,
+    "eras_covered": [
+      "Historical",
+      "Contemporary"
+    ]
+  },
+  "lopez_rega_milei_analysis": {
+    "overall_similarity": 0.7222222222222222,
+    "dimension_details": {
+      "ideology_economic": {
+        "lopez_rega_value": 0.2,
+        "milei_value": 0.95,
+        "distance": 0.75,
+        "similarity": 0.25
+      },
+      "ideology_social": {
+        "lopez_rega_value": 0.8,
+        "milei_value": 0.6,
+        "distance": 0.20000000000000007,
+        "similarity": 0.7999999999999999
+      },
+      "leadership_messianic": {
+        "lopez_rega_value": 0.9,
+        "milei_value": 0.85,
+        "distance": 0.050000000000000044,
+        "similarity": 0.95
+      },
+      "leadership_charismatic": {
+        "lopez_rega_value": 0.7,
+        "milei_value": 0.9,
+        "distance": 0.20000000000000007,
+        "similarity": 0.7999999999999999
+      },
+      "anti_establishment": {
+        "lopez_rega_value": 0.8,
+        "milei_value": 0.95,
+        "distance": 0.1499999999999999,
+        "similarity": 0.8500000000000001
+      },
+      "symbolic_mystical": {
+        "lopez_rega_value": 0.95,
+        "milei_value": 0.8,
+        "distance": 0.1499999999999999,
+        "similarity": 0.8500000000000001
+      },
+      "populist_appeal": {
+        "lopez_rega_value": 0.7,
+        "milei_value": 0.9,
+        "distance": 0.20000000000000007,
+        "similarity": 0.7999999999999999
+      },
+      "authoritarian": {
+        "lopez_rega_value": 0.85,
+        "milei_value": 0.7,
+        "distance": 0.15000000000000002,
+        "similarity": 0.85
+      },
+      "media_savvy": {
+        "lopez_rega_value": 0.3,
+        "milei_value": 0.95,
+        "distance": 0.6499999999999999,
+        "similarity": 0.3500000000000001
+      }
+    },
+    "breakdown_by_category": {
+      "ideological_alignment": {
+        "individual_scores": {
+          "economic": 0.25,
+          "social": 0.7999999999999999
+        },
+        "category_mean": 0.5249999999999999
+      },
+      "leadership_style": {
+        "individual_scores": {
+          "messianic": 0.95,
+          "charismatic": 0.7999999999999999
+        },
+        "category_mean": 0.875
+      },
+      "anti_establishment_rhetoric": {
+        "individual_scores": {
+          "anti_establishment": 0.8500000000000001,
+          "populist_appeal": 0.7999999999999999
+        },
+        "category_mean": 0.825
+      },
+      "symbolic_mystical_elements": {
+        "individual_scores": {
+          "symbolic_mystical": 0.8500000000000001,
+          "media_savvy": 0.3500000000000001
+        },
+        "category_mean": 0.6000000000000001
+      }
+    }
+  },
+  "bootstrap_validation": {
+    "iterations": 1000,
+    "metrics_validated": [
+      "lopez_rega_similarity",
+      "messianic_total",
+      "populist_total",
+      "charisma_total",
+      "authoritarian",
+      "symbolic_mystical"
+    ],
+    "stability_scores": {
+      "lopez_rega_similarity": 0.0011595760198374078,
+      "messianic_total": 8.425504229010643e-05,
+      "populist_total": 0.0019672514619884563,
+      "charisma_total": 9.205983889539444e-05,
+      "authoritarian": 0.0011321656050956748,
+      "symbolic_mystical": 0.0010490797546012886
+    },
+    "confidence_intervals": {
+      "lopez_rega_similarity": [
+        0.6732960069444445,
+        0.7527100694444444
+      ],
+      "messianic_total": [
+        0.39452734375,
+        0.567046875
+      ],
+      "populist_total": [
+        0.60154296875,
+        0.73515625
+      ],
+      "charisma_total": [
+        0.6249609375,
+        0.7289062500000001
+      ],
+      "authoritarian": [
+        0.5,
+        0.6728671875
+      ],
+      "symbolic_mystical": [
+        0.30781250000000004,
+        0.5137578125000001
+      ]
+    }
+  },
+  "network_analysis": {
+    "nodes": 32,
+    "edges": 321,
+    "density": 0.6471774193548387,
+    "clustering": 0.8196299019252984,
+    "connected_components": 1
+  },
+  "top_similar_actors": [
+    {
+      "name": "José López Rega",
+      "lopez_rega_similarity": 1.0,
+      "country": "Argentina",
+      "era": "Historical"
+    },
+    {
+      "name": "Ayatollah Khomeini",
+      "lopez_rega_similarity": 0.9055555555555556,
+      "country": "Iran",
+      "era": "Historical"
+    },
+    {
+      "name": "Adolf Hitler",
+      "lopez_rega_similarity": 0.8122222222222222,
+      "country": "Germany",
+      "era": "Historical"
+    },
+    {
+      "name": "Benito Mussolini",
+      "lopez_rega_similarity": 0.8111111111111112,
+      "country": "Italy",
+      "era": "Historical"
+    },
+    {
+      "name": "Julius Evola",
+      "lopez_rega_similarity": 0.8111111111111111,
+      "country": "Italy",
+      "era": "Historical"
+    },
+    {
+      "name": "Evo Morales",
+      "lopez_rega_similarity": 0.788888888888889,
+      "country": "Bolivia",
+      "era": "Contemporary"
+    },
+    {
+      "name": "Recep Tayyip Erdoğan",
+      "lopez_rega_similarity": 0.7888888888888889,
+      "country": "Turkey",
+      "era": "Contemporary"
+    },
+    {
+      "name": "Rasputin",
+      "lopez_rega_similarity": 0.7844444444444445,
+      "country": "Russia",
+      "era": "Historical"
+    },
+    {
+      "name": "Viktor Orbán",
+      "lopez_rega_similarity": 0.7833333333333334,
+      "country": "Hungary",
+      "era": "Contemporary"
+    },
+    {
+      "name": "Daniel Ortega",
+      "lopez_rega_similarity": 0.7777777777777778,
+      "country": "Nicaragua",
+      "era": "Contemporary"
+    }
+  ],
+  "dimensional_statistics": {
+    "mean_scores": {
+      "leadership_messianic": 0.553125,
+      "leadership_charismatic": 0.6906249999999999,
+      "anti_establishment": 0.6671875,
+      "symbolic_mystical": 0.4075,
+      "populist_appeal": 0.66875,
+      "authoritarian": 0.58875
+    },
+    "correlations": {
+      "lopez_rega_similarity": {
+        "lopez_rega_similarity": 1.0,
+        "leadership_messianic": 0.8400132606448063,
+        "symbolic_mystical": 0.7746629929639539,
+        "anti_establishment": 0.6753453773240373,
+        "populist_appeal": 0.4032994861345288
+      },
+      "leadership_messianic": {
+        "lopez_rega_similarity": 0.8400132606448063,
+        "leadership_messianic": 1.0,
+        "symbolic_mystical": 0.8881613911467184,
+        "anti_establishment": 0.5886866708771925,
+        "populist_appeal": 0.36002817174977375
+      },
+      "symbolic_mystical": {
+        "lopez_rega_similarity": 0.7746629929639539,
+        "leadership_messianic": 0.8881613911467184,
+        "symbolic_mystical": 1.0,
+        "anti_establishment": 0.428448477899828,
+        "populist_appeal": 0.08425388092922848
+      },
+      "anti_establishment": {
+        "lopez_rega_similarity": 0.6753453773240373,
+        "leadership_messianic": 0.5886866708771925,
+        "symbolic_mystical": 0.428448477899828,
+        "anti_establishment": 1.0,
+        "populist_appeal": 0.6976336465973481
+      },
+      "populist_appeal": {
+        "lopez_rega_similarity": 0.4032994861345288,
+        "leadership_messianic": 0.36002817174977375,
+        "symbolic_mystical": 0.08425388092922848,
+        "anti_establishment": 0.6976336465973481,
+        "populist_appeal": 1.0
+      }
+    }
+  }
+}
