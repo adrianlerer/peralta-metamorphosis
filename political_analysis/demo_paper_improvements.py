@@ -163,7 +163,7 @@ def demonstrate_paper_improvements():
         if tests:
             example = tests[0]
             print(f"     Example: {example['test_question']}")
-            print(f"     Tests: {example['correct_answer']} vs {example.get('altered_answer', 'N/A')}")
+            print(f"     Tests: {example.get('correct_answer', 'N/A')} vs {example.get('altered_answer', 'N/A')}")
     
     # Performance summary
     print("\n📊 7. PERFORMANCE SUMMARY")
