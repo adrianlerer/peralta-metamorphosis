@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "analysis_date": "2025-09-12T13:46:27.054447",
+    "project_name": "Proyecto Gollan 2130-D-2025",
+    "framework": "Peralta-Metamorphosis Political Analysis",
+    "constitutional_basis": "Artículo 19 Constitución Nacional Argentina",
+    "methodology": "Multi-dimensional Political Space Analysis + Constitutional Review"
+  },
+  "executive_summary": {
+    "overall_assessment": "INCONSTITUCIONAL Y CONTRAPRODUCENTE",
+    "constitutional_compatibility": 0.1875,
+    "governance_score": 0.21250000000000002,
+    "innovation_impact": -0.41249999999999987,
+    "recommendation": "RECHAZO INTEGRAL - Requiere reescritura completa"
+  },
+  "constitutional_analysis": {
+    "constitutional_compatibility": 0.1875,
+    "art19_violations": {
+      "principio_legalidad": {
+        "score": 0.8,
+        "descripcion": "Definiciones vagas y discrecionales (Art. 3)",
+        "ejemplos": [
+          "Sistema de IA con objetivos implícitos",
+          "Riesgo inaceptable subjetivo"
+        ],
+        "impacto": "Permite arbitrariedad administrativa"
+      },
+      "esfera_privada": {
+        "score": 0.7,
+        "descripcion": "Regulación de actividades privadas sin daño a terceros",
+        "ejemplos": [
+          "Evaluación de comportamiento social",
+          "Control de procesamiento interno"
+        ],
+        "impacto": "Invade zona de no interferencia estatal"
+      },
+      "inversion_carga_prueba": {
+        "score": 0.9,
+        "descripcion": "Operadores deben demostrar cumplimiento (Art. 14.d)",
+        "ejemplos": [
+          "Presunción de culpabilidad",
+          "Prueba diabólica"
+        ],
+        "impacto": "Viola principio de inocencia"
+      },
+      "exceso_regulatorio": {
+        "score": 0.85,
+        "descripcion": "Estado se arroga competencias no delegadas",
+        "ejemplos": [
+          "AGC con poderes omnímodos",
+          "Control transversal sectores"
+        ],
+        "impacto": "Excede límites constitucionales del poder estatal"
+      }
+    },
+    "overall_assessment": "INCONSTITUCIONAL"
+  },
+  "political_comparison": {
+    "most_similar_actor": "Alberto Fernández",
+    "similarity_score": 0.8777777777777778,
+    "political_positioning": "Tecnocracia autoritaria con tendencias regulatorias excesivas"
+  },
+  "governance_analysis": {
+    "governance_score": 0.21250000000000002,
+    "detailed_analysis": {
+      "estructura_poder": {
+        "centralizacion": 0.9,
+        "politizacion": 0.8,
+        "tecnocratizacion": 0.7,
+        "federalismo": 0.2
+      },
+      "competencias": {
+        "exclusividad": 0.9,
+        "discrecionalidad": 0.85,
+        "transversalidad": 0.9,
+        "enforcement": 0.8
+      },
+      "financiamiento": {
+        "autonomia": 0.7,
+        "incentivos_perversos": 0.8,
+        "transparencia": 0.3,
+        "sostenibilidad": 0.6
+      },
+      "riesgos_democraticos": {
+        "capture_regulatorio": 0.8,
+        "deficit_legitimidad": 0.7,
+        "concentracion_poder": 0.9,
+        "accountability": 0.3
+      }
+    },
+    "assessment": "AUTORITARIO"
+  },
+  "innovation_analysis": {
+    "net_innovation_impact": -0.41249999999999987,
+    "detailed_analysis": {
+      "barreras_entrada": {
+        "pymes": 0.9,
+        "startups": 0.95,
+        "grandes_empresas": 0.3,
+        "investigadores": 0.7
+      },
+      "costos_regulatorios": {
+        "compliance": 0.8,
+        "certificacion": 0.85,
+        "auditoria": 0.7,
+        "legal": 0.9
+      },
+      "efectos_dinamicos": {
+        "chilling_effect": 0.8,
+        "fuga_talento": 0.7,
+        "consolidacion": 0.8,
+        "rezago_tecnologico": 0.75
+      },
+      "beneficios_esperados": {
+        "proteccion_consumidor": 0.4,
+        "transparencia": 0.3,
+        "competencia_leal": 0.2,
+        "confianza_publica": 0.5
+      }
+    },
+    "assessment": "NEGATIVO"
+  },
+  "recommendations": {
+    "constitucionales": {
+      "urgentes": [
+        "Precisar definiciones del Art. 3 eliminando conceptos discrecionales",
+        "Limitar competencias AGC a enforcement ex-post de daños reales",
+        "Establecer test de proporcionalidad obligatorio para toda regulación",
+        "Requerir orden judicial para sistemas de vigilancia estatal"
+      ],
+      "importantes": [
+        "Transformar AGC en organismo sectorial, no transversal",
+        "Eliminar financiamiento mediante tributación directa (conflicto de interés)",
+        "Fortalecer controles democráticos y accountability",
+        "Establecer sunset clauses para revisión periódica"
+      ],
+      "deseables": [
+        "Crear ombudsman de IA independiente del Ejecutivo",
+        "Implementar consulta pública obligatoria para nuevas regulaciones",
+        "Establecer mecanismos de revisión judicial expedita"
+      ]
+    },
+    "innovacion": {
+      "criticas": [
+        "Crear safe harbor para experimentos de investigación académica",
+        "Eximir PyMEs de regulación hasta alcanzar escala crítica",
+        "Establecer sandbox permanente con enforcement reducido",
+        "Priorizar autorregulación sectorial sobre control estatal"
+      ],
+      "importantes": [
+        "Crear incentivos fiscales para I+D en IA ética",
+        "Establecer fast-track para certificación de startups",
+        "Promover estándares internacionales vs. regulación local",
+        "Fomentar arbitraje privado para disputas de IA"
+      ]
+    },
+    "alternativas_sistemicas": [
+      "Modelo de responsabilidad civil ampliada (vs. regulación ex-ante)",
+      "Sistema de certificación voluntaria con incentivos de mercado",
+      "Autorregulación sectorial supervisada judicialmente",
+      "Marco minimalista enfocado solo en daños objetivos a terceros"
+    ]
+  },
+  "political_dimensions": {
+    "centralization_autonomy": 0.85,
+    "port_interior": 0.75,
+    "elite_popular": 0.65,
+    "continuity_rupture": 0.45
+  },
+  "key_findings": [
+    "El proyecto viola sistemáticamente el Art. 19 CN (score: 0.19)",
+    "Presenta alta centralización autoritaria (score: 0.85)",
+    "Impacto muy negativo en innovación (score: -0.41)",
+    "Estructura de gobernanza problemática (score: 0.21)",
+    "Requiere reescritura integral para compatibilidad constitucional"
+  ]
+}
