@@ -1,0 +1,212 @@
+{
+  "sources": [
+    {
+      "source_id": "art19_cn",
+      "source_type": "constitutional",
+      "influence_strength": 0.46596316889700645,
+      "textual_similarity": 0.059322033898305086,
+      "conceptual_overlap": [
+        "autoridad_aplicacion"
+      ],
+      "process_orientation": 0.5555555555555556,
+      "ends_orientation": 0.2777777777777778,
+      "hybridization_score": 0.24074074074074076,
+      "political_distance": 0.447213595499958,
+      "temporal_proximity": 0.0001841057936675792
+    },
+    {
+      "source_id": "ley_datos_personales",
+      "source_type": "legislative",
+      "influence_strength": 0.4096504796860191,
+      "textual_similarity": 0.07,
+      "conceptual_overlap": [
+        "registro_obligatorio",
+        "privacidad"
+      ],
+      "process_orientation": 0.0,
+      "ends_orientation": 1.0,
+      "hybridization_score": 0.0,
+      "political_distance": 0.223606797749979,
+      "temporal_proximity": 0.2865047968601901
+    },
+    {
+      "source_id": "ley_defensa_consumidor",
+      "source_type": "legislative",
+      "influence_strength": 0.3861302458588715,
+      "textual_similarity": 0.019801980198019802,
+      "conceptual_overlap": [
+        "transparencia",
+        "derechos_ciudadanos"
+      ],
+      "process_orientation": 0.0,
+      "ends_orientation": 1.0,
+      "hybridization_score": 0.0,
+      "political_distance": 0.14142135623730953,
+      "temporal_proximity": 0.20189651799465538
+    },
+    {
+      "source_id": "ai_act_eu",
+      "source_type": "international",
+      "influence_strength": 0.33425469876830444,
+      "textual_similarity": 0.14285714285714285,
+      "conceptual_overlap": [
+        "transparencia",
+        "sistemas_alto_riesgo",
+        "supervision"
+      ],
+      "process_orientation": 0.0,
+      "ends_orientation": 0.7692307692307693,
+      "hybridization_score": 0.09763313609467456,
+      "political_distance": 0.10000000000000005,
+      "temporal_proximity": 0.951229424500714
+    },
+    {
+      "source_id": "gdpr_eu",
+      "source_type": "international",
+      "influence_strength": 0.2918575780450159,
+      "textual_similarity": 0.08823529411764706,
+      "conceptual_overlap": [
+        "registro_obligatorio",
+        "transparencia",
+        "privacidad",
+        "derechos_ciudadanos",
+        "supervision"
+      ],
+      "process_orientation": 0.0,
+      "ends_orientation": 1.0,
+      "hybridization_score": 0.0,
+      "political_distance": 0.158113883008419,
+      "temporal_proximity": 0.7046880897187134
+    },
+    {
+      "source_id": "sabsay_const",
+      "source_type": "doctrinal",
+      "influence_strength": 0.24661794238481044,
+      "textual_similarity": 0.02912621359223301,
+      "conceptual_overlap": [
+        "derechos_ciudadanos"
+      ],
+      "process_orientation": 0.0,
+      "ends_orientation": 1.0,
+      "hybridization_score": 0.0,
+      "political_distance": 0.41231056256176596,
+      "temporal_proximity": 0.7788007830714049
+    }
+  ],
+  "hybridization_analysis": {
+    "proyecto_gollan_hybridization": {
+      "weighted_hybridization_score": 0.06784371476229596,
+      "weighted_process_orientation": 0.12127972202180613,
+      "weighted_ends_orientation": 0.8061983266103784,
+      "hybridization_class": "ORIENTADO_FINES",
+      "description": "Enfoque predominantemente sustantivo y valorativo"
+    },
+    "sources_classification": {
+      "high_hybridization": [],
+      "medium_hybridization": [],
+      "low_hybridization": [
+        "art19_cn",
+        "ley_datos_personales",
+        "ley_defensa_consumidor",
+        "ai_act_eu",
+        "gdpr_eu",
+        "sabsay_const"
+      ]
+    },
+    "type_analysis": {
+      "constitutional": {
+        "count": 1,
+        "avg_hybridization": 0.24074074074074076,
+        "avg_process_orientation": 0.5555555555555556,
+        "avg_ends_orientation": 0.2777777777777778,
+        "sources": [
+          "art19_cn"
+        ]
+      },
+      "legislative": {
+        "count": 2,
+        "avg_hybridization": 0.0,
+        "avg_process_orientation": 0.0,
+        "avg_ends_orientation": 1.0,
+        "sources": [
+          "ley_datos_personales",
+          "ley_defensa_consumidor"
+        ]
+      },
+      "international": {
+        "count": 2,
+        "avg_hybridization": 0.04881656804733728,
+        "avg_process_orientation": 0.0,
+        "avg_ends_orientation": 0.8846153846153846,
+        "sources": [
+          "ai_act_eu",
+          "gdpr_eu"
+        ]
+      },
+      "doctrinal": {
+        "count": 1,
+        "avg_hybridization": 0.0,
+        "avg_process_orientation": 0.0,
+        "avg_ends_orientation": 1.0,
+        "sources": [
+          "sabsay_const"
+        ]
+      }
+    },
+    "top_influences": [
+      {
+        "source_id": "art19_cn",
+        "influence_strength": 0.46596316889700645,
+        "hybridization_score": 0.24074074074074076,
+        "conceptual_overlap": [
+          "autoridad_aplicacion"
+        ]
+      },
+      {
+        "source_id": "ley_datos_personales",
+        "influence_strength": 0.4096504796860191,
+        "hybridization_score": 0.0,
+        "conceptual_overlap": [
+          "registro_obligatorio",
+          "privacidad"
+        ]
+      },
+      {
+        "source_id": "ley_defensa_consumidor",
+        "influence_strength": 0.3861302458588715,
+        "hybridization_score": 0.0,
+        "conceptual_overlap": [
+          "transparencia",
+          "derechos_ciudadanos"
+        ]
+      },
+      {
+        "source_id": "ai_act_eu",
+        "influence_strength": 0.33425469876830444,
+        "hybridization_score": 0.09763313609467456,
+        "conceptual_overlap": [
+          "transparencia",
+          "sistemas_alto_riesgo",
+          "supervision"
+        ]
+      },
+      {
+        "source_id": "gdpr_eu",
+        "influence_strength": 0.2918575780450159,
+        "hybridization_score": 0.0,
+        "conceptual_overlap": [
+          "registro_obligatorio",
+          "transparencia",
+          "privacidad",
+          "derechos_ciudadanos",
+          "supervision"
+        ]
+      }
+    ]
+  },
+  "analysis_metadata": {
+    "timestamp": "2025-09-12T17:13:08.263098",
+    "total_sources": 6,
+    "framework_version": "2.0"
+  }
+}
