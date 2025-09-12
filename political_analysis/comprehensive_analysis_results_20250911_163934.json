@@ -1,0 +1,1247 @@
+{
+  "execution_timestamp": "2025-09-11T16:39:33.831093",
+  "system_performance": {
+    "corpus_setup_time": 0.07352375984191895,
+    "system_stats": {
+      "setup_time_total": 0.07329607009887695,
+      "vector_rag_setup_time": 0.01931142807006836,
+      "graph_rag_setup_time": 0.03863668441772461,
+      "knowledge_test_setup_time": 0.013511896133422852,
+      "corpus_documents": 40,
+      "vector_chunks": 40,
+      "graph_entities": 6,
+      "graph_relationships": 2,
+      "communities": 2,
+      "knowledge_shift_tests": 4,
+      "vector_indexed_chunks": 40,
+      "vector_embedding_type": "TF-IDF",
+      "total_entities": 6,
+      "entities_by_type": {
+        "concept": 4,
+        "law": 1,
+        "event": 1
+      },
+      "total_relationships": 2,
+      "graph_nodes": 6,
+      "graph_edges": 2,
+      "is_indexed": true,
+      "router_type": "ML-based",
+      "system_ready": true
+    },
+    "total_queries_executed": 37,
+    "final_statistics": {
+      "setup_time_total": 0.07329607009887695,
+      "vector_rag_setup_time": 0.01931142807006836,
+      "graph_rag_setup_time": 0.03863668441772461,
+      "knowledge_test_setup_time": 0.013511896133422852,
+      "corpus_documents": 40,
+      "vector_chunks": 40,
+      "graph_entities": 6,
+      "graph_relationships": 2,
+      "communities": 2,
+      "knowledge_shift_tests": 4,
+      "vector_indexed_chunks": 40,
+      "vector_embedding_type": "TF-IDF",
+      "total_entities": 6,
+      "entities_by_type": {
+        "concept": 4,
+        "law": 1,
+        "event": 1
+      },
+      "total_relationships": 2,
+      "graph_nodes": 6,
+      "graph_edges": 2,
+      "is_indexed": true,
+      "router_type": "ML-based",
+      "system_ready": true
+    }
+  },
+  "antagonisms_analysis": {
+    "¿Cuáles son los principales antagonismos políticos entre Cristina Kirchner y Mauricio Macri?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.115) Graph analysis: Global analysis of '¿Cuáles son los principales antagonismos políticos entre Cristina Kirchner y Mauricio Macri?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.6079426820336272,
+        "reasoning": "Classified as thematic query (confidence: 60.79%). Multiple entities mentioned: kirchner, cristina, macri. Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "thematic",
+      "response_time": 0.0049479007720947266,
+      "confidence": "high",
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.11476120874534786,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Javier Gerardo Milei (2024)",
+          "similarity_score": 0.07233602912920362,
+          "document_id": "Milei_Motosierra_2024"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Cristina Fernández de Kirchner (2020)",
+          "similarity_score": 0.0491826150575318,
+          "document_id": "CFK_Vicepresidenta_2020"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Cómo se manifiesta el conflicto entre peronismo y anti-peronismo en la política argentina?": {
+      "answer": "No answer available",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "graph_rag_global",
+        "confidence": 0.8435300573814226,
+        "reasoning": "Classified as thematic query (confidence: 84.35%). Using Graph-RAG global for thematic synthesis."
+      },
+      "query_type": "thematic",
+      "response_time": 0.002287626266479492,
+      "confidence": "medium",
+      "provenance": []
+    },
+    "¿Qué diferencias ideológicas fundamentales existen entre La Cámpora y PRO?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.190) Graph analysis: Global analysis of '¿Qué diferencias ideológicas fundamentales existen entre La Cámpora y PRO?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "comparative",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.7741737192414253,
+        "reasoning": "Classified as comparative query (confidence: 77.42%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "comparative",
+      "response_time": 0.004145622253417969,
+      "confidence": "high",
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.18977279916355,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Eva Duarte de Perón (1947)",
+          "similarity_score": 0.054052285776040994,
+          "document_id": "Eva_Peron_Discurso_Sufragio_1947"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Grupo de Oficiales Unidos (1943)",
+          "similarity_score": 0.05141152899759988,
+          "document_id": "GOU_Proclama_1943"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Cuál es la naturaleza del antagonismo entre populismo y liberalismo en Argentina?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.181) Graph analysis: Global analysis of '¿Cuál es la naturaleza del antagonismo entre populismo y liberalismo en Argentina?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.4042258785591056,
+        "reasoning": "Classified as genealogical query (confidence: 40.42%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "genealogical",
+      "response_time": 0.004353761672973633,
+      "confidence": "high",
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.18067222101943822,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Domingo Faustino Sarmiento (1868)",
+          "similarity_score": 0.12821001530606435,
+          "document_id": "Sarmiento_Inaugural_1868"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.10754936416860753,
+          "document_id": "Yrigoyen_Primera_Inaugural_1916"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Cómo se expresan los conflictos entre kirchnerismo y macrismo en políticas concretas?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.178) Graph analysis: Global analysis of '¿Cómo se expresan los conflictos entre kirchnerismo y macrismo en políticas concretas?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.3877626355870177,
+        "reasoning": "Classified as genealogical query (confidence: 38.78%). Multiple entities mentioned: kirchner, macri. Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "genealogical",
+      "response_time": 0.003805875778198242,
+      "confidence": "high",
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.17842134786396338,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Raúl Alfonsín (1983)",
+          "similarity_score": 0.07929615485944341,
+          "document_id": "Alfonsin_Preambulo_1983"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Fernando de la Rúa (1999)",
+          "similarity_score": 0.07216375662462438,
+          "document_id": "De_la_Rua_Alianza_1999"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Qué rol juegan los antagonismos históricos en la polarización política actual?": {
+      "answer": "No answer available",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "graph_rag_global",
+        "confidence": 0.7793819432175138,
+        "reasoning": "Classified as thematic query (confidence: 77.94%). Using Graph-RAG global for thematic synthesis."
+      },
+      "query_type": "thematic",
+      "response_time": 0.0021915435791015625,
+      "confidence": "medium",
+      "provenance": []
+    },
+    "¿Cuáles son los puntos de fricción entre el modelo económico peronista y el liberal?": {
+      "answer": "Vector analysis: Found relevant information from Eduardo Duhalde (2002) (similarity: 0.165) Graph analysis: Global analysis of '¿Cuáles son los puntos de fricción entre el modelo económico peronista y el liberal?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.42294876842399276,
+        "reasoning": "Classified as thematic query (confidence: 42.29%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "thematic",
+      "response_time": 0.0036394596099853516,
+      "confidence": "high",
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Eduardo Duhalde (2002)",
+          "similarity_score": 0.1648724272576837,
+          "document_id": "Duhalde_Emergencia_2002"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.08682856342484246,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Javier Gerardo Milei (2024)",
+          "similarity_score": 0.052142308302749386,
+          "document_id": "Milei_Motosierra_2024"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Cómo se manifiestan los antagonismos en el discurso político mediático argentino?": {
+      "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.112) Graph analysis: Global analysis of '¿Cómo se manifiestan los antagonismos en el discurso político mediático argentino?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.341887603912728,
+        "reasoning": "Classified as thematic query (confidence: 34.19%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "thematic",
+      "response_time": 0.003507852554321289,
+      "confidence": "high",
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Raúl Alfonsín (1983)",
+          "similarity_score": 0.11238613179695109,
+          "document_id": "Alfonsin_Preambulo_1983"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.09698442463157866,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Javier Gerardo Milei (2024)",
+          "similarity_score": 0.06642548696160394,
+          "document_id": "Milei_Motosierra_2024"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    }
+  },
+  "genealogical_tracings": {
+    "Trace la genealogía política de Cristina Fernández de Kirchner desde sus orígenes hasta la actualidad": {
+      "genealogy": "Vector analysis: Found relevant information from Mariano Moreno (1810) (similarity: 0.157) Graph analysis: Global analysis of 'Trace la genealogía política de Cristina Fernández de Kirchner desde sus orígenes hasta la actualidad' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "comparative",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.24627667101231346,
+        "reasoning": "Classified as comparative query (confidence: 24.63%). Multiple entities mentioned: kirchner, cristina. Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "comparative",
+      "confidence": "high",
+      "tracing_time": 0.003998994827270508,
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Mariano Moreno (1810)",
+          "similarity_score": 0.156781853859698,
+          "document_id": "Moreno_Plan_Operaciones_1810"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Néstor Carlos Kirchner (2003)",
+          "similarity_score": 0.09395201155045,
+          "document_id": "Nestor_Kirchner_Inaugural_2003"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Eva Duarte de Perón (1947)",
+          "similarity_score": 0.09036993070396387,
+          "document_id": "Eva_Peron_Discurso_Sufragio_1947"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 1
+        }
+      ]
+    },
+    "¿Cuál es la genealogía política de Mauricio Macri y sus influencias formativas?": {
+      "genealogy": "No genealogy available",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "graph_rag_local",
+        "confidence": 0.7857393501141705,
+        "reasoning": "Classified as genealogical query (confidence: 78.57%). Using Graph-RAG local for entity-focused analysis."
+      },
+      "query_type": "genealogical",
+      "confidence": "medium",
+      "tracing_time": 0.002811908721923828,
+      "provenance": []
+    },
+    "Analice la genealogía del movimiento La Cámpora desde su fundación": {
+      "genealogy": "Vector analysis: Found relevant information from Juan Domingo Perón (1973) (similarity: 0.162) Graph analysis: Global analysis of 'Analice la genealogía del movimiento La Cámpora desde su fundación' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.4085723070403367,
+        "reasoning": "Classified as genealogical query (confidence: 40.86%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "genealogical",
+      "confidence": "high",
+      "tracing_time": 0.003664731979370117,
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Juan Domingo Perón (1973)",
+          "similarity_score": 0.16155596372697079,
+          "document_id": "Peron_Mensaje_Regreso_1973"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Eva Duarte de Perón (1947)",
+          "similarity_score": 0.08863276165187106,
+          "document_id": "Eva_Peron_Discurso_Sufragio_1947"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Mariano Moreno (1810)",
+          "similarity_score": 0.06734739737274696,
+          "document_id": "Moreno_Plan_Operaciones_1810"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 1
+        }
+      ]
+    },
+    "¿Cuál es el linaje político del PRO y sus antecedentes institucionales?": {
+      "genealogy": "Vector analysis: Found relevant information from Raúl Alfonsín (1985) (similarity: 0.100) Graph analysis: Global analysis of '¿Cuál es el linaje político del PRO y sus antecedentes institucionales?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "factual",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.6093044298915146,
+        "reasoning": "Classified as factual query (confidence: 60.93%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "factual",
+      "confidence": "high",
+      "tracing_time": 0.003438711166381836,
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Raúl Alfonsín (1985)",
+          "similarity_score": 0.10022960332111464,
+          "document_id": "Alfonsin_Plan_Austral_1985"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Mariano Moreno (1810)",
+          "similarity_score": 0.0759993845363982,
+          "document_id": "Moreno_Plan_Operaciones_1810"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Cristina Fernández de Kirchner (2020)",
+          "similarity_score": 0.0751052938254361,
+          "document_id": "CFK_Vicepresidenta_2020"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "Trace la evolución genealógica del peronismo desde Perón hasta el kirchnerismo": {
+      "genealogy": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.179) Graph analysis: Global analysis of 'Trace la evolución genealógica del peronismo desde Perón hasta el kirchnerismo' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.3942928018514975,
+        "reasoning": "Classified as genealogical query (confidence: 39.43%). Multiple entities mentioned: perón, kirchner, peronismo. Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "genealogical",
+      "confidence": "high",
+      "tracing_time": 0.003500699996948242,
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Raúl Alfonsín (1983)",
+          "similarity_score": 0.17933856153946867,
+          "document_id": "Alfonsin_1983_Electoral"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Mariano Moreno (1810)",
+          "similarity_score": 0.07824869275793318,
+          "document_id": "Moreno_Plan_Operaciones_1810"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Fernando de la Rúa (1999)",
+          "similarity_score": 0.06951041325114786,
+          "document_id": "De_la_Rua_Alianza_1999"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Cuál es la genealogía del radicalismo argentino y sus transformaciones?": {
+      "genealogy": "No genealogy available",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "graph_rag_local",
+        "confidence": 0.7116838508488328,
+        "reasoning": "Classified as genealogical query (confidence: 71.17%). Using Graph-RAG local for entity-focused analysis."
+      },
+      "query_type": "genealogical",
+      "confidence": "medium",
+      "tracing_time": 0.0021371841430664062,
+      "provenance": []
+    },
+    "Analice los linajes políticos que confluyen en Juntos por el Cambio": {
+      "genealogy": "Vector analysis: Found relevant information from Fernando de la Rúa (1999) (similarity: 0.144) Graph analysis: Global analysis of 'Analice los linajes políticos que confluyen en Juntos por el Cambio' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.5334211874408012,
+        "reasoning": "Classified as thematic query (confidence: 53.34%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "thematic",
+      "confidence": "high",
+      "tracing_time": 0.0038275718688964844,
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Fernando de la Rúa (1999)",
+          "similarity_score": 0.14449469903543008,
+          "document_id": "De_la_Rua_Alianza_1999"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Mauricio Macri (2015)",
+          "similarity_score": 0.1095262309845449,
+          "document_id": "Macri_Cadena_Cambio_2015"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Hipólito Yrigoyen (1916)",
+          "similarity_score": 0.09073373509153682,
+          "document_id": "Yrigoyen_1916_Electoral"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 2
+        }
+      ]
+    },
+    "¿Cómo se puede trazar la genealogía de los movimientos de izquierda en Argentina?": {
+      "genealogy": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.143) Graph analysis: Global analysis of '¿Cómo se puede trazar la genealogía de los movimientos de izquierda en Argentina?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.3984184547870839,
+        "reasoning": "Classified as genealogical query (confidence: 39.84%). Using hybrid approach for comprehensive analysis."
+      },
+      "query_type": "genealogical",
+      "confidence": "high",
+      "tracing_time": 0.003920555114746094,
+      "provenance": [
+        {
+          "method": "vector_rag",
+          "source": "Raúl Alfonsín (1983)",
+          "similarity_score": 0.14294636633772406,
+          "document_id": "Alfonsin_Preambulo_1983"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Eva Duarte de Perón (1947)",
+          "similarity_score": 0.1316821367008122,
+          "document_id": "Eva_Peron_Discurso_Sufragio_1947"
+        },
+        {
+          "method": "vector_rag",
+          "source": "Justo José de Urquiza (1852)",
+          "similarity_score": 0.11747386262546541,
+          "document_id": "Urquiza_Acuerdo_San_Nicolas_1852"
+        },
+        {
+          "method": "graph_rag_global",
+          "entities_analyzed": null,
+          "communities": 1
+        }
+      ]
+    }
+  },
+  "community_detection": {
+    "detected_communities": {
+      "community_0": {
+        "members": [
+          "concept_radicalismo",
+          "concept_peronismo"
+        ],
+        "method": "political_families",
+        "summary": "Political community (1916-1946): radicalismo, peronismo. Composition: 2 concept."
+      },
+      "community_1": {
+        "members": [
+          "concept_federal",
+          "concept_federalismo",
+          "law_constitución_nacional"
+        ],
+        "method": "political_families",
+        "summary": "Political community (1811-1861): federal, federalismo, constitución nacional. Composition: 2 concept, 1 law."
+      }
+    },
+    "community_count": 2,
+    "factional_analysis": {
+      "¿Cuáles son las principales facciones dentro del peronismo actual?": {
+        "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.140) Graph analysis: Global analysis of '¿Cuáles son las principales facciones dentro del peronismo actual?' across 1 political communities (1916-1946). Total entities: 2. Composition: 2 concept.",
+        "routing_decision": {
+          "query_type": "thematic",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.3929312413013458,
+          "reasoning": "Classified as thematic query (confidence: 39.29%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Qué grupos internos existen en Juntos por el Cambio?": {
+        "answer": "Vector analysis: Found relevant information from Fernando de la Rúa (1999) (similarity: 0.144) Graph analysis: Global analysis of '¿Qué grupos internos existen en Juntos por el Cambio?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "thematic",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.278065014495923,
+          "reasoning": "Classified as thematic query (confidence: 27.81%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Cómo se organizan las facciones dentro de La Cámpora?": {
+        "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1985) (similarity: 0.130) Graph analysis: Global analysis of '¿Cómo se organizan las facciones dentro de La Cámpora?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "procedural",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.3658810193980659,
+          "reasoning": "Classified as procedural query (confidence: 36.59%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Qué divisiones internas caracterizan al PRO?": {
+        "answer": "Vector analysis: Found relevant information from Juan Domingo Perón (1945) (similarity: 0.107) Graph analysis: Global analysis of '¿Qué divisiones internas caracterizan al PRO?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "procedural",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.36020175976676194,
+          "reasoning": "Classified as procedural query (confidence: 36.02%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Cuáles son las líneas internas del radicalismo contemporáneo?": {
+        "answer": "Vector analysis: Found relevant information from Juan Manuel de Rosas (1835) (similarity: 0.093) Graph analysis: Global analysis of '¿Cuáles son las líneas internas del radicalismo contemporáneo?' across 1 political communities (1916-1946). Total entities: 2. Composition: 2 concept.",
+        "routing_decision": {
+          "query_type": "comparative",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.45838730461818783,
+          "reasoning": "Classified as comparative query (confidence: 45.84%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Qué facciones componen el Frente de Todos?": {
+        "answer": "Vector analysis: Found relevant information from Bartolomé Mitre (1861) (similarity: 0.093) Graph analysis: Global analysis of '¿Qué facciones componen el Frente de Todos?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "comparative",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.23263874899402504,
+          "reasoning": "Classified as comparative query (confidence: 23.26%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      }
+    }
+  },
+  "factional_analysis": {
+    "¿Cuáles son las principales facciones dentro del peronismo actual?": {
+      "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.140) Graph analysis: Global analysis of '¿Cuáles son las principales facciones dentro del peronismo actual?' across 1 political communities (1916-1946). Total entities: 2. Composition: 2 concept.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.3929312413013458,
+        "reasoning": "Classified as thematic query (confidence: 39.29%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué grupos internos existen en Juntos por el Cambio?": {
+      "answer": "Vector analysis: Found relevant information from Fernando de la Rúa (1999) (similarity: 0.144) Graph analysis: Global analysis of '¿Qué grupos internos existen en Juntos por el Cambio?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.278065014495923,
+        "reasoning": "Classified as thematic query (confidence: 27.81%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Cómo se organizan las facciones dentro de La Cámpora?": {
+      "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1985) (similarity: 0.130) Graph analysis: Global analysis of '¿Cómo se organizan las facciones dentro de La Cámpora?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "procedural",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.3658810193980659,
+        "reasoning": "Classified as procedural query (confidence: 36.59%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué divisiones internas caracterizan al PRO?": {
+      "answer": "Vector analysis: Found relevant information from Juan Domingo Perón (1945) (similarity: 0.107) Graph analysis: Global analysis of '¿Qué divisiones internas caracterizan al PRO?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "procedural",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.36020175976676194,
+        "reasoning": "Classified as procedural query (confidence: 36.02%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Cuáles son las líneas internas del radicalismo contemporáneo?": {
+      "answer": "Vector analysis: Found relevant information from Juan Manuel de Rosas (1835) (similarity: 0.093) Graph analysis: Global analysis of '¿Cuáles son las líneas internas del radicalismo contemporáneo?' across 1 political communities (1916-1946). Total entities: 2. Composition: 2 concept.",
+      "routing_decision": {
+        "query_type": "comparative",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.45838730461818783,
+        "reasoning": "Classified as comparative query (confidence: 45.84%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué facciones componen el Frente de Todos?": {
+      "answer": "Vector analysis: Found relevant information from Bartolomé Mitre (1861) (similarity: 0.093) Graph analysis: Global analysis of '¿Qué facciones componen el Frente de Todos?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "comparative",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.23263874899402504,
+        "reasoning": "Classified as comparative query (confidence: 23.26%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    }
+  },
+  "cross_temporal_patterns": {
+    "¿Cómo han evolucionado los antagonismos políticos argentinos desde 2003 hasta 2023?": {
+      "answer": "Vector analysis: Found relevant information from Fernando de la Rúa (1999) (similarity: 0.103) Graph analysis: Global analysis of '¿Cómo han evolucionado los antagonismos políticos argentinos desde 2003 hasta 2023?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.38488033432101015,
+        "reasoning": "Classified as thematic query (confidence: 38.49%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué patrones temporales se observan en los conflictos entre peronismo y oposición?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.171) Graph analysis: Global analysis of '¿Qué patrones temporales se observan en los conflictos entre peronismo y oposición?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "comparative",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.2997657609963867,
+        "reasoning": "Classified as comparative query (confidence: 29.98%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Cómo se han transformado las estrategias discursivas de los principales actores políticos?": {
+      "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.125) Graph analysis: Global analysis of '¿Cómo se han transformado las estrategias discursivas de los principales actores políticos?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.41950052657755676,
+        "reasoning": "Classified as thematic query (confidence: 41.95%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué ciclos políticos se pueden identificar en las últimas dos décadas argentinas?": {
+      "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.100) Graph analysis: Global analysis of '¿Qué ciclos políticos se pueden identificar en las últimas dos décadas argentinas?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.32952954595113404,
+        "reasoning": "Classified as thematic query (confidence: 32.95%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Cómo han cambiado las alianzas y enemistades políticas a lo largo del tiempo?": {
+      "answer": "Vector analysis: Found relevant information from Fernando de la Rúa (1999) (similarity: 0.125) Graph analysis: Global analysis of '¿Cómo han cambiado las alianzas y enemistades políticas a lo largo del tiempo?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "genealogical",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.4839010702160478,
+        "reasoning": "Classified as genealogical query (confidence: 48.39%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué continuidades y rupturas se observan en el sistema político argentino?": {
+      "answer": "Vector analysis: Found relevant information from Justo José de Urquiza (1852) (similarity: 0.106) Graph analysis: Global analysis of '¿Qué continuidades y rupturas se observan en el sistema político argentino?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "factual",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.2576248548452766,
+        "reasoning": "Classified as factual query (confidence: 25.76%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    }
+  },
+  "narrative_coherence": {
+    "knowledge_shift_test": {
+      "total_tests": 4,
+      "passed_tests": 0,
+      "pass_rate": 0.0,
+      "average_fidelity_score": 0.5249999999999999,
+      "detailed_results": [
+        {
+          "test_case": {
+            "test_id": "date_shift_1",
+            "test_type": "date_shift",
+            "category": "constitutional_facts",
+            "original_document": {
+              "document_id": "Yrigoyen_1916_Electoral",
+              "author": "Hipólito Yrigoyen",
+              "year": 1916,
+              "title": "Análisis Electoral 1916",
+              "text": "Primera elección con voto secreto. Victoria radical en Capital y Buenos Aires, \n                      resistencia conservadora en el interior. Córdoba, Santa Fe y Entre Ríos apoyan \n                      el cambio democrático. El radicalismo triunfa en las ciudades y entre los \n                      sectores medios. Las provincias del norte mantienen estructuras tradicionales.",
+              "province": "Multiple",
+              "political_family": "Electoral Analysis",
+              "outcome": "geographic_polarization"
+            },
+            "altered_document": {
+              "document_id": "altered_Yrigoyen_1916_Electoral_date_1",
+              "author": "Hipólito Yrigoyen",
+              "year": 1916,
+              "title": "Análisis Electoral 1916",
+              "text": "Primera elección con voto secreto. Victoria radical en Capital y Buenos Aires, \n                      resistencia conservadora en el interior. Córdoba, Buenos Aires y Entre Ríos apoyan \n                      el cambio democrático. El radicalismo triunfa en las ciudades y entre los \n                      sectores medios. Las provincias del norte mantienen estructuras tradicionales.",
+              "province": "Multiple",
+              "political_family": "Electoral Analysis",
+              "outcome": "geographic_polarization"
+            },
+            "test_question": "¿Dónde se sancionó la Constitución de 1853?",
+            "correct_answer": "Santa Fe",
+            "altered_answer": "Buenos Aires",
+            "should_detect_alteration": true
+          },
+          "original_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "altered_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "fidelity_score": 0.0,
+          "passed": false,
+          "timestamp": "2025-09-11T16:39:34.007862"
+        },
+        {
+          "test_case": {
+            "test_id": "position_shift_0",
+            "test_type": "position_shift",
+            "category": "political_ideology",
+            "politician": "Moreno",
+            "original_document": {
+              "document_id": "Moreno_Plan_Operaciones_1810",
+              "author": "Mariano Moreno",
+              "year": 1810,
+              "title": "Plan de Operaciones",
+              "text": "El pueblo tiene derecho incontrastable a destronar a los reyes, cambiar la dinastía \n                      y hasta la forma de gobierno cuando conviene a sus intereses. La junta provisional \n                      gubernativa debe fomentar las artes, la agricultura, la navegación y el comercio. \n                      Buenos Aires como capital debe dirigir la revolución americana. La educación del \n                      pueblo es el fundamento de la libertad civil. Debemos establecer la libertad de \n                      escribir como base de las luces y la ilustración pública.",
+              "province": "Buenos Aires",
+              "political_family": "Morenista",
+              "outcome": "marginalized"
+            },
+            "altered_document": {
+              "document_id": "altered_Moreno_Plan_Operaciones_1810_position_0",
+              "author": "Mariano Moreno",
+              "year": 1810,
+              "title": "Plan de Operaciones",
+              "text": "El pueblo tiene derecho incontrastable a destronar a los reyes, cambiar la dinastía \n                      y hasta la forma de gobierno cuando conviene a sus intereses. La junta provisional \n                      gubernativa debe fomentar las artes, la agricultura, la navegación y el comercio. \n                      Buenos Aires como capital debe dirigir la revolución americana. La educación del \n                      pueblo es el fundamento de la libertad civil. Debemos establecer la libertad de \n                      escribir como base de las luces y la ilustración pública.",
+              "province": "Buenos Aires",
+              "political_family": "Morenista",
+              "outcome": "marginalized"
+            },
+            "test_question": "¿Cuál era la posición de Moreno sobre el federalismo?",
+            "correct_context": "centralista",
+            "altered_context": "federalista",
+            "should_detect_alteration": true
+          },
+          "original_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "altered_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "fidelity_score": 0.7,
+          "passed": false,
+          "timestamp": "2025-09-11T16:39:34.007937"
+        },
+        {
+          "test_case": {
+            "test_id": "position_shift_1",
+            "test_type": "position_shift",
+            "category": "political_ideology",
+            "politician": "Saavedra",
+            "original_document": {
+              "document_id": "Saavedra_Memoria_1811",
+              "author": "Cornelio Saavedra",
+              "year": 1811,
+              "title": "Memoria Autógrafa",
+              "text": "Las provincias del interior no pueden estar sujetas a la sola voluntad de Buenos Aires. \n                      La revolución debe ser gradual y no violenta para no alarmar a los pueblos. El gobierno \n                      debe ser federal respetando las autonomías provinciales. Los caudillos naturales conocen \n                      mejor las necesidades de sus territorios. La democracia debe ser templada y no absoluta.",
+              "province": "Buenos Aires",
+              "political_family": "Saavedrista",
+              "outcome": "temporary_success"
+            },
+            "altered_document": {
+              "document_id": "altered_Saavedra_Memoria_1811_position_1",
+              "author": "Cornelio Saavedra",
+              "year": 1811,
+              "title": "Memoria Autógrafa",
+              "text": "Las provincias del interior no pueden estar sujetas a la sola voluntad de Buenos Aires. \n                      La revolución debe ser revolucionaria y no violenta para no alarmar a los pueblos. El gobierno \n                      debe ser federal respetando las autonomías provinciales. Los caudillos naturales conocen \n                      mejor las necesidades de sus territorios. La democracia debe ser templada y no absoluta.",
+              "province": "Buenos Aires",
+              "political_family": "Saavedrista",
+              "outcome": "temporary_success"
+            },
+            "test_question": "¿Cómo era el enfoque político de Saavedra?",
+            "correct_context": "moderado",
+            "altered_context": "radical",
+            "should_detect_alteration": true
+          },
+          "original_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "altered_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "fidelity_score": 0.7,
+          "passed": false,
+          "timestamp": "2025-09-11T16:39:34.007973"
+        },
+        {
+          "test_case": {
+            "test_id": "position_shift_2",
+            "test_type": "position_shift",
+            "category": "political_ideology",
+            "politician": "Rosas",
+            "original_document": {
+              "document_id": "Rosas_Mensaje_Suma_Poder_1835",
+              "author": "Juan Manuel de Rosas",
+              "year": 1835,
+              "title": "Mensaje sobre la Suma del Poder Público",
+              "text": "La federación es sagrada e inviolable. Buenos Aires como hermana mayor debe \n                      proteger pero no dominar a las provincias. La suma del poder público es necesaria \n                      para defender la patria de enemigos externos e internos. El pueblo debe confiar \n                      en sus caudillos naturales. Los salvajes unitarios pretenden entregar la patria \n                      a potencias extranjeras. Orden, respeto y subordinación son las bases del gobierno.",
+              "province": "Buenos Aires",
+              "political_family": "Federal Rosista",
+              "outcome": "success"
+            },
+            "altered_document": {
+              "document_id": "altered_Rosas_Mensaje_Suma_Poder_1835_position_2",
+              "author": "Juan Manuel de Rosas",
+              "year": 1835,
+              "title": "Mensaje sobre la Suma del Poder Público",
+              "text": "La federación es sagrada e inviolable. Buenos Aires como hermana mayor debe \n                      proteger pero no dominar a las provincias. La suma del poder público es necesaria \n                      para defender la patria de enemigos externos e internos. El pueblo debe confiar \n                      en sus caudillos naturales. Los salvajes unitarios pretenden entregar la patria \n                      a potencias extranjeras. Orden, respeto y subordinación son las bases del gobierno.",
+              "province": "Buenos Aires",
+              "political_family": "Federal Rosista",
+              "outcome": "success"
+            },
+            "test_question": "¿Cuál era la posición de Rosas sobre la organización nacional?",
+            "correct_context": "federal",
+            "altered_context": "unitario",
+            "should_detect_alteration": true
+          },
+          "original_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "altered_result": {
+            "answer": "System does not support hybrid queries",
+            "confidence": 0.0,
+            "sources": []
+          },
+          "fidelity_score": 0.7,
+          "passed": false,
+          "timestamp": "2025-09-11T16:39:34.008005"
+        }
+      ],
+      "test_categories": {
+        "constitutional_facts": {
+          "total": 1,
+          "passed": 0,
+          "avg_fidelity": 0.0,
+          "tests": [
+            {
+              "test_case": {
+                "test_id": "date_shift_1",
+                "test_type": "date_shift",
+                "category": "constitutional_facts",
+                "original_document": {
+                  "document_id": "Yrigoyen_1916_Electoral",
+                  "author": "Hipólito Yrigoyen",
+                  "year": 1916,
+                  "title": "Análisis Electoral 1916",
+                  "text": "Primera elección con voto secreto. Victoria radical en Capital y Buenos Aires, \n                      resistencia conservadora en el interior. Córdoba, Santa Fe y Entre Ríos apoyan \n                      el cambio democrático. El radicalismo triunfa en las ciudades y entre los \n                      sectores medios. Las provincias del norte mantienen estructuras tradicionales.",
+                  "province": "Multiple",
+                  "political_family": "Electoral Analysis",
+                  "outcome": "geographic_polarization"
+                },
+                "altered_document": {
+                  "document_id": "altered_Yrigoyen_1916_Electoral_date_1",
+                  "author": "Hipólito Yrigoyen",
+                  "year": 1916,
+                  "title": "Análisis Electoral 1916",
+                  "text": "Primera elección con voto secreto. Victoria radical en Capital y Buenos Aires, \n                      resistencia conservadora en el interior. Córdoba, Buenos Aires y Entre Ríos apoyan \n                      el cambio democrático. El radicalismo triunfa en las ciudades y entre los \n                      sectores medios. Las provincias del norte mantienen estructuras tradicionales.",
+                  "province": "Multiple",
+                  "political_family": "Electoral Analysis",
+                  "outcome": "geographic_polarization"
+                },
+                "test_question": "¿Dónde se sancionó la Constitución de 1853?",
+                "correct_answer": "Santa Fe",
+                "altered_answer": "Buenos Aires",
+                "should_detect_alteration": true
+              },
+              "original_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "altered_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "fidelity_score": 0.0,
+              "passed": false,
+              "timestamp": "2025-09-11T16:39:34.007862"
+            }
+          ],
+          "pass_rate": 0.0
+        },
+        "political_ideology": {
+          "total": 3,
+          "passed": 0,
+          "avg_fidelity": 0.6999999999999998,
+          "tests": [
+            {
+              "test_case": {
+                "test_id": "position_shift_0",
+                "test_type": "position_shift",
+                "category": "political_ideology",
+                "politician": "Moreno",
+                "original_document": {
+                  "document_id": "Moreno_Plan_Operaciones_1810",
+                  "author": "Mariano Moreno",
+                  "year": 1810,
+                  "title": "Plan de Operaciones",
+                  "text": "El pueblo tiene derecho incontrastable a destronar a los reyes, cambiar la dinastía \n                      y hasta la forma de gobierno cuando conviene a sus intereses. La junta provisional \n                      gubernativa debe fomentar las artes, la agricultura, la navegación y el comercio. \n                      Buenos Aires como capital debe dirigir la revolución americana. La educación del \n                      pueblo es el fundamento de la libertad civil. Debemos establecer la libertad de \n                      escribir como base de las luces y la ilustración pública.",
+                  "province": "Buenos Aires",
+                  "political_family": "Morenista",
+                  "outcome": "marginalized"
+                },
+                "altered_document": {
+                  "document_id": "altered_Moreno_Plan_Operaciones_1810_position_0",
+                  "author": "Mariano Moreno",
+                  "year": 1810,
+                  "title": "Plan de Operaciones",
+                  "text": "El pueblo tiene derecho incontrastable a destronar a los reyes, cambiar la dinastía \n                      y hasta la forma de gobierno cuando conviene a sus intereses. La junta provisional \n                      gubernativa debe fomentar las artes, la agricultura, la navegación y el comercio. \n                      Buenos Aires como capital debe dirigir la revolución americana. La educación del \n                      pueblo es el fundamento de la libertad civil. Debemos establecer la libertad de \n                      escribir como base de las luces y la ilustración pública.",
+                  "province": "Buenos Aires",
+                  "political_family": "Morenista",
+                  "outcome": "marginalized"
+                },
+                "test_question": "¿Cuál era la posición de Moreno sobre el federalismo?",
+                "correct_context": "centralista",
+                "altered_context": "federalista",
+                "should_detect_alteration": true
+              },
+              "original_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "altered_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "fidelity_score": 0.7,
+              "passed": false,
+              "timestamp": "2025-09-11T16:39:34.007937"
+            },
+            {
+              "test_case": {
+                "test_id": "position_shift_1",
+                "test_type": "position_shift",
+                "category": "political_ideology",
+                "politician": "Saavedra",
+                "original_document": {
+                  "document_id": "Saavedra_Memoria_1811",
+                  "author": "Cornelio Saavedra",
+                  "year": 1811,
+                  "title": "Memoria Autógrafa",
+                  "text": "Las provincias del interior no pueden estar sujetas a la sola voluntad de Buenos Aires. \n                      La revolución debe ser gradual y no violenta para no alarmar a los pueblos. El gobierno \n                      debe ser federal respetando las autonomías provinciales. Los caudillos naturales conocen \n                      mejor las necesidades de sus territorios. La democracia debe ser templada y no absoluta.",
+                  "province": "Buenos Aires",
+                  "political_family": "Saavedrista",
+                  "outcome": "temporary_success"
+                },
+                "altered_document": {
+                  "document_id": "altered_Saavedra_Memoria_1811_position_1",
+                  "author": "Cornelio Saavedra",
+                  "year": 1811,
+                  "title": "Memoria Autógrafa",
+                  "text": "Las provincias del interior no pueden estar sujetas a la sola voluntad de Buenos Aires. \n                      La revolución debe ser revolucionaria y no violenta para no alarmar a los pueblos. El gobierno \n                      debe ser federal respetando las autonomías provinciales. Los caudillos naturales conocen \n                      mejor las necesidades de sus territorios. La democracia debe ser templada y no absoluta.",
+                  "province": "Buenos Aires",
+                  "political_family": "Saavedrista",
+                  "outcome": "temporary_success"
+                },
+                "test_question": "¿Cómo era el enfoque político de Saavedra?",
+                "correct_context": "moderado",
+                "altered_context": "radical",
+                "should_detect_alteration": true
+              },
+              "original_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "altered_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "fidelity_score": 0.7,
+              "passed": false,
+              "timestamp": "2025-09-11T16:39:34.007973"
+            },
+            {
+              "test_case": {
+                "test_id": "position_shift_2",
+                "test_type": "position_shift",
+                "category": "political_ideology",
+                "politician": "Rosas",
+                "original_document": {
+                  "document_id": "Rosas_Mensaje_Suma_Poder_1835",
+                  "author": "Juan Manuel de Rosas",
+                  "year": 1835,
+                  "title": "Mensaje sobre la Suma del Poder Público",
+                  "text": "La federación es sagrada e inviolable. Buenos Aires como hermana mayor debe \n                      proteger pero no dominar a las provincias. La suma del poder público es necesaria \n                      para defender la patria de enemigos externos e internos. El pueblo debe confiar \n                      en sus caudillos naturales. Los salvajes unitarios pretenden entregar la patria \n                      a potencias extranjeras. Orden, respeto y subordinación son las bases del gobierno.",
+                  "province": "Buenos Aires",
+                  "political_family": "Federal Rosista",
+                  "outcome": "success"
+                },
+                "altered_document": {
+                  "document_id": "altered_Rosas_Mensaje_Suma_Poder_1835_position_2",
+                  "author": "Juan Manuel de Rosas",
+                  "year": 1835,
+                  "title": "Mensaje sobre la Suma del Poder Público",
+                  "text": "La federación es sagrada e inviolable. Buenos Aires como hermana mayor debe \n                      proteger pero no dominar a las provincias. La suma del poder público es necesaria \n                      para defender la patria de enemigos externos e internos. El pueblo debe confiar \n                      en sus caudillos naturales. Los salvajes unitarios pretenden entregar la patria \n                      a potencias extranjeras. Orden, respeto y subordinación son las bases del gobierno.",
+                  "province": "Buenos Aires",
+                  "political_family": "Federal Rosista",
+                  "outcome": "success"
+                },
+                "test_question": "¿Cuál era la posición de Rosas sobre la organización nacional?",
+                "correct_context": "federal",
+                "altered_context": "unitario",
+                "should_detect_alteration": true
+              },
+              "original_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "altered_result": {
+                "answer": "System does not support hybrid queries",
+                "confidence": 0.0,
+                "sources": []
+              },
+              "fidelity_score": 0.7,
+              "passed": false,
+              "timestamp": "2025-09-11T16:39:34.008005"
+            }
+          ],
+          "pass_rate": 0.0
+        }
+      }
+    },
+    "narrative_consistency": {
+      "¿Qué tan consistente es la narrativa sobre Cristina Kirchner en diferentes fuentes?": {
+        "answer": "Vector analysis: Found relevant information from Domingo Faustino Sarmiento (1868) (similarity: 0.142) Graph analysis: Global analysis of '¿Qué tan consistente es la narrativa sobre Cristina Kirchner en diferentes fuentes?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "genealogical",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.32574028041084313,
+          "reasoning": "Classified as genealogical query (confidence: 32.57%). Multiple entities mentioned: kirchner, cristina. Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Existe coherencia en la descripción de las políticas de Mauricio Macri?": {
+        "answer": "Vector analysis: Found relevant information from Néstor Carlos Kirchner (2003) (similarity: 0.176) Graph analysis: Global analysis of '¿Existe coherencia en la descripción de las políticas de Mauricio Macri?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "comparative",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.26809003863367203,
+          "reasoning": "Classified as comparative query (confidence: 26.81%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Cómo de consistente es la caracterización del peronismo en el corpus?": {
+        "answer": "Vector analysis: Found relevant information from Raúl Alfonsín (1983) (similarity: 0.179) Graph analysis: Global analysis of '¿Cómo de consistente es la caracterización del peronismo en el corpus?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "genealogical",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.517854947361127,
+          "reasoning": "Classified as genealogical query (confidence: 51.79%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      },
+      "¿Qué nivel de coherencia narrativa existe sobre La Cámpora?": {
+        "answer": "Vector analysis: Found relevant information from Javier Gerardo Milei (2023) (similarity: 0.171) Graph analysis: Global analysis of '¿Qué nivel de coherencia narrativa existe sobre La Cámpora?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+        "routing_decision": {
+          "query_type": "procedural",
+          "retrieval_method": "hybrid_rag",
+          "confidence": 0.21269815673345444,
+          "reasoning": "Classified as procedural query (confidence: 21.27%). Using hybrid approach for comprehensive analysis."
+        },
+        "confidence": "high"
+      }
+    }
+  },
+  "recommendations": {
+    "¿Qué estrategias podrían reducir la polarización política argentina?": {
+      "answer": "No recommendation available",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "graph_rag_global",
+        "confidence": 0.8178839755223286,
+        "reasoning": "Classified as thematic query (confidence: 81.79%). Using Graph-RAG global for thematic synthesis."
+      },
+      "confidence": "medium"
+    },
+    "¿Cómo se podrían construir puentes entre los principales antagonismos políticos?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.166) Graph analysis: Global analysis of '¿Cómo se podrían construir puentes entre los principales antagonismos políticos?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.37249700415369597,
+        "reasoning": "Classified as thematic query (confidence: 37.25%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué reformas institucionales ayudarían a moderar los conflictos políticos?": {
+      "answer": "Vector analysis: Found relevant information from Cristina Fernández de Kirchner (2020) (similarity: 0.093) Graph analysis: Global analysis of '¿Qué reformas institucionales ayudarían a moderar los conflictos políticos?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.424338837375513,
+        "reasoning": "Classified as thematic query (confidence: 42.43%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Qué rol pueden jugar los medios en la desescalada de antagonismos?": {
+      "answer": "Vector analysis: Found relevant information from Cristina Fernández de Kirchner (2009) (similarity: 0.179) Graph analysis: Global analysis of '¿Qué rol pueden jugar los medios en la desescalada de antagonismos?' across 1 political communities (1811-1861). Total entities: 3. Composition: 2 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "thematic",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.6645302024994824,
+        "reasoning": "Classified as thematic query (confidence: 66.45%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    },
+    "¿Cómo se puede promover el diálogo entre facciones opuestas?": {
+      "answer": "Vector analysis: Found relevant information from Hipólito Yrigoyen (1916) (similarity: 0.106) Graph analysis: Global analysis of '¿Cómo se puede promover el diálogo entre facciones opuestas?' across 2 political communities (1811-1946). Total entities: 5. Composition: 4 concept, 1 law.",
+      "routing_decision": {
+        "query_type": "comparative",
+        "retrieval_method": "hybrid_rag",
+        "confidence": 0.5174848112122247,
+        "reasoning": "Classified as comparative query (confidence: 51.75%). Using hybrid approach for comprehensive analysis."
+      },
+      "confidence": "high"
+    }
+  }
+}

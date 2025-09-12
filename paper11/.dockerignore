@@ -1,0 +1,145 @@
+# Paper 11 Docker ignore file
+# Exclude unnecessary files from Docker build context
+
+# Git and version control
+.git
+.gitignore
+.gitattributes
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation build files
+docs/_build/
+docs/auto_examples/
+docs/generated/
+
+# Test and coverage files
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Large data files (should be downloaded separately)
+data/large_datasets/
+*.h5
+*.hdf5
+*.parquet
+
+# Results and output (will be generated)
+results/bootstrap_cache/
+results/temp/
+*.pickle
+*.pkl
+
+# Docker files (avoid recursive copying)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# CI/CD files
+.github/
+.travis.yml
+.circleci/
+
+# Package manager files
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment and secrets
+.env.local
+.env.development
+.env.test
+.env.production
+secrets.yml
+config.local.yml
+
+# Backup files
+*.bak
+*.backup
+
+# Log files
+*.log
+logs/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Specific to this project
+paper11_analysis_old/
+deprecated/
+scratch/
+experiments/
+
+# Large visualization files
+visualizations/*.gif
+visualizations/*.mp4
+visualizations/high_res/
+
+# Conda environment files
+environment.yml
+conda-meta/

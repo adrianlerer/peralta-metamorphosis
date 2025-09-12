@@ -1,0 +1,323 @@
+{
+  "genealogies": {
+    "Peron_Justicia_1945": [
+      {
+        "document_id": "Peron_Justicia_1945",
+        "author": "Juan Domingo Perón",
+        "year": 1945,
+        "generation": 0,
+        "inherited_themes": [],
+        "mutations": [],
+        "semantic_similarity": 0,
+        "mutation_type": "unknown",
+        "ideological_distance": 0.4123105625617661,
+        "influence_weight": 0.0,
+        "political_position": [
+          0.5,
+          0.5,
+          0.9,
+          0.6
+        ]
+      }
+    ],
+    "Macri_Cambio_2015": [
+      {
+        "document_id": "Macri_Cambio_2015",
+        "author": "Mauricio Macri",
+        "year": 2015,
+        "generation": 0,
+        "inherited_themes": [],
+        "mutations": [],
+        "semantic_similarity": 0,
+        "mutation_type": "unknown",
+        "ideological_distance": 0.5099019513592785,
+        "influence_weight": 0.0,
+        "political_position": [
+          0.3,
+          0.2,
+          0.3,
+          0.2
+        ]
+      }
+    ],
+    "Milei_Liberal_2023": [
+      {
+        "document_id": "Milei_Liberal_2023",
+        "author": "Javier Milei",
+        "year": 2023,
+        "generation": 0,
+        "inherited_themes": [],
+        "mutations": [],
+        "semantic_similarity": 0,
+        "mutation_type": "unknown",
+        "ideological_distance": 0.7071067811865476,
+        "influence_weight": 0.0,
+        "political_position": [
+          0.1,
+          0.2,
+          0.2,
+          0.9
+        ]
+      }
+    ]
+  },
+  "common_ancestors": {
+    "Peron_Justicia_1945_vs_Macri_Cambio_2015": null,
+    "Peron_Justicia_1945_vs_Milei_Liberal_2023": null,
+    "Macri_Cambio_2015_vs_Milei_Liberal_2023": null
+  },
+  "positions_4d": {
+    "Moreno_Plan_1810": [
+      0.0,
+      0.0,
+      0.5,
+      0.3333333333333333
+    ],
+    "Mariano Moreno": [
+      0.0,
+      0.0,
+      0.5,
+      0.3333333333333333
+    ],
+    "Saavedra_Moderacion_1810": [
+      0.5,
+      0.3333333333333333,
+      0.0,
+      0.25
+    ],
+    "Cornelio Saavedra": [
+      0.5,
+      0.3333333333333333,
+      0.0,
+      0.25
+    ],
+    "Rivadavia_Unitario_1826": [
+      0.25,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "Bernardino Rivadavia": [
+      0.25,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "Rosas_Federacion_1835": [
+      0.5,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "Juan Manuel de Rosas": [
+      0.5,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "Urquiza_Confederacion_1852": [
+      0.6666666666666666,
+      0.3333333333333333,
+      0.0,
+      0.0
+    ],
+    "Justo José de Urquiza": [
+      0.6666666666666666,
+      0.3333333333333333,
+      0.0,
+      0.0
+    ],
+    "Mitre_Organizacion_1862": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Bartolomé Mitre": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Peron_Justicia_1945": [
+      0.0,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "Juan Domingo Perón": [
+      0.0,
+      0.0,
+      0.5,
+      0.0
+    ],
+    "Antiperonismo_1955": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Pedro Eugenio Aramburu": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Alfonsin_Democracia_1983": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Raúl Alfonsín": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Menem_Neoliberal_1990": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Carlos Menem": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Kirchner_Popular_2003": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Néstor Kirchner": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Macri_Cambio_2015": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Mauricio Macri": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Milei_Liberal_2023": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Javier Milei": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "political_attractors": {
+    "Attractor_1_Moderate_Moderate": [
+      0.5833333333333333,
+      0.3333333333333333,
+      0.0,
+      0.12499999999999999
+    ],
+    "Attractor_2_Central_Port": [
+      2.7755575615628914e-17,
+      -6.938893903907228e-18,
+      5.551115123125783e-17,
+      6.938893903907228e-18
+    ],
+    "Attractor_3_Central_Port": [
+      0.1875,
+      6.938893903907228e-18,
+      0.5,
+      0.08333333333333331
+    ]
+  },
+  "grieta_evolution": [
+    [
+      1810,
+      0.7861650943380504
+    ],
+    [
+      1850,
+      0.7453559924999299
+    ],
+    [
+      1990,
+      0
+    ],
+    [
+      2010,
+      0
+    ]
+  ],
+  "phase_transitions": [],
+  "fitness_scores": {
+    "Moreno_Plan_1810": 0.6717380140945826,
+    "Mariano Moreno": 0.6717380140945826,
+    "Saavedra_Moderacion_1810": 0.6557847239655389,
+    "Cornelio Saavedra": 0.6557847239655389,
+    "Rivadavia_Unitario_1826": 0.7259057427170541,
+    "Bernardino Rivadavia": 0.7259057427170541,
+    "Rosas_Federacion_1835": 0.6628786899190665,
+    "Juan Manuel de Rosas": 0.6628786899190665,
+    "Urquiza_Confederacion_1852": 0.6193610585945929,
+    "Justo José de Urquiza": 0.6193610585945929,
+    "Mitre_Organizacion_1862": 0.8260252550662691,
+    "Bartolomé Mitre": 0.8260252550662691,
+    "Peron_Justicia_1945": 0.719821697398085,
+    "Juan Domingo Perón": 0.719821697398085,
+    "Antiperonismo_1955": 0.8260252550662691,
+    "Pedro Eugenio Aramburu": 0.8260252550662691,
+    "Alfonsin_Democracia_1983": 0.8260252550662691,
+    "Raúl Alfonsín": 0.8260252550662691,
+    "Menem_Neoliberal_1990": 0.8260252550662691,
+    "Carlos Menem": 0.8260252550662691,
+    "Kirchner_Popular_2003": 0.8260252550662691,
+    "Néstor Kirchner": 0.8260252550662691,
+    "Macri_Cambio_2015": 0.8260252550662691,
+    "Mauricio Macri": 0.8260252550662691,
+    "Milei_Liberal_2023": 0.8260252550662691,
+    "Javier Milei": 0.8260252550662691
+  },
+  "integration_analysis": {
+    "attractor_genealogies": {
+      "Attractor_1_Moderate_Moderate": {
+        "closest_actor": null,
+        "distance": Infinity
+      },
+      "Attractor_2_Central_Port": {
+        "closest_actor": null,
+        "distance": Infinity
+      },
+      "Attractor_3_Central_Port": {
+        "closest_actor": null,
+        "distance": Infinity
+      }
+    },
+    "transition_impacts": [],
+    "inheritance_prediction": {
+      "correlation": NaN,
+      "p_value": NaN,
+      "predictive_power": "Poor"
+    }
+  },
+  "metadata": {
+    "n_documents": 13,
+    "timespan": "1810-2023",
+    "n_genealogies": 3,
+    "n_attractors": 3,
+    "n_transitions": 0
+  }
+}
