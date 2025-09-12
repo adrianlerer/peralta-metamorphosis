@@ -36,8 +36,8 @@ sys.path.append('/home/user/webapp/peralta-metamorphosis')
 sys.path.append('/home/user/webapp/political_analysis')
 
 # Import the actual repository tools
-sys.path.append('/home/user/webapp/peralta-metamorphosis/data')
-from political_actors_expanded import create_expanded_political_dataset, get_multidimensional_breakdown
+sys.path.append('/home/user/webapp')
+from political_actors_generic import create_generic_political_dataset as create_expanded_political_dataset, get_political_similarity_breakdown as get_multidimensional_breakdown
 
 class ExpandedCorpusAnalyzer:
     """
@@ -51,7 +51,7 @@ class ExpandedCorpusAnalyzer:
         
         # Simulate original 13-document corpus (subset of key figures)
         self.original_actors = [
-            'José López Rega', 'Javier Milei', 'Juan Domingo Perón', 'Eva Perón',
+            'José Actor Referencia A', 'Javier Actor Referencia B', 'Juan Domingo Perón', 'Eva Perón',
             'Carlos Menem', 'Hugo Chávez', 'Donald Trump', 'Adolf Hitler',
             'Benito Mussolini', 'Rasputin', 'Cristina Fernández de Kirchner',
             'Mauricio Macri', 'Alberto Fernández'
@@ -109,7 +109,7 @@ class ExpandedCorpusAnalyzer:
                     'era': actor['era'],
                     'position': actor.get('position', 'Political Figure'),
                     'mystical_score': actor['symbolic_mystical'],
-                    'lopez_rega_similarity': actor.get('lopez_rega_similarity', 0)
+                    'political_similarity_index': actor.get('political_similarity_index', 0)
                 }
             })
         
@@ -258,7 +258,7 @@ class ExpandedCorpusAnalyzer:
                         'total_influence': influence_scores[name],
                         'average_influence': influence_scores[name] / count if count > 0 else 0,
                         'mystical_score': actor_data['symbolic_mystical'],
-                        'lopez_rega_similarity': actor_data.get('lopez_rega_similarity', 0),
+                        'political_similarity_index': actor_data.get('political_similarity_index', 0),
                         'era': actor_data['era'],
                         'country': actor_data['country']
                     }
@@ -539,7 +539,7 @@ class ExpandedCorpusAnalyzer:
         print(f"🔄 Running bootstrap validation ({n_iterations} iterations)...")
         
         metrics_to_validate = [
-            'lopez_rega_similarity', 'symbolic_mystical', 'leadership_messianic',
+            'political_similarity_index', 'symbolic_mystical', 'leadership_messianic',
             'anti_establishment', 'populist_appeal', 'authoritarian'
         ]
         
@@ -650,10 +650,10 @@ class ExpandedCorpusAnalyzer:
                 }
             },
             'bootstrap_stability': {
-                'lopez_rega_similarity': {
-                    'original_stability': original_bootstrap['lopez_rega_similarity']['stability'],
-                    'expanded_stability': expanded_bootstrap['lopez_rega_similarity']['stability'],
-                    'improvement': original_bootstrap['lopez_rega_similarity']['stability'] - expanded_bootstrap['lopez_rega_similarity']['stability']
+                'political_similarity_index': {
+                    'original_stability': original_bootstrap['political_similarity_index']['stability'],
+                    'expanded_stability': expanded_bootstrap['political_similarity_index']['stability'],
+                    'improvement': original_bootstrap['political_similarity_index']['stability'] - expanded_bootstrap['political_similarity_index']['stability']
                 }
             },
             'key_findings': self.generate_key_findings()
@@ -755,13 +755,13 @@ class ExpandedCorpusAnalyzer:
                         f'{density:.3f}', ha='center', va='bottom', fontweight='bold', fontsize=11)
             ax3.legend()
         
-        # 4. López Rega Similarity Distribution
+        # 4. Actor Referencia A Similarity Distribution
         ax4 = plt.subplot(3, 4, 4)
-        ax4.hist(self.original_df['lopez_rega_similarity'], bins=15, alpha=0.7, 
+        ax4.hist(self.original_df['political_similarity_index'], bins=15, alpha=0.7, 
                 color='#FF6B6B', label='Original', density=True)
-        ax4.hist(self.expanded_df['lopez_rega_similarity'], bins=15, alpha=0.7, 
+        ax4.hist(self.expanded_df['political_similarity_index'], bins=15, alpha=0.7, 
                 color='#4ECDC4', label='Expanded', density=True)
-        ax4.set_xlabel('López Rega Similarity')
+        ax4.set_xlabel('Actor Referencia A Similarity')
         ax4.set_ylabel('Density')
         ax4.set_title('Similarity Distribution\nComparison', fontweight='bold')
         ax4.legend()
@@ -817,7 +817,7 @@ class ExpandedCorpusAnalyzer:
         # 8. Bootstrap Stability Comparison  
         ax8 = plt.subplot(3, 4, 8)
         if hasattr(self, 'original_results') and hasattr(self, 'expanded_results'):
-            metrics = ['lopez_rega_similarity', 'symbolic_mystical', 'leadership_messianic']
+            metrics = ['political_similarity_index', 'symbolic_mystical', 'leadership_messianic']
             orig_stability = [self.original_results['bootstrap'][m]['stability'] for m in metrics]
             exp_stability = [self.expanded_results['bootstrap'][m]['stability'] for m in metrics]
             
@@ -1099,7 +1099,7 @@ class ExpandedCorpusAnalyzer:
         return [
             "The expanded 50-document corpus provides crucial validation of the original 13-document findings",
             "Statistical methods (bootstrap validation, PCA, network analysis) confirm robustness across corpus sizes",
-            "The López Rega-Milei similarity framework remains valid and statistically significant",
+            "The Actor Referencia A-Actor Referencia B similarity framework remains valid and statistically significant",
             "Genealogical methodologies successfully scale to larger datasets",
             "Political attractor identification shows consistent patterns across different corpus sizes",
             "The memetic evolution framework applies effectively to both historical and contemporary political figures",

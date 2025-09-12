@@ -62,7 +62,7 @@ Using actual peralta-metamorphosis repository tools (PoliticalRootFinder and Pol
 
 | Metric | Mean | 95% Confidence Interval | Stability |
 |--------|------|------------------------|-----------|
-| **López Rega Similarity** | 0.7142 | [0.6702, 0.7544] | 0.0001 |
+| **Actor Referencia A Similarity** | 0.7142 | [0.6702, 0.7544] | 0.0001 |
 | **Symbolic Mystical** | 0.4077 | [0.3125, 0.5103] | 0.0005 |
 | **Leadership Messianic** | 0.5537 | [0.4702, 0.6360] | 0.0011 |
 | **Anti-Establishment** | 0.6672 | [0.5828, 0.7469] | 0.0000 |
@@ -88,7 +88,7 @@ All stability coefficients < 0.005 indicate **excellent statistical robustness**
 - **2010 decade most polarized** (financial crisis, populist surge)
 - Antagonism patterns clearly identifiable across temporal periods
 
-### 4. López Rega-Milei Framework Validation
+### 4. Actor Referencia A-Actor Referencia B Framework Validation
 - **Framework remains statistically robust** across corpus sizes (stability: 0.0001)
 - **95% confidence interval: [0.6702, 0.7544]** confirms high similarity
 - Multi-dimensional analysis scales effectively to expanded datasets
@@ -127,7 +127,7 @@ All stability coefficients < 0.005 indicate **excellent statistical robustness**
 2. **Original methodology validated** but requires sufficient sample size
 3. **Political complexity greater** than small-sample studies suggest
 4. **Statistical tools robust** and scalable to expanded datasets
-5. **López Rega-Milei framework** maintains validity across corpus sizes
+5. **Actor Referencia A-Actor Referencia B framework** maintains validity across corpus sizes
 
 ### Recommendations
 1. **Use corpora of 30+ documents minimum** for political genealogy analysis

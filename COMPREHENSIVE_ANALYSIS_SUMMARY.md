@@ -16,7 +16,7 @@
 
 #### 🎯 **Implicaciones Metodológicas**:
 1. **Corpus mínimo requerido**: 30+ documentos para análisis político genealógico
-2. **Framework validado**: López Rega-Milei mantiene robustez estadística
+2. **Framework validado**: Actor Referencia A-Actor Referencia B mantiene robustez estadística
 3. **Herramientas escalables**: PoliticalRootFinder y PoliticalMemespace funcionan en corpus expandidos
 4. **Complejidad revelada**: El paisaje político argentino es más complejo de lo inicialmente observado
 

@@ -18,9 +18,7 @@ import json
 # Import our political analysis framework
 import sys
 sys.path.append('/home/user/webapp')
-sys.path.append('/home/user/webapp/peralta-metamorphosis/data')
-
-from political_actors_expanded import create_expanded_political_dataset
+from political_actors_generic import create_generic_political_dataset as create_expanded_political_dataset
 
 class ProyectoGollanAnalyzer:
     """

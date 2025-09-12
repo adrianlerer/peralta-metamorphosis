@@ -211,8 +211,8 @@ Marco regulatorio minimalista basado en:
 | **Elite-Popular** | 0.65 | Tecnocracia vs. ciudadanía |
 | **Continuity** | 0.45 | Continuidad modelo regulatorio |
 
-**Similarity Score López Rega**: 0.23 (Baja - proyecto tecnocrático, no místico)
-**Similarity Score Milei**: 0.12 (Muy baja - antítesis del liberalismo económico)
+**Similarity Score Actor Referencia A**: 0.23 (Baja - proyecto tecnocrático, no místico)
+**Similarity Score Actor Referencia B**: 0.12 (Muy baja - antítesis del liberalismo económico)
 
 ---
 
