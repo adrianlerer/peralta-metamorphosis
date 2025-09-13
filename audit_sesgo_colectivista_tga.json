@@ -1,0 +1,118 @@
+{
+  "perspective_balance": {
+    "perspective_analysis": {
+      "liberal_constitucional": {
+        "ideological_lean": "INDIVIDUAL_RIGHTS",
+        "regulatory_preference": "MINIMAL_STATE",
+        "top_sources": [
+          "art19_cn",
+          "sabsay_const",
+          "ley_defensa_consumidor"
+        ],
+        "interpretation_bias": {
+          "collective_emphasis": 1,
+          "individual_emphasis": 2,
+          "net_bias": -1,
+          "bias_direction": "INDIVIDUAL"
+        }
+      },
+      "estatista_regulatorio": {
+        "ideological_lean": "COLLECTIVE_PROTECTION",
+        "regulatory_preference": "STRONG_STATE",
+        "top_sources": [
+          "gdpr_eu",
+          "ai_act_eu",
+          "ley_datos_personales"
+        ],
+        "interpretation_bias": {
+          "collective_emphasis": 4,
+          "individual_emphasis": 0,
+          "net_bias": 4,
+          "bias_direction": "COLLECTIVE"
+        }
+      },
+      "tecno_pragmatico": {
+        "ideological_lean": "UTILITARIAN_BALANCE",
+        "regulatory_preference": "ADAPTIVE_STATE",
+        "top_sources": [
+          "ai_act_eu",
+          "ley_datos_personales",
+          "ley_defensa_consumidor"
+        ],
+        "interpretation_bias": {
+          "collective_emphasis": 1,
+          "individual_emphasis": 0,
+          "net_bias": 1,
+          "bias_direction": "COLLECTIVE"
+        }
+      }
+    },
+    "structural_bias": {
+      "regulatory_leaning_perspectives": 2,
+      "individual_leaning_perspectives": 1,
+      "bias_ratio": 2.0,
+      "bias_detected": true
+    }
+  },
+  "redundancy_decisions": {
+    "redundancy_score": 0.7248571428571428,
+    "decision": "Keep ai_act_eu, Remove gdpr_eu",
+    "kept_source_ideology": {
+      "regulatory_intensity": "HIGH",
+      "individual_vs_collective": "COLLECTIVE_FOCUSED",
+      "state_role": "STRONG_INTERVENTION",
+      "innovation_stance": "PRECAUTIONARY"
+    },
+    "removed_source_ideology": {
+      "regulatory_intensity": "HIGH",
+      "individual_vs_collective": "INDIVIDUAL_FOCUSED",
+      "state_role": "MODERATE_INTERVENTION",
+      "innovation_stance": "RIGHTS_PROTECTIVE"
+    },
+    "potential_bias": {
+      "bias_detected": true,
+      "bias_type": "PRO_COLLECTIVE",
+      "explanation": "Kept collective-focused source (ai_act_eu), removed individual-focused source (gdpr_eu)"
+    }
+  },
+  "bias_documentation": {
+    "individual_sources_flagged_overestimation": [
+      "art19_cn",
+      "sabsay_const"
+    ],
+    "collective_sources_flagged_underestimation": [
+      "ai_act_eu"
+    ],
+    "pattern": "Flags individual rights sources as overestimation risk, collective sources as underestimation risk",
+    "meta_bias_detected": true
+  },
+  "consensus_interpretation": {
+    "high_consensus_orientations": [
+      "COLLECTIVE_PROTECTION",
+      "MIXED_INDIVIDUAL_COLLECTIVE"
+    ],
+    "divergent_orientations": [
+      "INDIVIDUAL_CONSTITUTIONAL",
+      "INDIVIDUAL_DATA_RIGHTS"
+    ],
+    "pattern_detected": {
+      "consensus_collective": 2,
+      "consensus_individual": 0,
+      "divergent_collective": 0,
+      "divergent_individual": 2,
+      "bias_toward_collective": true
+    }
+  },
+  "bias_indicators": {
+    "structural_perspective_bias": true,
+    "redundancy_decision_bias": true,
+    "meta_bias_in_documentation": true,
+    "consensus_interpretation_bias": true
+  },
+  "overall_assessment": {
+    "total_bias_indicators": 4,
+    "bias_severity": "HIGH",
+    "primary_bias_direction": "PRO_COLLECTIVE_REGULATORY",
+    "confidence_in_tga_neutrality": "LOW"
+  }
+}
