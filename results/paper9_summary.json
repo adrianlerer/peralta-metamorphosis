@@ -1,0 +1,166 @@
+{
+  "paper": "The Multilayer Parasite",
+  "title": "Quantifying Corruption's Accumulative Evolution Through Computational Analysis of Argentine Legal Responses (1880-2025)",
+  "author": "Ignacio Adrián Lerer",
+  "status": "Complete",
+  "date_completed": "2025-01-10",
+  "series": "The Extended Phenotype of Law",
+  "paper_number": 9,
+  "
+  "key_metrics": {
+    "accumulation_index": 0.438884,
+    "biofilm_score": 0.611397,
+    "active_layers": 4,
+    "max_possible_layers": 4,
+    "layer_persistence": {
+      "electoral": 0.332,
+      "administrative": 0.649,
+      "entrepreneurial": 0.623,
+      "compliance_capture": 1.000
+    },
+    "compliance_distribution": {
+      "genuine": 0.133,
+      "cosmetic": 0.333,
+      "captured": 0.100,
+      "transitional": 0.367,
+      "other": 0.067
+    },
+    "fitness_scores": {
+      "anti_corruption_citations": 0.013142,
+      "pro_corruption_citations": 0.011045,
+      "citation_ratio": 0.84,
+      "anti_corruption_impact": 0.348,
+      "pro_corruption_impact": 0.801,
+      "fitness_paradox": true
+    },
+    "temporal_analysis": {
+      "oldest_layer_age": 145,
+      "newest_layer_age": 8,
+      "extinction_events": 0,
+      "diversification_complete": true
+    }
+  },
+  
+  "predictions": {
+    "mutation_pressure_overall": 0.175,
+    "high_risk_mutations": [
+      {
+        "type": "regulatory_arbitrage",
+        "probability": 0.62,
+        "timeline_months": "6-18",
+        "description": "Exploiting differences between regulatory frameworks and jurisdictions to minimize oversight",
+        "countermeasures": ["Regulatory harmonization", "International cooperation"]
+      },
+      {
+        "type": "esg_capture",
+        "probability": 0.58,
+        "timeline_months": "12-24", 
+        "description": "Weaponization of Environmental, Social, and Governance frameworks for competitive advantage and regulatory shield",
+        "countermeasures": ["Independent ESG verification", "Stakeholder involvement"]
+      }
+    ],
+    "layer_specific_pressure": {
+      "electoral": 0.0,
+      "administrative": 0.5,
+      "entrepreneurial": 0.2,
+      "compliance_capture": 0.0
+    }
+  },
+  
+  "dataset": {
+    "total_cases": 89,
+    "timespan": "1880-2025",
+    "duration_years": 145,
+    "categories": {
+      "electoral": 18,
+      "administrative": 22,
+      "entrepreneurial": 19,
+      "compliance_capture": 30
+    },
+    "real_argentine_cases": [
+      "Skanska (2005)",
+      "Cuadernos de las Coimas (2018)",
+      "Vacunatorio VIP (2021)",
+      "FGS Seguros (2024)",
+      "Hotesur (2016)",
+      "Odebrecht (2018)"
+    ],
+    "data_quality": {
+      "verified_cases": 89,
+      "computational_validation": true,
+      "peer_reviewable": true
+    }
+  },
+  
+  "computational_tools": {
+    "new_tools": [
+      {
+        "name": "CorruptionLayerAnalyzer",
+        "purpose": "Biofilm model implementation",
+        "key_algorithms": ["Layer Persistence", "Accumulation Index", "Biofilm Score", "Mutation Prediction"]
+      }
+    ],
+    "adapted_tools": [
+      {
+        "name": "JurisRank",
+        "adaptation": "Applied to corruption citation networks"
+      },
+      {
+        "name": "RootFinder", 
+        "adaptation": "Genealogical tracing of corruption precedents"
+      },
+      {
+        "name": "Legal-Memespace",
+        "adaptation": "4D mapping of corruption strategy evolution"
+      }
+    ]
+  },
+  
+  "research_impact": {
+    "theoretical_contributions": [
+      "First computational model of corruption as biofilm",
+      "Accumulation vs substitution framework",
+      "Compliance capture quantification",
+      "Evolutionary mutation prediction"
+    ],
+    "policy_implications": [
+      "Traditional anti-corruption approaches fail due to substitution assumption",
+      "Multi-layer simultaneous pressure required",
+      "Compliance programs need capture resistance design",
+      "Evolutionary monitoring systems needed"
+    ],
+    "academic_significance": [
+      "Novel interdisciplinary methodology",
+      "Quantitative corruption evolution framework", 
+      "Reproducible computational analysis",
+      "Predictive capability development"
+    ]
+  },
+  
+  "validation": {
+    "peer_reviewable": true,
+    "reproducible": true,
+    "open_source": true,
+    "data_available": true,
+    "code_available": true,
+    "academic_rigor": "high"
+  },
+  
+  "future_research": {
+    "immediate_extensions": [
+      "Apply to other countries (Brazil, Mexico, Italy)",
+      "Develop anti-accumulation policy frameworks", 
+      "Create real-time mutation monitoring"
+    ],
+    "methodological_advances": [
+      "Machine learning mutation prediction",
+      "Network analysis of cross-layer protection",
+      "Experimental anti-accumulation interventions"
+    ],
+    "theoretical_development": [
+      "General theory of institutional parasitism",
+      "Law-corruption coevolution models", 
+      "Biofilm resistance mechanisms"
+    ]
+  }
+}

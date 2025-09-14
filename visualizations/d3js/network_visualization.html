@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper 11: Political Actor Network Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .control-group label {
+            font-weight: 600;
+            font-size: 0.9em;
+            color: #495057;
+        }
+        
+        .control-group input, .control-group select {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .network-container {
+            position: relative;
+            height: 700px;
+            overflow: hidden;
+        }
+        
+        #network-svg {
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+        }
+        
+        #network-svg:active {
+            cursor: grabbing;
+        }
+        
+        .node {
+            cursor: pointer;
+            stroke-width: 2px;
+        }
+        
+        .node:hover {
+            stroke-width: 4px;
+        }
+        
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+        
+        .node-label {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            fill: #333;
+            text-anchor: middle;
+            pointer-events: none;
+            font-weight: 500;
+        }
+        
+        .lopez-rega {
+            fill: #8B0000;
+            stroke: #660000;
+        }
+        
+        .milei {
+            fill: #FF4500;
+            stroke: #CC3300;
+        }
+        
+        .other-actor {
+            fill: #2E86AB;
+            stroke: #1A5F7A;
+        }
+        
+        .highlight {
+            fill: #FFD700 !important;
+            stroke: #FFA500 !important;
+            stroke-width: 4px !important;
+        }
+        
+        .info-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: none;
+        }
+        
+        .info-panel h3 {
+            margin: 0 0 15px 0;
+            color: #495057;
+            font-size: 1.3em;
+        }
+        
+        .info-item {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-size: 1em;
+            margin-top: 2px;
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .legend h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            color: #495057;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 0.9em;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #333;
+        }
+        
+        .statistics {
+            padding: 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Political Actor Network Analysis</h1>
+            <p>Paper 11: Interactive Visualization of Political Similarities and Networks</p>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="similarity-threshold">Similarity Threshold</label>
+                <input type="range" id="similarity-threshold" min="0.3" max="1.0" step="0.05" value="0.7">
+                <span id="threshold-value">0.70</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="layout-type">Layout Algorithm</label>
+                <select id="layout-type">
+                    <option value="force">Force-Directed</option>
+                    <option value="circular">Circular</option>
+                    <option value="radial">Radial</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="node-size">Node Size</label>
+                <select id="node-size">
+                    <option value="uniform">Uniform</option>
+                    <option value="centrality">By Centrality</option>
+                    <option value="connections">By Connections</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="show-labels">Show Labels</label>
+                <input type="checkbox" id="show-labels" checked>
+            </div>
+            
+            <div class="control-group">
+                <button id="reset-zoom" style="padding: 8px 16px; background: #667eea; color: white; border: none; border-radius: 4px; cursor: pointer;">Reset View</button>
+            </div>
+        </div>
+        
+        <div class="network-container">
+            <svg id="network-svg"></svg>
+            
+            <div class="info-panel" id="info-panel">
+                <h3 id="actor-name">Actor Information</h3>
+                <div class="info-item">
+                    <div class="info-label">Country</div>
+                    <div class="info-value" id="actor-country">-</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Connections</div>
+                    <div class="info-value" id="actor-connections">-</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Centrality</div>
+                    <div class="info-value" id="actor-centrality">-</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Similar to López Rega</div>
+                    <div class="info-value" id="lopez-similarity">-</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Similar to Milei</div>
+                    <div class="info-value" id="milei-similarity">-</div>
+                </div>
+            </div>
+            
+            <div class="legend">
+                <h4>Legend</h4>
+                <div class="legend-item">
+                    <div class="legend-color lopez-rega"></div>
+                    <span>López Rega</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color milei"></div>
+                    <span>Javier Milei</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color other-actor"></div>
+                    <span>Other Political Actors</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="statistics">
+            <div class="stat-item">
+                <div class="stat-value" id="total-actors">32</div>
+                <div class="stat-label">Total Actors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="total-connections">-</div>
+                <div class="stat-label">Connections</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="avg-similarity">-</div>
+                <div class="stat-label">Avg Similarity</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="lopez-milei-similarity">-</div>
+                <div class="stat-label">López-Milei Similarity</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Sample data - replace with actual data from analysis
+        const actorData = [
+            {id: 0, name: "José López Rega", country: "Argentina", type: "lopez_rega"},
+            {id: 1, name: "Javier Milei", country: "Argentina", type: "milei"},
+            {id: 2, name: "Jair Bolsonaro", country: "Brazil", type: "other"},
+            {id: 3, name: "Donald Trump", country: "United States", type: "other"},
+            {id: 4, name: "Viktor Orbán", country: "Hungary", type: "other"},
+            {id: 5, name: "Matteo Salvini", country: "Italy", type: "other"},
+            {id: 6, name: "Marine Le Pen", country: "France", type: "other"},
+            {id: 7, name: "Geert Wilders", country: "Netherlands", type: "other"},
+            {id: 8, name: "Santiago Abascal", country: "Spain", type: "other"},
+            {id: 9, name: "Giorgia Meloni", country: "Italy", type: "other"},
+            {id: 10, name: "Nigel Farage", country: "United Kingdom", type: "other"},
+            {id: 11, name: "Andrés Manuel López Obrador", country: "Mexico", type: "other"},
+            {id: 12, name: "Rodrigo Duterte", country: "Philippines", type: "other"},
+            {id: 13, name: "Recep Tayyip Erdoğan", country: "Turkey", type: "other"},
+            {id: 14, name: "Narendra Modi", country: "India", type: "other"},
+            {id: 15, name: "Benjamin Netanyahu", country: "Israel", type: "other"}
+        ];
+
+        // Similarity matrix (simplified for demo)
+        const similarityMatrix = [
+            [1.00, 0.78, 0.65, 0.72, 0.68, 0.70, 0.63, 0.61, 0.66, 0.69, 0.58, 0.73, 0.71, 0.67, 0.64, 0.62],
+            [0.78, 1.00, 0.71, 0.79, 0.75, 0.77, 0.68, 0.66, 0.72, 0.74, 0.63, 0.76, 0.73, 0.70, 0.68, 0.65],
+            [0.65, 0.71, 1.00, 0.82, 0.78, 0.75, 0.72, 0.70, 0.76, 0.79, 0.68, 0.74, 0.77, 0.73, 0.71, 0.69],
+            [0.72, 0.79, 0.82, 1.00, 0.85, 0.81, 0.78, 0.75, 0.80, 0.83, 0.73, 0.79, 0.82, 0.78, 0.76, 0.74],
+            [0.68, 0.75, 0.78, 0.85, 1.00, 0.84, 0.81, 0.79, 0.83, 0.86, 0.76, 0.82, 0.85, 0.82, 0.80, 0.77],
+            [0.70, 0.77, 0.75, 0.81, 0.84, 1.00, 0.87, 0.85, 0.89, 0.92, 0.82, 0.86, 0.89, 0.85, 0.83, 0.81],
+            [0.63, 0.68, 0.72, 0.78, 0.81, 0.87, 1.00, 0.92, 0.95, 0.89, 0.85, 0.83, 0.86, 0.82, 0.80, 0.78],
+            [0.61, 0.66, 0.70, 0.75, 0.79, 0.85, 0.92, 1.00, 0.88, 0.86, 0.83, 0.81, 0.84, 0.80, 0.78, 0.76],
+            [0.66, 0.72, 0.76, 0.80, 0.83, 0.89, 0.95, 0.88, 1.00, 0.93, 0.86, 0.87, 0.90, 0.86, 0.84, 0.82],
+            [0.69, 0.74, 0.79, 0.83, 0.86, 0.92, 0.89, 0.86, 0.93, 1.00, 0.88, 0.90, 0.93, 0.89, 0.87, 0.85],
+            [0.58, 0.63, 0.68, 0.73, 0.76, 0.82, 0.85, 0.83, 0.86, 0.88, 1.00, 0.84, 0.87, 0.83, 0.81, 0.79],
+            [0.73, 0.76, 0.74, 0.79, 0.82, 0.86, 0.83, 0.81, 0.87, 0.90, 0.84, 1.00, 0.91, 0.87, 0.85, 0.83],
+            [0.71, 0.73, 0.77, 0.82, 0.85, 0.89, 0.86, 0.84, 0.90, 0.93, 0.87, 0.91, 1.00, 0.94, 0.92, 0.90],
+            [0.67, 0.70, 0.73, 0.78, 0.82, 0.85, 0.82, 0.80, 0.86, 0.89, 0.83, 0.87, 0.94, 1.00, 0.96, 0.93],
+            [0.64, 0.68, 0.71, 0.76, 0.80, 0.83, 0.80, 0.78, 0.84, 0.87, 0.81, 0.85, 0.92, 0.96, 1.00, 0.97],
+            [0.62, 0.65, 0.69, 0.74, 0.77, 0.81, 0.78, 0.76, 0.82, 0.85, 0.79, 0.83, 0.90, 0.93, 0.97, 1.00]
+        ];
+
+        // Initialize visualization
+        class NetworkVisualization {
+            constructor() {
+                this.width = 1360;
+                this.height = 700;
+                this.threshold = 0.7;
+                
+                this.svg = d3.select("#network-svg")
+                    .attr("width", this.width)
+                    .attr("height", this.height);
+                
+                this.g = this.svg.append("g");
+                
+                this.tooltip = d3.select("#tooltip");
+                
+                this.setupZoom();
+                this.setupControls();
+                this.updateVisualization();
+            }
+            
+            setupZoom() {
+                const zoom = d3.zoom()
+                    .scaleExtent([0.1, 4])
+                    .on("zoom", (event) => {
+                        this.g.attr("transform", event.transform);
+                    });
+                
+                this.svg.call(zoom);
+                
+                d3.select("#reset-zoom").on("click", () => {
+                    this.svg.transition().duration(750).call(
+                        zoom.transform,
+                        d3.zoomIdentity
+                    );
+                });
+            }
+            
+            setupControls() {
+                d3.select("#similarity-threshold").on("input", (event) => {
+                    this.threshold = +event.target.value;
+                    d3.select("#threshold-value").text(this.threshold.toFixed(2));
+                    this.updateVisualization();
+                });
+                
+                d3.select("#layout-type").on("change", () => {
+                    this.updateVisualization();
+                });
+                
+                d3.select("#node-size").on("change", () => {
+                    this.updateVisualization();
+                });
+                
+                d3.select("#show-labels").on("change", () => {
+                    const show = d3.select("#show-labels").property("checked");
+                    this.g.selectAll(".node-label").style("display", show ? "block" : "none");
+                });
+            }
+            
+            createLinks() {
+                const links = [];
+                for (let i = 0; i < actorData.length; i++) {
+                    for (let j = i + 1; j < actorData.length; j++) {
+                        if (similarityMatrix[i][j] >= this.threshold) {
+                            links.push({
+                                source: i,
+                                target: j,
+                                value: similarityMatrix[i][j]
+                            });
+                        }
+                    }
+                }
+                return links;
+            }
+            
+            calculateCentrality(links) {
+                const centrality = {};
+                actorData.forEach(d => centrality[d.id] = 0);
+                
+                links.forEach(link => {
+                    centrality[link.source.id || link.source]++;
+                    centrality[link.target.id || link.target]++;
+                });
+                
+                return centrality;
+            }
+            
+            updateVisualization() {
+                // Clear previous visualization
+                this.g.selectAll("*").remove();
+                
+                const links = this.createLinks();
+                const centrality = this.calculateCentrality(links);
+                
+                // Update statistics
+                d3.select("#total-connections").text(links.length);
+                const avgSim = links.length > 0 ? d3.mean(links, d => d.value) : 0;
+                d3.select("#avg-similarity").text(avgSim.toFixed(3));
+                d3.select("#lopez-milei-similarity").text(similarityMatrix[0][1].toFixed(3));
+                
+                // Create force simulation
+                const simulation = d3.forceSimulation(actorData)
+                    .force("link", d3.forceLink(links).id(d => d.id).distance(d => 100 * (1 - d.value)))
+                    .force("charge", d3.forceManyBody().strength(-300))
+                    .force("center", d3.forceCenter(this.width / 2, this.height / 2));
+                
+                // Create links
+                const link = this.g.append("g")
+                    .selectAll("line")
+                    .data(links)
+                    .join("line")
+                    .attr("class", "link")
+                    .attr("stroke-width", d => Math.sqrt(d.value * 5));
+                
+                // Create nodes
+                const node = this.g.append("g")
+                    .selectAll("circle")
+                    .data(actorData)
+                    .join("circle")
+                    .attr("class", d => `node ${d.type}`)
+                    .attr("r", d => {
+                        const sizeMode = d3.select("#node-size").property("value");
+                        switch(sizeMode) {
+                            case "centrality": return 8 + (centrality[d.id] || 0) * 2;
+                            case "connections": return 8 + (centrality[d.id] || 0) * 1.5;
+                            default: return 12;
+                        }
+                    })
+                    .call(d3.drag()
+                        .on("start", dragstarted)
+                        .on("drag", dragged)
+                        .on("end", dragended));
+                
+                // Add labels
+                const label = this.g.append("g")
+                    .selectAll("text")
+                    .data(actorData)
+                    .join("text")
+                    .attr("class", "node-label")
+                    .text(d => d.name)
+                    .attr("dy", -15);
+                
+                // Add interactions
+                node
+                    .on("mouseover", (event, d) => {
+                        // Highlight node
+                        d3.select(event.target).classed("highlight", true);
+                        
+                        // Show tooltip
+                        this.tooltip
+                            .style("opacity", 1)
+                            .html(`<strong>${d.name}</strong><br>Country: ${d.country}<br>Connections: ${centrality[d.id] || 0}`)
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 10) + "px");
+                    })
+                    .on("mousemove", (event) => {
+                        this.tooltip
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 10) + "px");
+                    })
+                    .on("mouseout", (event, d) => {
+                        d3.select(event.target).classed("highlight", false);
+                        this.tooltip.style("opacity", 0);
+                    })
+                    .on("click", (event, d) => {
+                        this.showActorInfo(d, centrality);
+                    });
+                
+                // Simulation tick
+                simulation.on("tick", () => {
+                    link
+                        .attr("x1", d => d.source.x)
+                        .attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x)
+                        .attr("y2", d => d.target.y);
+                    
+                    node
+                        .attr("cx", d => d.x)
+                        .attr("cy", d => d.y);
+                    
+                    label
+                        .attr("x", d => d.x)
+                        .attr("y", d => d.y);
+                });
+                
+                // Drag functions
+                function dragstarted(event) {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+                }
+                
+                function dragged(event) {
+                    event.subject.fx = event.x;
+                    event.subject.fy = event.y;
+                }
+                
+                function dragended(event) {
+                    if (!event.active) simulation.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+                }
+            }
+            
+            showActorInfo(actor, centrality) {
+                const panel = d3.select("#info-panel");
+                
+                d3.select("#actor-name").text(actor.name);
+                d3.select("#actor-country").text(actor.country);
+                d3.select("#actor-connections").text(centrality[actor.id] || 0);
+                d3.select("#actor-centrality").text((centrality[actor.id] / actorData.length).toFixed(3));
+                d3.select("#lopez-similarity").text(similarityMatrix[0][actor.id].toFixed(3));
+                d3.select("#milei-similarity").text(similarityMatrix[1][actor.id].toFixed(3));
+                
+                panel.style("display", "block");
+                
+                // Hide panel after 5 seconds
+                setTimeout(() => {
+                    panel.style("display", "none");
+                }, 5000);
+            }
+        }
+        
+        // Initialize visualization when page loads
+        document.addEventListener("DOMContentLoaded", () => {
+            new NetworkVisualization();
+        });
+    </script>
+</body>
+</html>

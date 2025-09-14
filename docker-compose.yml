@@ -1,0 +1,112 @@
+# Paper 11: Political Actor Network Analysis - Docker Compose
+# Complete development and analysis environment
+
+version: '3.8'
+
+services:
+  # Main analysis environment with Jupyter Lab
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: paper11-jupyter
+    ports:
+      - "8888:8888"  # Jupyter Lab
+      - "8050:8050"  # Dash apps
+    volumes:
+      - ./notebooks:/app/notebooks
+      - ./data:/app/data
+      - ./code:/app/code
+      - ./results:/app/results
+      - ./docs:/app/docs
+      - ./visualizations:/app/visualizations
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - PYTHONPATH=/app
+    command: jupyter lab --allow-root --no-browser --ip=0.0.0.0 --port=8888
+    restart: unless-stopped
+    networks:
+      - paper11-network
+
+  # Interactive web dashboard
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: paper11-dashboard
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./code:/app/code
+      - ./data:/app/data
+      - ./results:/app/results
+    environment:
+      - FLASK_APP=code/dashboard.py
+      - FLASK_ENV=development
+      - PYTHONPATH=/app
+    command: python -m flask run --host=0.0.0.0 --port=5000
+    depends_on:
+      - jupyter
+    restart: unless-stopped
+    networks:
+      - paper11-network
+
+  # Database for caching and results storage
+  redis:
+    image: redis:7-alpine
+    container_name: paper11-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    networks:
+      - paper11-network
+
+  # Production web server
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: paper11-web
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./results:/app/results:ro
+    restart: unless-stopped
+    networks:
+      - paper11-network
+    profiles:
+      - production
+
+  # Documentation server
+  docs:
+    image: nginx:alpine
+    container_name: paper11-docs
+    ports:
+      - "8080:80"
+    volumes:
+      - ./docs/_build/html:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: unless-stopped
+    networks:
+      - paper11-network
+    profiles:
+      - documentation
+
+volumes:
+  redis-data:
+    driver: local
+
+networks:
+  paper11-network:
+    driver: bridge
+
+# Development override file
+# Create docker-compose.override.yml for local customizations

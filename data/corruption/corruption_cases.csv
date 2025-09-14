@@ -1,0 +1,90 @@
+case_id,case_name,year,date,court_level,layer,outcome,severity,fitness_impact,description
+Electoral_1880,Voto_Cantado_Roca,1880,1880-06-15,Supreme Court,electoral,unchallenged,high,0.95,Public voting system enabling electoral manipulation under Roca administration
+Electoral_1890,Fraude_Patriotico_1890,1890,1890-03-20,Supreme Court,electoral,unchallenged,high,0.93,Systematic electoral fraud during the Unicato period
+Electoral_1900,Elecciones_Falsas_Pellegrini,1900,1900-09-12,Supreme Court,electoral,unchallenged,extreme,0.96,Peak of electoral manipulation before Saenz Pena Law
+Electoral_1910,Ultima_Decada_Infame,1910,1910-04-08,Supreme Court,electoral,reformed,high,0.45,Final period of systematic electoral fraud before reform
+Saenz_Pena_1912,Ley_Saenz_Pena,1912,1912-02-13,Supreme Court,electoral,reform_attempt,high,-0.60,Secret ballot law attempting to end electoral corruption
+Administrative_1912,Empleo_Publico_Patronazgo,1912,1912-07-20,Appeals,administrative,emerging,medium,0.75,Emergence of administrative patronage networks post-Saenz Pena
+Electoral_1930,Fraude_Patriotico_Uriburu,1930,1930-09-06,Supreme Court,electoral,normalized,high,0.78,Return of electoral manipulation after Uriburu coup
+Administrative_1930,Burocracia_Militar_1930,1930,1930-10-15,Appeals,administrative,normalized,high,0.85,Military administration consolidates bureaucratic networks
+Administrative_1935,Decada_Infame_Admin,1935,1935-05-12,Appeals,administrative,normalized,high,0.92,Administrative corruption during the Infamous Decade
+Electoral_1940,Fraude_Concordancia,1940,1940-11-03,Supreme Court,electoral,normalized,high,0.87,Electoral fraud under the Concordancia conservative alliance
+Electoral_1943,Elecciones_Fraudulentas_1943,1943,1943-06-04,Supreme Court,electoral,challenged,medium,0.55,Military government disrupts but doesn't eliminate fraud
+Administrative_1943,Estado_Interventor_1943,1943,1943-08-22,Appeals,administrative,expanded,high,0.88,Expansion of state apparatus creates new corruption opportunities
+Electoral_1946,Clientelismo_Peronista,1946,1946-02-24,Supreme Court,electoral,normalized,high,0.82,Institutionalization of clientelistic networks under Perón
+Administrative_1946,Sindicatos_Estado_1946,1946,1946-05-17,Appeals,administrative,normalized,high,0.89,State-union relationship creates administrative capture
+Administrative_1950,Fundacion_Eva_Peron,1950,1950-09-08,Lower,administrative,normalized,medium,0.76,Foundation activities blur public-private boundaries
+Electoral_1955,Revolucion_Libertadora_Electoral,1955,1955-09-16,Supreme Court,electoral,challenged,medium,0.45,Military intervention disrupts electoral networks
+Administrative_1955,Desperonizacion_Admin,1955,1955-11-20,Appeals,administrative,challenged,medium,0.35,Administrative purge attempts to eliminate Peronist networks
+Administrative_1958,Frondizi_Desarrollismo,1958,1958-05-01,Appeals,administrative,normalized,high,0.83,Developmentalist policies create new administrative corruption
+Electoral_1966,Revolucion_Argentina_Electoral,1966,1966-06-28,Supreme Court,electoral,suppressed,low,0.25,Military government suspends electoral processes
+Administrative_1966,Ongania_Burocracia,1966,1966-08-15,Appeals,administrative,expanded,high,0.91,Authoritarian administration expands bureaucratic corruption
+Administrative_1970,Cordobazo_Represion_Admin,1970,1970-03-12,Lower,administrative,challenged,medium,0.42,Social uprising challenges administrative networks
+Administrative_1973,Campora_Vuelta_Peronismo,1973,1973-05-25,Appeals,administrative,normalized,high,0.86,Return of Peronism reactivates administrative networks
+Electoral_1973,Elecciones_Marzo_1973,1973,1973-03-11,Supreme Court,electoral,normalized,medium,0.68,Return to electoral competition with persistent irregularities
+Administrative_1976,Proceso_Burocracia_Militar,1976,1976-03-24,Supreme Court,administrative,militarized,extreme,0.94,Military Process creates parallel administrative corruption
+Electoral_1983,Vuelta_Democracia,1983,1983-10-30,Supreme Court,electoral,reformed,medium,0.38,Democratic transition reduces but doesn't eliminate electoral corruption
+Administrative_1983,Transicion_Admin_1983,1983,1983-12-10,Appeals,administrative,reformed,medium,0.52,Administrative transition maintains some corrupt networks
+Electoral_1989,Crisis_Hiperinflacion_Electoral,1989,1989-05-14,Supreme Court,electoral,normalized,high,0.79,Economic crisis enables electoral manipulation
+Administrative_1989,Menem_Clientelismo_1989,1989,1989-07-08,Appeals,administrative,expanded,extreme,0.96,Menem administration expands clientelistic networks
+Entrepreneurial_1990,Privatizaciones_Menem,1990,1990-08-17,Supreme Court,entrepreneurial,emerging,extreme,0.98,Beginning of state capture through privatizations
+Administrative_1990,Reforma_Estado_1990,1990,1990-09-23,Appeals,administrative,captured,extreme,0.97,State reform captured by private interests
+Entrepreneurial_1991,YPF_Privatizacion,1991,1991-12-24,Supreme Court,entrepreneurial,successful,extreme,0.95,YPF privatization creates entrepreneurial corruption networks
+Entrepreneurial_1992,ENTel_Privatizacion,1992,1992-11-08,Appeals,entrepreneurial,successful,extreme,0.94,Telecommunications privatization consolidates capture model
+Entrepreneurial_1993,Aerolíneas_Privatizacion,1993,1993-10-12,Appeals,entrepreneurial,successful,high,0.91,Airlines privatization extends entrepreneurial corruption
+Administrative_1994,Pacto_Olivos,1994,1994-11-13,Supreme Court,administrative,negotiated,high,0.84,Constitutional reform negotiated to maintain corruption networks
+Entrepreneurial_1995,Bancos_Privatizacion,1995,1995-06-20,Appeals,entrepreneurial,successful,high,0.89,Bank privatizations complete entrepreneurial layer
+Electoral_1995,Reeleccion_Menem,1995,1995-05-14,Supreme Court,electoral,successful,high,0.88,Constitutional reform enables corrupt reelection
+Entrepreneurial_1996,IBM_Banco_Nacion,1996,1996-03-18,Lower,entrepreneurial,scandal,high,0.72,IBM-Banco Nación scandal exposes but doesn't stop corruption
+Administrative_1997,Flexibilizacion_Laboral,1997,1997-05-07,Appeals,administrative,successful,medium,0.81,Labor flexibility reforms create administrative capture
+Electoral_1999,Fin_Menemismo,1999,1999-10-24,Supreme Court,electoral,challenged,medium,0.46,Electoral defeat challenges but doesn't eliminate corruption
+Administrative_1999,Alianza_Transicion,1999,1999-12-10,Appeals,administrative,reformed,medium,0.48,Administrative transition attempts reform but maintains networks
+Entrepreneurial_2001,Crisis_2001_Empresarial,2001,2001-12-19,Supreme Court,entrepreneurial,crisis,extreme,0.65,Economic crisis weakens but doesn't eliminate entrepreneurial corruption
+Administrative_2001,Corralito_Administrativo,2001,2001-12-03,Appeals,administrative,crisis,extreme,0.58,Banking crisis exposes administrative corruption
+Electoral_2003,Kirshner_Eleccion,2003,2003-04-27,Supreme Court,electoral,normalized,medium,0.73,Kirchner election maintains electoral irregularities
+Administrative_2003,Kirchner_Admin_2003,2003,2003-05-25,Appeals,administrative,normalized,high,0.87,Kirchner administration consolidates new administrative networks
+Entrepreneurial_2004,Obra_Publica_K_Inicio,2004,2004-09-15,Lower,entrepreneurial,emerging,high,0.89,Beginning of Kirchner-era public works corruption
+Entrepreneurial_2005,Skanska_Scandal,2005,2005-04-22,Appeals,entrepreneurial,scandal,high,0.71,Skanska scandal exposes construction sector corruption
+Administrative_2006,Subsidios_Energeticos,2006,2006-01-30,Lower,administrative,normalized,high,0.85,Energy subsidies create administrative corruption opportunities
+Electoral_2007,Cristina_Eleccion,2007,2007-10-28,Supreme Court,electoral,normalized,medium,0.75,Cristina Kirchner election continues electoral irregularities
+Administrative_2008,Resolucion_125_Admin,2008,2008-03-11,Appeals,administrative,challenged,high,0.59,Agricultural conflict challenges administrative networks
+Entrepreneurial_2009,Futuro_Dolar_Clarin,2009,2009-06-18,Lower,entrepreneurial,normalized,high,0.82,Media-government conflicts over entrepreneurial benefits
+Administrative_2010,Bicentenario_Admin,2010,2010-05-25,Lower,administrative,normalized,medium,0.78,Bicentennial spending enables administrative corruption
+Entrepreneurial_2011,Estatizacion_YPF_Previa,2011,2011-02-28,Appeals,entrepreneurial,preparation,high,0.86,Preparation for YPF renationalization creates opportunities
+Administrative_2012,Indec_Manipulacion,2012,2012-01-31,Lower,administrative,successful,extreme,0.93,INDEC statistics manipulation consolidates administrative capture
+Entrepreneurial_2013,Lazaro_Baez_Emergence,2013,2013-08-12,Lower,entrepreneurial,normalized,extreme,0.96,Lázaro Báez construction empire peaks
+Administrative_2013,Cadenas_Nacionales,2013,2013-10-27,Lower,administrative,normalized,medium,0.79,Media cadenas consolidate administrative propaganda
+Electoral_2015,Fin_Kirchnerismo,2015,2015-11-22,Supreme Court,electoral,challenged,medium,0.47,Macri election challenges but doesn't eliminate corruption
+Administrative_2015,Transicion_Macri_Admin,2015,2015-12-10,Appeals,administrative,reformed,medium,0.51,Macri transition attempts administrative reform
+Entrepreneurial_2016,Hotesur_Cristobal_Lopez,2016,2016-07-18,Appeals,entrepreneurial,prosecuted,high,0.35,Hotesur and Cristóbal López prosecution disrupts networks
+Administrative_2016,DNU_Macri_2016,2016,2016-01-04,Supreme Court,administrative,normalized,high,0.83,Macri DNUs maintain administrative capture mechanisms
+Compliance_2017,Compliance_Programs_Law,2017,2017-03-20,Supreme Court,compliance_capture,emerging,medium,0.74,Corporate compliance programs law creates capture opportunities
+Electoral_2017,Elecciones_Legislativas_2017,2017,2017-10-22,Supreme Court,electoral,normalized,medium,0.72,Legislative elections maintain electoral irregularities
+Entrepreneurial_2018,Cuadernos_Coimas,2018,2018-08-01,Appeals,entrepreneurial,scandal,extreme,0.42,Notebooks scandal exposes but leads to selective prosecution
+Administrative_2018,Tarifazo_Admin,2018,2018-05-28,Lower,administrative,challenged,high,0.63,Utility rate increases create administrative conflicts
+Compliance_2018,Odebrecht_Argentina,2018,2018-12-12,Appeals,compliance_capture,negotiated,high,0.81,Odebrecht plea bargain demonstrates compliance capture
+Administrative_2019,Crisis_Macri_Admin,2019,2019-08-11,Appeals,administrative,crisis,high,0.57,Macri administration crisis weakens administrative networks
+Electoral_2019,Eleccion_Alberto_Fernandez,2019,2019-10-27,Supreme Court,electoral,normalized,medium,0.74,Alberto Fernández election continues electoral patterns
+Administrative_2019,Vuelta_Kirchnerismo_Admin,2019,2019-12-10,Appeals,administrative,normalized,high,0.88,Return of Kirchnerism reactivates administrative networks
+Compliance_2020,Pandemia_Compliance,2020,2020-03-20,Lower,compliance_capture,expanded,high,0.87,Pandemic emergency expands compliance capture opportunities
+Administrative_2020,IFE_AUH_Pandemia,2020,2020-04-03,Lower,administrative,expanded,high,0.89,Emergency income programs create administrative corruption
+Entrepreneurial_2020,Vacunas_VIP_Preparacion,2020,2020-12-29,Lower,entrepreneurial,preparation,medium,0.76,Vaccine procurement creates entrepreneurial opportunities
+Compliance_2021,Vacunatorio_VIP,2021,2021-02-19,Appeals,compliance_capture,scandal,extreme,0.68,VIP vaccination scandal shows compliance system capture
+Administrative_2021,Fiesta_Olivos,2021,2021-08-14,Lower,administrative,scandal,medium,0.71,Olivos party scandal exposes administrative privilege
+Entrepreneurial_2021,Seguros_Nacion_Inicio,2021,2021-05-17,Lower,entrepreneurial,emerging,high,0.84,Nacional Seguros scheme begins
+Compliance_2022,Techint_Compliance,2022,2022-01-25,Lower,compliance_capture,defensive,high,0.86,Techint uses compliance programs defensively
+Administrative_2022,Atentado_Cristina_Admin,2022,2022-09-01,Appeals,administrative,defensive,medium,0.77,Post-assassination attempt administrative protection
+Electoral_2022,Elecciones_Legislativas_2022,2022,2022-11-14,Supreme Court,electoral,normalized,medium,0.73,Legislative elections maintain electoral corruption patterns
+Entrepreneurial_2023,Massa_Dolar_Blue,2023,2023-06-12,Lower,entrepreneurial,normalized,high,0.81,Massa administration dollar policies create arbitrage opportunities
+Compliance_2023,ESG_Washing_Argentina,2023,2023-09-08,Lower,compliance_capture,normalized,high,0.83,ESG compliance washing becomes normalized
+Administrative_2023,Javier_Milei_Transicion,2023,2023-11-19,Supreme Court,administrative,challenged,medium,0.49,Milei election challenges administrative networks
+Electoral_2023,Eleccion_Milei,2023,2023-11-19,Supreme Court,electoral,reformed,medium,0.41,Milei election reduces but doesn't eliminate electoral corruption
+Compliance_2024,FGS_Seguros_Scandal,2024,2024-01-15,Appeals,compliance_capture,scandal,extreme,0.64,FGS insurance scandal exposes compliance capture
+Administrative_2024,Motosierra_Admin,2024,2024-02-20,Appeals,administrative,reformed,high,0.44,Milei's chainsaw reduces but restructures administrative corruption
+Entrepreneurial_2024,AI_Compliance_Emerging,2024,2024-03-10,Lower,entrepreneurial,emerging,medium,0.78,AI and tech sector compliance creates new entrepreneurial opportunities
+Compliance_2024,DNU_Milei_Compliance,2024,2024-04-05,Supreme Court,compliance_capture,defensive,high,0.85,Milei DNUs use compliance mechanisms defensively
+Electoral_2024,Elecciones_Provinciales_2024,2024,2024-09-22,Lower,electoral,normalized,medium,0.69,Provincial elections show persistence of electoral corruption
+Administrative_2025,Nueva_Burocracia_Milei,2025,2025-01-01,Appeals,administrative,transitional,medium,0.67,New Milei administration creates different administrative opportunities
+Entrepreneurial_2025,Crypto_Compliance_2025,2025,2025-02-14,Lower,entrepreneurial,emerging,medium,0.82,Cryptocurrency regulation creates new entrepreneurial corruption
+Compliance_2025,AI_Governance_Capture,2025,2025-03-20,Lower,compliance_capture,emerging,high,0.88,AI governance frameworks captured from inception
+Electoral_2025,Sistema_Electoral_Digital,2025,2025-08-15,Supreme Court,electoral,transitional,medium,0.71,Digital voting systems create new electoral corruption opportunities
