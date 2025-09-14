@@ -1,0 +1,58 @@
+# Universal Analysis Framework - Requirements
+# Dependencias para el framework de análisis universal aplicando 8 meta-principios
+
+# Core scientific computing
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Network analysis for genealogical tracking
+networkx>=2.6.0
+
+# Web API and integration
+fastapi>=0.68.0
+uvicorn[standard]>=0.15.0
+pydantic>=1.8.0
+
+# Async support
+asyncio-throttle>=1.0.2
+
+# Data validation and serialization
+typing-extensions>=4.0.0
+
+# Logging and monitoring
+structlog>=21.1.0
+
+# Optional dependencies for enhanced functionality
+# Uncomment as needed:
+
+# Machine Learning (for advanced models)
+# scikit-learn>=1.0.0
+# pandas>=1.3.0
+
+# Advanced statistical methods
+# statsmodels>=0.12.0
+
+# Plotting and visualization (for genealogy graphs)
+# matplotlib>=3.4.0
+# plotly>=5.0.0
+
+# Development and testing
+pytest>=6.2.0
+pytest-asyncio>=0.15.0
+pytest-cov>=2.12.0
+
+# Code quality
+black>=21.6.0
+flake8>=3.9.0
+mypy>=0.910
+
+# Documentation
+sphinx>=4.0.0
+sphinx-rtd-theme>=0.5.0
+
+# Production deployment
+gunicorn>=20.1.0
+redis>=3.5.0  # For caching if needed
+
+# Security
+cryptography>=3.4.0
