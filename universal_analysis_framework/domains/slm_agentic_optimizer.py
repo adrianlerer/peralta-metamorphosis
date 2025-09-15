@@ -198,6 +198,33 @@ class SLMAgenticOptimizer(UniversalAnalyzer[AgenticTask, OptimizationResult]):
             context_window=8192
         )
         
+        # Apertus-70B-Instruct - ENTERPRISE SLM (compliance-focused)
+        models["apertus-70b-instruct"] = ModelCandidate(
+            model_id="apertus-70b-instruct",
+            size_category=ModelSizeCategory.LARGE,  # 70B dense model
+            parameter_count=70.0,  # 70B parámetros (dense, no MoE)
+            capabilities={
+                "tool_calling": 0.75,  # [Conjetura] Declarado pero sin benchmarks públicos
+                "code_generation": 0.82,  # [Inferencia] Entrenado con datos de código
+                "instruction_following": 0.85,  # [Inferencia] SFT + QRPO alignment
+                "reasoning": 0.76,  # [Verificado] Benchmarks ARC 70.6%, promedio 67.5%
+                "conversational": 0.80,  # [Inferencia] Chat template integrado
+                "compliance_readiness": 0.95  # [Verificado] EU AI Act documented
+            },
+            performance_metrics={
+                "arc_benchmark": 0.706,  # [Verificado] ARC score
+                "average_benchmark": 0.675,  # [Verificado] Promedio benchmarks
+                "multilingue_support": 1811,  # [Verificado] Idiomas soportados
+                "enterprise_transparency": 1.0,  # [Verificado] Fully open source
+                "context_window_utilization": 0.90  # [Inferencia] 65k context optimizado
+            },
+            cost_per_token=0.020,  # [Estimación] Self-hosted, infra costs included
+            latency_profile={"simple": 2.0, "moderate": 4.0, "complex": 8.0},  # [Estimación] 70B dense
+            deployment_flexibility=0.60,  # [Inferencia] Requiere infra significativa
+            fine_tuning_cost=0.30,  # [Estimación] Open source facilita fine-tuning
+            context_window=65536  # [Verificado] 65k tokens
+        )
+        
         # LLMs de referencia
         models["gpt-4o"] = ModelCandidate(
             model_id="gpt-4o",
@@ -316,6 +343,51 @@ CONSEJOS PARA EVITAR PARÁLISIS:
 
 EJECUTAR TAREA CON REALITY FILTER 2.0:
 """
+    
+    def intelligent_model_router(self, task: AgenticTask) -> str:
+        """
+        [Inferencia razonada] Router inteligente entre Kimi K2 y Apertus-70B-Instruct
+        Selecciona modelo óptimo basado en características de tarea
+        """
+        
+        # Criterios de routing basados en task characteristics
+        routing_scores = {
+            "kimi-k2": 0.0,
+            "apertus-70b-instruct": 0.0
+        }
+        
+        # Factor 1: Compliance requirements
+        if task.specialized_domain in ["legal", "banking", "healthcare", "regulatory"]:
+            routing_scores["apertus-70b-instruct"] += 0.4  # EU AI Act compliance
+        else:
+            routing_scores["kimi-k2"] += 0.2  # Sufficient for general use
+        
+        # Factor 2: Cost sensitivity
+        if task.cost_sensitivity > 0.8:  # High cost sensitivity
+            routing_scores["kimi-k2"] += 0.3  # OpenRouter más cost-efficient
+        elif task.cost_sensitivity < 0.4:  # Low cost sensitivity  
+            routing_scores["apertus-70b-instruct"] += 0.2  # Can afford infra costs
+        
+        # Factor 3: Latency requirements
+        if task.latency_requirement < 0.5:  # Need fast response
+            routing_scores["kimi-k2"] += 0.3  # MoE efficiency
+        elif task.latency_requirement > 2.0:  # Can tolerate higher latency
+            routing_scores["apertus-70b-instruct"] += 0.1
+        
+        # Factor 4: Context window requirements
+        if task.context_window_needed > 100000:  # Very long context
+            routing_scores["kimi-k2"] += 0.2  # 200k vs 65k context window
+        elif task.context_window_needed > 32000:
+            routing_scores["apertus-70b-instruct"] += 0.1  # 65k sufficient
+            routing_scores["kimi-k2"] += 0.1  # Both can handle
+        
+        # Factor 5: Frequency/volume (cost scaling)
+        if task.frequency > 1000:  # High frequency tasks
+            routing_scores["kimi-k2"] += 0.2  # Better scaling via OpenRouter
+        
+        # Determine winner
+        winner = max(routing_scores, key=routing_scores.get)
+        return winner
     
     def _setup_optimization_components(self):
         """Configura componentes de hibridización para optimización SLM/LLM"""
