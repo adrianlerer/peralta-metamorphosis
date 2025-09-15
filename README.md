@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://docker.com)
 [![Jupyter](https://img.shields.io/badge/jupyter-notebooks-orange.svg)](https://jupyter.org)
 
-> **Comprehensive supplementary materials for Paper 11: Multi-dimensional Analysis of Political Actor Networks with López Rega-Milei Similarity Framework**
+> **Comprehensive supplementary materials for Paper 11: Multi-dimensional Analysis of Political Actor Networks Similarity Framework**
 
 This repository contains complete, executable supplementary materials for Paper 11's academic publication, providing comprehensive tools for political actor network analysis with bootstrap validation and interactive visualizations.
 
@@ -29,14 +29,14 @@ This repository contains complete, executable supplementary materials for Paper 
 
 ## 🎯 Overview
 
-This replication package provides complete computational tools for analyzing political actor networks using multi-dimensional similarity frameworks. The analysis focuses on 32 political actors across 19 countries, with special emphasis on the López Rega-Milei comparison using bootstrap validation with 1000 iterations.
+This replication package provides complete computational tools for analyzing political actor networks using multi-dimensional similarity frameworks. The analysis focuses on 32 political actors across 19 countries, using bootstrap validation with 1000 iterations.
 
 ### Research Questions Addressed
 
 1. **Multi-dimensional Political Similarity**: How do political actors compare across economic, social, political system, and international relations dimensions?
 2. **Network Structure Analysis**: What network patterns emerge from political actor similarities?
 3. **Statistical Robustness**: How robust are similarity measurements when validated through bootstrap resampling?
-4. **López Rega-Milei Framework**: What are the detailed similarity breakdowns between these specific political figures?
+4. **Political Figures Framework**: What are the detailed similarity breakdowns between these specific political figures?
 
 ## ⭐ Key Features
 
