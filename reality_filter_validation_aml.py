@@ -39,7 +39,8 @@ class RealityFilter:
         # Base de conocimiento verificable de la industria
         self.verified_benchmarks = {
             "gpt4_cost_per_1k_tokens": 0.03,  # OpenAI pricing público
-            "nemotron_4b_parameters": 4.8e9,  # NVIDIA spec público
+            "kimi_k2_active_parameters": 32e9,  # Kimi K2 - 32B activos de 1T total (MoE)
+            "kimi_k2_openrouter_available": True,  # Acceso directo via OpenRouter
             "typical_aml_transaction_volume": {"small_bank": 5000, "large_bank": 100000},
             "regulatory_accuracy_requirements": {"aml_minimum": 0.90, "high_risk": 0.95},
             "slm_vs_llm_cost_ratio": {"conservative": 0.1, "optimistic": 0.01},
