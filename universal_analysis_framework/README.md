@@ -58,9 +58,14 @@ universal_analysis_framework/
 │   └── influence_tracker.py       # Rastreo de influencias y dependencias
 ├── hybridization/                 # Meta-principio 8: Hibridación adaptativa
 │   └── adaptive_hybridizer.py     # Sistema de hibridación dinámica
-├── domains/                       # Ejemplos de implementación
+├── domains/                       # Implementaciones especializadas
 │   ├── text_analysis_example.py   # Análisis de texto
-│   └── financial_analysis_example.py # Análisis financiero
+│   ├── financial_analysis_example.py # Análisis financiero
+│   ├── slm_agentic_optimizer.py   # 🧠 SLM Agentic AI (NVIDIA-inspired)
+│   ├── llm_to_slm_converter.py    # 🔄 Conversión LLM-to-SLM
+│   ├── generalized_ai_optimizer.py # 🎯 Optimizador AI generalizado
+│   ├── metacognitive_neurofeedback.py # 🧠 Neurofeedback metacognitivo (arXiv:2505.13763)
+│   └── peralta_enhanced_analyzer.py # 🚀 Peralta Enhanced: SLM + Neurofeedback + Reality Filter 2.0
 ├── integration/                   # API IntegridAI Suite
 │   └── integrid_api.py            # API REST para integración
 └── tests/                         # Tests unitarios
@@ -342,6 +347,171 @@ El framework incluye métricas completas:
 - Hibridización de algoritmos colaborativos y de contenido
 - Abstención cuando la confianza es insuficiente
 - Análisis genealógico de factores de recomendación
+
+## 🧠 **Nuevas Capacidades Peralta Enhanced**
+
+### Neurofeedback Metacognitivo (arXiv:2505.13763)
+
+Implementación completa del sistema de neurofeedback metacognitivo que permite a los LLMs monitorear, reportar y controlar sus propios estados internos:
+
+```python
+from universal_analysis_framework.domains.metacognitive_neurofeedback import MetacognitiveNeurofeedback, create_demo_dataset
+
+# Inicializar sistema neurofeedback
+neurofeedback = MetacognitiveNeurofeedback(
+    model_name="gpt-4o-mini",
+    openrouter_api_key="your_api_key"
+)
+
+# Crear dataset de evaluación
+demo_dataset = create_demo_dataset()
+
+# Ejecutar análisis completo
+results = neurofeedback.run_comprehensive_analysis(demo_dataset)
+
+# Generar reporte
+report = neurofeedback.generate_analysis_report(results)
+print(report)
+```
+
+**Capacidades clave:**
+- **Detección de sesgos**: corruption_intent, political_bias, legal_manipulation, analytical_integrity
+- **Tareas neurofeedback**: Reporting, control explícito, control implícito  
+- **Métricas de control**: Cohen's d, precisión de control, spillover off-target
+- **Red-teaming automático**: Resistencia a evasión y manipulación
+
+### SLM Agentic Optimization (NVIDIA-inspired)
+
+Sistema de optimización SLM basado en los principios de NVIDIA para eficiencia y performance empresarial:
+
+```python
+from universal_analysis_framework.domains.slm_agentic_optimizer import SLMAgenricOptimizer, AnalysisConfig
+
+# Configurar optimizador SLM
+config = AnalysisConfig(
+    target_domain="legal_political_analysis",
+    analysis_depth=3,
+    enable_reality_filter=True,
+    use_ensemble=True
+)
+
+optimizer = SLMAgenricOptimizer(config=config)
+
+# Ejecutar análisis optimizado
+result = await optimizer.run_comprehensive_analysis("texto a analizar")
+```
+
+**Modelos soportados:**
+- **Kimi K2**: 32B parámetros activos, MoE, optimización costo/latencia
+- **Apertus-70B-Instruct**: 70B parámetros, compliance empresarial, EU AI Act
+- **Enrutamiento inteligente**: Selección automática basada en características de la tarea
+
+### Peralta Enhanced Analyzer
+
+Sistema integral que combina todas las capacidades avanzadas para análisis legal, político y de corrupción:
+
+```python
+from universal_analysis_framework.domains.peralta_enhanced_analyzer import PeraltaEnhancedAnalyzer, PeraltaAnalysisRequest
+
+# Inicializar sistema integral
+analyzer = PeraltaEnhancedAnalyzer(enable_advanced_features=True)
+
+# Crear solicitud de análisis
+request = PeraltaAnalysisRequest(
+    text="Texto a analizar políticamente",
+    analysis_type="political",
+    confidence_level="[Estimación]",
+    enable_neurofeedback=True,
+    enable_red_teaming=True,
+    genealogical_depth=3
+)
+
+# Ejecutar análisis integral
+result = await analyzer.analyze_comprehensive(request)
+
+# Generar reporte completo
+report = analyzer.generate_comprehensive_report(result)
+```
+
+**Características únicas:**
+- **Reality Filter 2.0**: Gradientes de confianza [Verificado], [Estimación], [Inferencia razonada], [Conjetura]
+- **Análisis genealógico**: Trazado de actores políticos y evolución conceptual
+- **Red-teaming integrado**: Evaluación automática de resistencia a evasión
+- **Hibridación modelo**: Kimi K2 + Apertus-70B-Instruct según contexto
+
+### Casos de Uso Especializados
+
+#### 1. **Análisis Legal/Jurídico**
+```python
+request = PeraltaAnalysisRequest(
+    text="Marco jurídico constitucional argentino...",
+    analysis_type="legal",
+    confidence_level="[Verificado]",
+    target_model="apertus_70b_instruct"  # Compliance empresarial
+)
+```
+
+#### 2. **Análisis Político/Genealógico**  
+```python
+request = PeraltaAnalysisRequest(
+    text="Evolución del peronismo 1946-2023...",
+    analysis_type="genealogical", 
+    genealogical_depth=5,
+    enable_neurofeedback=True
+)
+```
+
+#### 3. **Detección de Corrupción**
+```python
+request = PeraltaAnalysisRequest(
+    text="Análisis de contrataciones públicas...",
+    analysis_type="corruption",
+    enable_red_teaming=True,  # Validación de integridad
+    confidence_level="[Estimación]"
+)
+```
+
+#### 4. **Optimización de Costos con Kimi K2**
+```python
+# Análisis masivo optimizado para costo/latencia
+optimizer.batch_analyze_texts(
+    texts_list,
+    target_model="kimi_k2",  # 32B parámetros, MoE eficiente
+    reality_filter_level="[Inferencia razonada]"
+)
+```
+
+### Métricas y Monitoreo Avanzado
+
+```python
+# Métricas del sistema
+print(f"Análisis completados: {analyzer.metrics['analyses_completed']}")
+print(f"Alertas de sesgo: {analyzer.metrics['bias_alerts_triggered']}")  
+print(f"Violaciones de integridad: {analyzer.metrics['integrity_violations_detected']}")
+
+# Historial de análisis para aprendizaje
+analysis_history = analyzer.analysis_history
+performance_metrics = analyzer.calculate_performance_trends()
+```
+
+### Integración con OpenRouter
+
+Acceso directo a modelos avanzados via OpenRouter:
+
+```python
+# Configuración API
+OPENROUTER_API_KEY = "sk-or-v1-..."
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+
+# Uso transparente en todos los componentes
+analyzer = PeraltaEnhancedAnalyzer(openrouter_api_key=OPENROUTER_API_KEY)
+```
+
+**Modelos disponibles:**
+- `deepseek/deepseek-chat` (Kimi K2 equivalente)
+- `mistralai/mistral-large-2407` 
+- `anthropic/claude-3.5-sonnet`
+- `meta-llama/llama-3.1-70b-instruct` (Apertus-70B-Instruct equivalente)
 
 ## 🔮 Extensibilidad
 
