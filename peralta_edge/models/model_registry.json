@@ -1,0 +1,44 @@
+{
+  "gemma-2b-it": {
+    "size_mb": 2500,
+    "quantized_size_mb": 1600,
+    "context_length": 8192,
+    "languages": [
+      "es",
+      "en"
+    ],
+    "domains": [
+      "legal",
+      "political",
+      "general"
+    ]
+  },
+  "phi-3-mini-4k": {
+    "size_mb": 4200,
+    "quantized_size_mb": 2800,
+    "context_length": 4096,
+    "languages": [
+      "es",
+      "en"
+    ],
+    "domains": [
+      "legal",
+      "technical",
+      "general"
+    ]
+  },
+  "qwen2-1.5b": {
+    "size_mb": 1800,
+    "quantized_size_mb": 1200,
+    "context_length": 32768,
+    "languages": [
+      "es",
+      "en",
+      "zh"
+    ],
+    "domains": [
+      "multilingual",
+      "general"
+    ]
+  }
+}
