@@ -1,0 +1,304 @@
+{
+  "dataset_info": {
+    "total_cases": 22,
+    "categories": {
+      "Financial": 4,
+      "Real Estate": 1,
+      "Monetary": 2,
+      "Contractual": 2,
+      "Commercial": 1,
+      "Constitutional": 2,
+      "Exchange": 2,
+      "General": 8
+    },
+    "year_range": [
+      1957,
+      2021
+    ],
+    "average_velocity": 170.28730139768248
+  },
+  "learning_progression": [
+    {
+      "batch": 1,
+      "cases_processed": 5,
+      "knowledge_level": 0.49,
+      "patterns_discovered": 0,
+      "memory_utilization": 0.0005
+    },
+    {
+      "batch": 2,
+      "cases_processed": 10,
+      "knowledge_level": 1.02,
+      "patterns_discovered": 2,
+      "memory_utilization": 0.001
+    },
+    {
+      "batch": 3,
+      "cases_processed": 15,
+      "knowledge_level": 1.5100000000000005,
+      "patterns_discovered": 3,
+      "memory_utilization": 0.0015
+    },
+    {
+      "batch": 4,
+      "cases_processed": 20,
+      "knowledge_level": 2.020000000000001,
+      "patterns_discovered": 6,
+      "memory_utilization": 0.002
+    },
+    {
+      "batch": 5,
+      "cases_processed": 22,
+      "knowledge_level": 2.220000000000001,
+      "patterns_discovered": 8,
+      "memory_utilization": 0.0022
+    }
+  ],
+  "evolution_result": {
+    "evolution_timestamp": "2025-09-17T20:09:07.921864",
+    "pre_evolution_state": {
+      "total_cases_processed": 22,
+      "learning_iterations": 22,
+      "current_knowledge_level": 2.220000000000001,
+      "evolution_patterns_discovered": 8,
+      "prediction_accuracy_history": [],
+      "last_update": "2025-09-17T20:09:07.920157",
+      "memory_size": 0,
+      "active_architectures": [
+        "deep_feed_forward",
+        "attention",
+        "rnn",
+        "autoencoder"
+      ]
+    },
+    "adaptations_made": [],
+    "performance_improvements": {},
+    "post_evolution_state": {
+      "total_cases_processed": 22,
+      "learning_iterations": 22,
+      "current_knowledge_level": 2.3310000000000013,
+      "evolution_patterns_discovered": 8,
+      "prediction_accuracy_history": [],
+      "last_update": "2025-09-17T20:09:07.921913",
+      "memory_size": 0,
+      "active_architectures": [
+        "deep_feed_forward",
+        "attention",
+        "rnn",
+        "autoencoder"
+      ]
+    }
+  },
+  "final_summary": {
+    "system_overview": {
+      "total_cases_processed": 22,
+      "learning_iterations": 22,
+      "current_knowledge_level": 2.3310000000000013,
+      "patterns_discovered": 8,
+      "active_architectures": [
+        "deep_feed_forward",
+        "attention",
+        "rnn",
+        "autoencoder"
+      ]
+    },
+    "memory_system": {
+      "episodic_memory_size": 22,
+      "semantic_patterns": 1,
+      "procedural_rules": 0,
+      "total_evolution_patterns": 2,
+      "temporal_coverage_years": 15,
+      "memory_utilization": 0.0022
+    },
+    "temporal_analysis": {
+      "yearly_evolution": {
+        "1957": {
+          "average_velocity": 439.7831800262812,
+          "average_impact": 0.1,
+          "case_count": 1
+        },
+        "1991": {
+          "average_velocity": 128.64651773981603,
+          "average_impact": 0.1,
+          "case_count": 1
+        },
+        "1994": {
+          "average_velocity": 364.2904073587385,
+          "average_impact": 0.15000000000000002,
+          "case_count": 2
+        },
+        "1995": {
+          "average_velocity": 359.69119579500654,
+          "average_impact": 0.3,
+          "case_count": 1
+        },
+        "1998": {
+          "average_velocity": 83.96846254927726,
+          "average_impact": 0.1,
+          "case_count": 1
+        },
+        "1999": {
+          "average_velocity": 311.957950065703,
+          "average_impact": 0.1,
+          "case_count": 1
+        },
+        "2000": {
+          "average_velocity": 294.74375821287776,
+          "average_impact": 0.2,
+          "case_count": 1
+        },
+        "2001": {
+          "average_velocity": 154.10643889618925,
+          "average_impact": 0.16666666666666666,
+          "case_count": 3
+        },
+        "2002": {
+          "average_velocity": 103.79434954007883,
+          "average_impact": 0.1,
+          "case_count": 2
+        },
+        "2009": {
+          "average_velocity": 189.22470433639947,
+          "average_impact": 0.2,
+          "case_count": 1
+        },
+        "2016": {
+          "average_velocity": 104.99342969776609,
+          "average_impact": 0.1,
+          "case_count": 1
+        },
+        "2017": {
+          "average_velocity": 90.78515111695137,
+          "average_impact": 0.15000000000000002,
+          "case_count": 2
+        },
+        "2019": {
+          "average_velocity": 62.13863337713535,
+          "average_impact": 0.1,
+          "case_count": 2
+        },
+        "2020": {
+          "average_velocity": 43.47897503285151,
+          "average_impact": 0.2,
+          "case_count": 2
+        },
+        "2021": {
+          "average_velocity": 42.01708278580814,
+          "average_impact": 0.2,
+          "case_count": 1
+        }
+      },
+      "acceleration_periods": [
+        {
+          "year": 1994,
+          "acceleration": 235.64388961892246
+        },
+        {
+          "year": 1999,
+          "acceleration": 227.98948751642575
+        }
+      ]
+    },
+    "velocity_patterns": {
+      "Constitutional": {
+        "mean_velocity": 402.03679369250983,
+        "std_velocity": 37.74638633377134,
+        "max_velocity": 439.7831800262812,
+        "min_velocity": 364.2904073587385,
+        "case_count": 2
+      },
+      "Monetary": {
+        "mean_velocity": 83.19645203679369,
+        "std_velocity": 45.45006570302234,
+        "max_velocity": 128.64651773981603,
+        "min_velocity": 37.746386333771355,
+        "case_count": 2
+      },
+      "General": {
+        "mean_velocity": 134.82670827858084,
+        "std_velocity": 121.17878554846332,
+        "max_velocity": 364.2904073587385,
+        "min_velocity": 11.793692509855452,
+        "case_count": 8
+      },
+      "Financial": {
+        "mean_velocity": 197.00229960578184,
+        "std_velocity": 133.37931270393477,
+        "max_velocity": 359.69119579500654,
+        "min_velocity": 42.01708278580814,
+        "case_count": 4
+      },
+      "Real Estate": {
+        "mean_velocity": 311.957950065703,
+        "std_velocity": 0.0,
+        "max_velocity": 311.957950065703,
+        "min_velocity": 311.957950065703,
+        "case_count": 1
+      },
+      "Exchange": {
+        "mean_velocity": 116.21222076215506,
+        "std_velocity": 52.21747700394218,
+        "max_velocity": 168.42969776609723,
+        "min_velocity": 63.99474375821288,
+        "case_count": 2
+      },
+      "Contractual": {
+        "mean_velocity": 137.4178712220762,
+        "std_velocity": 32.42444152431011,
+        "max_velocity": 169.8423127463863,
+        "min_velocity": 104.99342969776609,
+        "case_count": 2
+      },
+      "Commercial": {
+        "mean_velocity": 90.01314060446781,
+        "std_velocity": 0.0,
+        "max_velocity": 90.01314060446781,
+        "min_velocity": 90.01314060446781,
+        "case_count": 1
+      }
+    },
+    "neural_performance": {
+      "architectures": {},
+      "best_architecture": null,
+      "best_loss": Infinity
+    },
+    "learning_trajectory": [],
+    "system_maturity": {
+      "learning_stability": 0,
+      "pattern_recognition_capability": 0.36363636363636365,
+      "prediction_readiness": false
+    }
+  },
+  "prediction_test": {
+    "test_case": "Crypto Assets",
+    "prediction_result": {
+      "neural_predictions": {},
+      "memory_prediction": {
+        "predicted_velocity": 197.00229960578184,
+        "predicted_impact": 0.22499999999999998,
+        "confidence": 0.4,
+        "similar_cases_count": 4
+      },
+      "system_state": {
+        "knowledge_level": 2.3310000000000013,
+        "cases_processed": 22,
+        "patterns_discovered": 8
+      },
+      "prediction_metadata": {
+        "prediction_time": "2025-09-17T20:09:07.922357",
+        "memory_utilization": 0.0022,
+        "active_architectures": [
+          "deep_feed_forward",
+          "attention",
+          "rnn",
+          "autoencoder"
+        ]
+      }
+    }
+  },
+  "test_metadata": {
+    "timestamp": "2025-09-17T20:09:07.923717",
+    "test_version": "1.0.0",
+    "dataset_verified": true
+  }
+}
