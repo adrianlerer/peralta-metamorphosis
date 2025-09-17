@@ -1,0 +1,29 @@
+{
+  "document": "Presupuesto Nacional Uruguay 2025-2029",
+  "analysis_date": "2025-09-16T23:41:25.229873",
+  "pages_processed": 15,
+  "total_pages": 407,
+  "variables_detected": [
+    "✅ PERÍODO PLURIANUAL: 2025-2029 confirmado",
+    "✅ AJUSTE INFLACIÓN: Mecanismo detectado",
+    "✅ BASE TEMPORAL: Enero 2025 identificada",
+    "⚠️ CIFRAS PRESUPUESTARIAS: Pocas cifras detectadas",
+    "⚠️ MARCO INSTITUCIONAL: Verificar instituciones"
+  ],
+  "reality_warnings": [
+    "🔴 INFLACIÓN ACUMULADA: Calcular impacto 5 años (2025-2029)",
+    "🔴 INCERTIDUMBRE TEMPORAL: Proyecciones años 2027-2029 alta incertidumbre",
+    "🔴 CONTEXTO URUGUAYO: Considerar dependencia commodities y vecinos",
+    "🔴 SOSTENIBILIDAD FISCAL: Analizar ratio deuda/PIB realista",
+    "🔴 CAPACIDAD EJECUCIÓN: Evaluar viabilidad implementación quinquenal"
+  ],
+  "assessment": "⚠️ LIMITADO: Pocas cifras detectadas - Requiere análisis más profundo",
+  "key_figures_sample": [],
+  "key_articles_sample": [
+    "Artículo 1.- El Presupuesto Nacional para el período de Gobierno 2025-2029 se regirá por las",
+    "Artículo 2.- Los créditos establecidos en la presente ley para gastos corrientes, inversiones,",
+    "Artículo 3.- La presente ley regirá a partir del 1º de enero de 2026, excepto en aquellas",
+    "Artículo 5.- Autorízase al Poder Ejecutivo a efectuar las correcciones de los errores u omisiones",
+    "Artículo 6.- Facúltase al Poder Ejecutivo a aprobar las reestructuras organizativas y de puestos de"
+  ]
+}

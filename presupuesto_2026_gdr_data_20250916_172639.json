@@ -1,0 +1,109 @@
+{
+  "analysis_content": {
+    "titulo": "Análisis Presupuesto Nacional 2026 - Ajustado por Inflación",
+    "metodologia": "Enhanced Universal Framework v4.0 con verificación GDR",
+    "fecha_analisis": "2025-09-16T17:26:39.554600",
+    "gastos_totales_2025_nominal": 180637,
+    "gastos_totales_2026_nominal": 158865,
+    "variacion_nominal_pct": -12.052901675736422,
+    "inflacion_2025_pct": 24.5,
+    "inflacion_2026_pct": 10.100000000000001,
+    "deflactor_compuesto": 1.370745,
+    "metodologia_ajuste": "Proyecciones oficiales INDEC/BCRA",
+    "gastos_totales_2025_real": 180637,
+    "gastos_totales_2026_real": 115897.0,
+    "variacion_real_pct": -35.8,
+    "gastos_corrientes_2025_real": 156234,
+    "gastos_corrientes_2026_real": 100596.0,
+    "variacion_corrientes_real_pct": -35.6,
+    "recursos_tributarios_2025_real": 147532,
+    "recursos_tributarios_2026_real": 94969.0,
+    "variacion_recursos_real_pct": -35.6,
+    "conclusion_principal": "Reducción real de 35.8% en gastos totales tras ajuste por inflación",
+    "diferencia_nominal_vs_real": "Diferencia entre análisis nominal (-12.1%) y real (-35.8%): 23.8 puntos porcentuales",
+    "ajuste_inflacion_aplicado": true,
+    "fuentes_oficiales_utilizadas": [
+      "Mensaje Presupuestal 2026",
+      "INDEC",
+      "BCRA"
+    ],
+    "metodo_verificacion": "GDR Enhanced Universal Framework v4.0",
+    "data_sources_used": [
+      "mensaje_presupuestal_2026",
+      "proyecciones_inflacion_oficiales",
+      "contexto_economico",
+      "_inflation_adjustment_applied",
+      "_inflation_method",
+      "_inflation_years"
+    ],
+    "analysis_context": {
+      "analysis_type": "presupuesto_nacional_2026",
+      "methodology": "gdr_enhanced_universal_framework_v4",
+      "base_year": 2025,
+      "target_year": 2026,
+      "inflation_adjustment_required": true,
+      "domain": "fiscal_policy_argentina"
+    },
+    "quality_indicators": {
+      "temporal_consistency": true,
+      "inflation_adjustment": true,
+      "source_traceability": true,
+      "quantitative_precision": true
+    }
+  },
+  "safety_score": 0.9100000000000001,
+  "quality_metrics": {
+    "pass_rate": 0.6,
+    "content_length": 1815,
+    "numerical_density": 0.4666666666666667,
+    "source_density": 0.03333333333333333
+  },
+  "traceability_metadata": {
+    "verification_timestamp": "2025-09-16T17:26:39.555998",
+    "framework_version": "4.0.0-GDR",
+    "verifiers_used": [
+      "inflation_adjustment_verifier",
+      "temporal_coherence_verifier",
+      "factual_consistency_verifier",
+      "source_traceability_verifier",
+      "quantitative_precision_verifier"
+    ],
+    "mandatory_criteria_checked": [
+      "inflation_adjustment_compliance",
+      "factual_consistency",
+      "quantitative_precision",
+      "source_traceability",
+      "temporal_coherence"
+    ]
+  },
+  "improvement_suggestions": [
+    "Verify date formatting consistency",
+    "Provide methodology transparency",
+    "Validate temporal causality chains",
+    "Add specific citations for all numerical data",
+    "Check chronological order of events",
+    "Link to official government documents"
+  ],
+  "verification_summary": {
+    "inflation_adjustment_verifier": {
+      "result": "pass",
+      "message": "No multi-year monetary comparison detected"
+    },
+    "temporal_coherence_verifier": {
+      "result": "warning",
+      "message": "Potential temporal inconsistencies detected"
+    },
+    "factual_consistency_verifier": {
+      "result": "pass",
+      "message": "No factual inconsistencies detected"
+    },
+    "source_traceability_verifier": {
+      "result": "warning",
+      "message": "Moderate source traceability"
+    },
+    "quantitative_precision_verifier": {
+      "result": "pass",
+      "message": "Quantitative precision is consistent"
+    }
+  }
+}

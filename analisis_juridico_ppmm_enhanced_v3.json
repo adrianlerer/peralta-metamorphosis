@@ -1,0 +1,186 @@
+{
+  "document_id": "PPMM-GEI-DOCX",
+  "analysis_timestamp": "2025-09-16T22:18:40.491058",
+  "variables_detected": [
+    {
+      "name": "Aplicación Art. 41 CN",
+      "type": "VariableType.CONSTITUTIONAL",
+      "criticality": "CriticalityLevel.HIGH",
+      "description": "Correcta invocación de competencias federales presupuestos mínimos",
+      "current_status": "Menciones detectadas: 29",
+      "requires_correction": false,
+      "suggested_improvement": "Reforzar base constitucional con citas específicas doctrina CSJN",
+      "legal_basis": [
+        "Art. 41 CN",
+        "Mendoza (2008)",
+        "Riachuelo (2008)"
+      ],
+      "risk_assessment": "Alto riesgo inconstitucionalidad si ausente"
+    },
+    {
+      "name": "Respeto Federalismo",
+      "type": "VariableType.FEDERALISM",
+      "criticality": "CriticalityLevel.HIGH",
+      "description": "Adecuada distribución competencias Nación-Provincias",
+      "current_status": "Indicadores federalismo: 38",
+      "requires_correction": false,
+      "suggested_improvement": "Fortalecer mecanismos coordinación interjurisdiccional específicos",
+      "legal_basis": [
+        "Art. 121-123 CN",
+        "Dulce Nombre (2007)",
+        "Telecom (2014)"
+      ],
+      "risk_assessment": "Medio riesgo conflicto competencial"
+    },
+    {
+      "name": "Concepto Adicionalidad Obligatoria",
+      "type": "VariableType.ADDITIONALITY",
+      "criticality": "CriticalityLevel.HIGH",
+      "description": "Requisito fundamental: proyectos deben ir MÁS ALLÁ del business-as-usual",
+      "current_status": "Menciones adicionalidad: 2. Confusión BAU: False",
+      "requires_correction": false,
+      "suggested_improvement": "\n            INCLUIR DEFINICIÓN EXPLÍCITA:\n            Art. X: Los proyectos de mitigación deben demostrar ADICIONALIDAD, entendida como:\n            a) Actividades que NO ocurrirían en escenario business-as-usual\n            b) Requerir incentivos del mercado de carbono para ser viables\n            c) Ir más allá de cumplimiento regulatorio existente\n            d) No constituir práctica común en la región\n            ",
+      "legal_basis": [
+        "CDM Rules",
+        "VCS Standard",
+        "Gold Standard",
+        "Art. 6 Acuerdo París"
+      ],
+      "risk_assessment": "CRÍTICO: Sin adicionalidad, créditos inválidos internacionalmente"
+    },
+    {
+      "name": "Tipos Proyectos Válidos Especificados",
+      "type": "VariableType.CARBON_CONCEPTS",
+      "criticality": "CriticalityLevel.HIGH",
+      "description": "Especificación clara de categorías elegibles: REDD+, restauración, conservación mejorada, manejo sostenible",
+      "current_status": "Tipos detectados: 0 - []",
+      "requires_correction": true,
+      "suggested_improvement": "\n            INCLUIR ARTÍCULO ESPECÍFICO:\n            Art. X: Son elegibles los siguientes tipos de proyectos:\n            a) Evitar deforestación (REDD+): Prevención tala con riesgo demostrado\n            b) Restauración forestal: Recuperación áreas degradadas con barreras documentadas\n            c) Conservación mejorada: Prácticas superiores a requerimientos legales\n            d) Manejo sostenible certificado: Certificación con inversiones adicionales\n            ",
+      "legal_basis": [
+        "UNFCCC",
+        "Ley 26.331",
+        "Protocolo Kyoto",
+        "Acuerdo París"
+      ],
+      "risk_assessment": "Alto riesgo ambigüedad en implementación"
+    },
+    {
+      "name": "Precisión Datos Forestales Oficiales",
+      "type": "VariableType.DATA_ACCURACY",
+      "criticality": "CriticalityLevel.MEDIUM",
+      "description": "Uso correcto estadísticas oficiales bosques nativos argentinos",
+      "current_status": "Datos detectados: []. Datos incorrectos: False",
+      "requires_correction": false,
+      "suggested_improvement": "\n            CORREGIR A DATOS OFICIALES:\n            - Bosques nativos: MÁS DE 50 millones de hectáreas (Ley 26.331)\n            - Fuente: Inventario Nacional de Bosques Nativos - Ley 26.331\n            - Reconocimiento provincial: Ordenamientos Territoriales provinciales\n            - Bosques cultivados: 1.3 millones de hectáreas (correcto)\n            ",
+      "legal_basis": [
+        "Ley 26.331",
+        "Inventario Nacional Bosques Nativos",
+        "SAyDS"
+      ],
+      "risk_assessment": "Crítico: Datos incorrectos invalidan análisis económico"
+    },
+    {
+      "name": "Sistema RENAMI - Registro Nacional",
+      "type": "VariableType.INSTITUTIONAL",
+      "criticality": "CriticalityLevel.MEDIUM",
+      "description": "Registro Nacional de Proyectos de Mitigación - transparencia y trazabilidad",
+      "current_status": "Referencias RENAMI/registro: 4",
+      "requires_correction": false,
+      "suggested_improvement": "\n            FORTALECER RENAMI CON:\n            a) Interoperabilidad con registros provinciales existentes\n            b) API pública para consulta ciudadana\n            c) Integración con sistema MRV internacional\n            d) Procedimientos claros de alta/baja/modificación\n            e) Plazos máximos de respuesta (30 días hábiles)\n            ",
+      "legal_basis": [
+        "Ley 25.326 Protección Datos",
+        "Decreto 1172/03 Acceso Información"
+      ],
+      "risk_assessment": "Medio: Registro deficiente afecta credibilidad sistema"
+    },
+    {
+      "name": "Procedimiento Autorización Internacional",
+      "type": "VariableType.PROCEDURAL",
+      "criticality": "CriticalityLevel.HIGH",
+      "description": "Marco claro para transferencias internacionales créditos carbono",
+      "current_status": "Referencias autorización internacional: 1",
+      "requires_correction": false,
+      "suggested_improvement": "\n            INCLUIR PROCEDIMIENTO ESPECÍFICO:\n            Art. X: Autorización transferencias internacionales:\n            a) Solicitud con documentación técnica completa\n            b) Evaluación impacto en NDC Argentina\n            c) Coordinación con Cancillería (Art. 6 París)\n            d) Plazo máximo resolución: 60 días hábiles\n            e) Criterios objetivos aprobación/denegación\n            f) Recursos administrativos contra denegación\n            ",
+      "legal_basis": [
+        "Art. 6 Acuerdo París",
+        "Ley 25.438 Ratificación Kyoto"
+      ],
+      "risk_assessment": "Alto: Procedimientos ambiguos generan inseguridad jurídica"
+    },
+    {
+      "name": "Precisión Definiciones Técnicas",
+      "type": "VariableType.LEGISLATIVE_TECHNIQUE",
+      "criticality": "CriticalityLevel.MEDIUM",
+      "description": "Claridad conceptual términos técnicos del proyecto",
+      "current_status": "Definiciones detectadas: 1",
+      "requires_correction": true,
+      "suggested_improvement": "\n            INCLUIR GLOSARIO TÉCNICO COMPLETO:\n            - Mitigación GEI: Reducción emisiones antropogénicas o aumento remociones\n            - Crédito de carbono: Unidad equivalente 1 tCO2eq reducida/removida\n            - Adicionalidad: [definición completa como se sugirió]\n            - MRV: Sistema Medición, Reporte y Verificación\n            - Línea base: Escenario emisiones sin proyecto\n            - Permanencia: Durabilidad temporal reducciones/remociones\n            - Leakage: Desplazamiento emisiones fuera límites proyecto\n            ",
+      "legal_basis": [
+        "Manual Técnica Legislativa",
+        "Decreto 1759/72 Reglamentario"
+      ],
+      "risk_assessment": "Medio: Definiciones imprecisas generan litigiosidad"
+    }
+  ],
+  "critical_errors": [],
+  "improvement_recommendations": [
+    "",
+    "📋 SUGERENCIAS TÉCNICO-JURÍDICAS ADICIONALES:",
+    "",
+    "1. FORTALECIMIENTO CONSTITUCIONAL:",
+    "   • Incluir cita expresa Art. 41 CN en exposición de motivos",
+    "   • Referenciar jurisprudencia CSJN consolidada (Mendoza, Riachuelo, Salas)",
+    "   • Justificar competencia federal con argumentos interjurisdiccionalidad",
+    "",
+    "2. MEJORAS TÉCNICA LEGISLATIVA:",
+    "   • Crear capítulo específico 'Definiciones' con términos técnicos",
+    "   • Establecer plazos administrativos máximos para todos los procedimientos",
+    "   • Incluir régimen sancionatorio proporcional y efectivo",
+    "   • Prever mecanismo revisión/actualización metodologías técnicas",
+    "",
+    "3. COORDINACIÓN FEDERAL MEJORADA:",
+    "   • Crear Consejo Federal de Mercados de Carbono (COFEMAC)",
+    "   • Protocolo técnico coordinación Nación-Provincias",
+    "   • Mecanismo resolución conflictos competenciales",
+    "   • Fondo compensatorio para jurisdicciones con menores capacidades",
+    "",
+    "4. INTEGRACIÓN INTERNACIONAL:",
+    "   • Compatibilidad expresa con Art. 6 Acuerdo París",
+    "   • Procedimiento armonización con NDC Argentina",
+    "   • Protocolos intercambio información con registros internacionales",
+    "   • Salvaguardas sociales y ambientales (UNFCCC)",
+    "",
+    "5. SISTEMA MRV ROBUSTO:",
+    "   • Metodologías validadas internacionalmente (VCS, Gold Standard, CDM)",
+    "   • Organismos verificadores independientes acreditados",
+    "   • Auditorías aleatorias post-emisión créditos",
+    "   • Base datos pública con información no confidencial",
+    "",
+    "6. GARANTÍAS PROCESALES:",
+    "   • Audiencia pública previa aprobación metodologías",
+    "   • Recursos administrativos con efecto suspensivo",
+    "   • Acceso información pública con excepciones tasadas",
+    "   • Participación ciudadana en monitoreo cumplimiento"
+  ],
+  "constitutional_compliance": {
+    "status": "COMPATIBLE",
+    "details": {
+      "constitutional_compliance": "ALTA",
+      "technical_precision": "BUENA",
+      "procedural_clarity": "INSUFICIENTE",
+      "international_compatibility": "ALTA",
+      "federalism_respect": "EXCELENTE"
+    }
+  },
+  "technical_quality": {
+    "rating": "EXCELENTE CALIDAD TÉCNICO-JURÍDICA",
+    "metrics": {
+      "constitutional_compliance": "ALTA",
+      "technical_precision": "BUENA",
+      "procedural_clarity": "INSUFICIENTE",
+      "international_compatibility": "ALTA",
+      "federalism_respect": "EXCELENTE"
+    }
+  },
+  "overall_rating": "EXCELENTE CALIDAD TÉCNICO-JURÍDICA"
+}
